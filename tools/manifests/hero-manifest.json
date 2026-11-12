@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "biryani-rice-mound",
+    "title": "Floating Basmati Biryani Rice Mound",
+    "image": "briyani/Floating Basmati Biryani Rice Mound.png",
+    "finish": "organic",
+    "pbrName": "basmati-rice-mound",
+    "scaleReference": "1 world unit = 1 meter (mound width ~0.24m, height ~0.125m; fits inside copper-handi belly r=0.135m / neck r=0.106m)",
+    "silhouette": {
+      "boundingShape": "rounded organic biryani rice mound with flat-tapered underbelly seated inside handi neck and fluffy domed top crest",
+      "aspectRatios": ["diameter:height = 1.9:1", "baseNeckRadius = 0.098m"],
+      "symmetry": "none",
+      "dominantCurves": ["soft domed upper rice crest", "tapered neck-hugging lower belly"],
+      "negativeSpaces": ["inter-grain micro crevices and layered saffron garnish pockets"],
+      "landmarks": ["base seating plane y=0.0", "max belly bulge y=0.048 r=0.118", "domed crown y=0.125"]
+    },
+    "materials": [
+      { "id": "cooked-basmati-rice", "name": "Cooked Basmati Rice", "baseColor": "#f4ead4", "secondaryColor": "#d9922c", "roughness": 0.48, "dominantAlbedo": "rgba(244, 234, 212, 1)", "accentAlbedo": "rgba(229, 152, 41, 1)" },
+      { "id": "biryani-masala-rice", "name": "Spiced Biryani Saffron Rice", "baseColor": "#e29828", "secondaryColor": "#a84414", "roughness": 0.44, "dominantAlbedo": "rgba(226, 152, 40, 1)", "accentAlbedo": "rgba(168, 68, 20, 1)" },
+      { "id": "mound-fried-onion-garnish", "name": "Crispy Birista Onions", "baseColor": "#7a3b14", "secondaryColor": "#3e1b08", "roughness": 0.55, "dominantAlbedo": "rgba(122, 59, 20, 1)" },
+      { "id": "mound-herb-garnish", "name": "Fresh Mint & Cilantro Bits", "baseColor": "#2e6b27", "secondaryColor": "#4f8d38", "roughness": 0.38, "dominantAlbedo": "rgba(46, 107, 39, 1)" }
+    ],
+    "components": [
+      { "id": "biryani-core-dome", "name": "Core Rice Dome", "role": "body", "primitive": "sculpted-dome", "material": "biryani-masala-rice", "proportions": { "diameter": 0.236, "height": 0.115 } },
+      { "id": "individual-basmati-grains", "name": "Baked Basmati Grain Layer", "role": "surface-cluster", "primitive": "instanced-cluster", "material": "cooked-basmati-rice", "proportions": { "count": 900 } },
+      { "id": "birista-and-herb-garnish", "name": "Fried Onions & Herb Garnish", "role": "garnish", "primitive": "curve-sweep", "material": "mound-fried-onion-garnish", "proportions": { "count": 48 } }
+    ]
+  },
+  {
+    "slug": "chicken-drumstick",
+    "title": "Spicy Masala Chicken Drumstick",
+    "image": "briyani/Spicy Masala Chicken Drumstick.png",
+    "finish": "organic",
+    "pbrName": "masala-drumstick",
+    "scaleReference": "1 world unit = 1 meter (length ~0.165m, meaty bulb diameter ~0.068m; origin at center-of-mass)",
+    "silhouette": {
+      "boundingShape": "organic curved drumstick club tapering smoothly from rounded meaty thigh bulb down to slender exposed bone shaft and double knuckle condyle",
+      "aspectRatios": ["length:maxWidth = 2.4:1"],
+      "symmetry": "none",
+      "dominantCurves": ["bulbous caramelized meat upper lobe", "curved taper toward ankle tendon", "bilobed distal bone knuckle"],
+      "negativeSpaces": ["neck constriction before bone knuckle"],
+      "landmarks": ["meaty crown +0.075", "pivot COM 0.0", "knuckle end -0.085"]
+    },
+    "materials": [
+      { "id": "spiced-masala-crust", "name": "Roasted Spicy Masala Glaze", "baseColor": "#9d2b0e", "secondaryColor": "#531405", "roughness": 0.34, "clearcoat": 0.35, "dominantAlbedo": "rgba(157, 43, 14, 1)", "accentAlbedo": "rgba(218, 122, 42, 1)" },
+      { "id": "exposed-bone", "name": "Roasted Chicken Bone Knuckle", "baseColor": "#d9c29f", "secondaryColor": "#8c5c38", "roughness": 0.42, "dominantAlbedo": "rgba(217, 194, 159, 1)" },
+      { "id": "drumstick-herb-flecks", "name": "Charred Spice & Coriander Garnish", "baseColor": "#3b6e24", "secondaryColor": "#281006", "roughness": 0.45, "dominantAlbedo": "rgba(59, 110, 36, 1)" }
+    ],
+    "components": [
+      { "id": "meaty-drumstick-body", "name": "Meaty Drumstick Loft", "role": "body", "primitive": "tapered-sweep", "material": "spiced-masala-crust", "proportions": { "length": 0.135, "radius": 0.034 } },
+      { "id": "tibia-bone-knuckle", "name": "Exposed Bone Shaft & Condyle", "role": "bone", "primitive": "tapered-sweep", "material": "exposed-bone", "proportions": { "length": 0.052 } },
+      { "id": "masala-garnish-ring", "name": "Onion Curl & Herb Garnish", "role": "garnish", "primitive": "curve-sweep", "material": "drumstick-herb-flecks", "proportions": { "count": 18 } }
+    ]
+  },
+  {
+    "slug": "fried-onions",
+    "title": "Crispy Floating Fried Onions",
+    "image": "briyani/Crispy Floating Fried Onions.png",
+    "finish": "organic",
+    "pbrName": "crispy-fried-onions",
+    "scaleReference": "1 world unit = 1 meter (cluster span ~0.16m wide, 0.11m tall; centered at pivot)",
+    "silhouette": {
+      "boundingShape": "airy asymmetrical spray of curved caramelized onion crescent ribbons and crisp shards in dynamic suspension",
+      "aspectRatios": ["width:height = 1.4:1"],
+      "symmetry": "none",
+      "dominantCurves": ["sweeping C-shaped and S-shaped ribbon arcs", "curled tapered feather ends"],
+      "negativeSpaces": ["open air gaps separating flying onion arcs"],
+      "landmarks": ["dense central weave", "outer flying crest curls"]
+    },
+    "materials": [
+      { "id": "golden-birista-onion", "name": "Golden Crispy Fried Onion", "baseColor": "#b85c1d", "secondaryColor": "#4c1b06", "roughness": 0.48, "dominantAlbedo": "rgba(184, 92, 29, 1)", "accentAlbedo": "rgba(230, 152, 62, 1)" },
+      { "id": "charred-onion-tips", "name": "Deep Caramelized Crispy Edges", "baseColor": "#6a2709", "secondaryColor": "#280c03", "roughness": 0.56, "dominantAlbedo": "rgba(106, 39, 9, 1)" }
+    ],
+    "components": [
+      { "id": "fried-onion-ribbons", "name": "Caramelized Onion Crescent Ribbons", "role": "body", "primitive": "curve-sweep", "material": "golden-birista-onion", "proportions": { "count": 26 } },
+      { "id": "crispy-onion-shreds", "name": "Fine Crispy Onion Fragments", "role": "garnish", "primitive": "curve-sweep", "material": "charred-onion-tips", "proportions": { "count": 20 } }
+    ]
+  },
+  {
+    "slug": "mint-leaves",
+    "title": "Dewy Mint Leaves in Motion",
+    "image": "briyani/Dewy Mint Leaves in Motion.png",
+    "finish": "glossy",
+    "pbrName": "dewy-mint-leaves",
+    "scaleReference": "1 world unit = 1 meter (sprig span ~0.15m wide, ~0.13m tall; centered near sprig core)",
+    "silhouette": {
+      "boundingShape": "curved branching mint stem carrying deeply quilted serrated oval-pointed leaves at radial phyllotaxis plus two detached hovering leaflets",
+      "aspectRatios": ["span:height = 1.15:1"],
+      "symmetry": "none",
+      "dominantCurves": ["arched reddish-green central stem", "vaulted midrib leaf blades with serrated rims"],
+      "negativeSpaces": ["gaps between decussate leaf pairs and satellite leaves"],
+      "landmarks": ["primary lower leaf pair", "terminal shoot rosette", "floating satellite leaves"]
+    },
+    "materials": [
+      { "id": "mint-leaf-blade", "name": "Fresh Quilted Mint Leaf", "baseColor": "#2b6f22", "secondaryColor": "#4f9b38", "roughness": 0.30, "clearcoat": 0.45, "dominantAlbedo": "rgba(43, 111, 34, 1)", "accentAlbedo": "rgba(108, 174, 72, 1)" },
+      { "id": "mint-stem-purple", "name": "Burgundy-Green Mint Stem", "baseColor": "#4f5e24", "secondaryColor": "#6e3226", "roughness": 0.42, "dominantAlbedo": "rgba(79, 94, 36, 1)" },
+      { "id": "dew-droplets-mint", "name": "Translucent Water Dew", "baseColor": "#eef9ff", "secondaryColor": "#ffffff", "roughness": 0.04, "dominantAlbedo": "rgba(238, 249, 255, 0.85)" }
+    ],
+    "components": [
+      { "id": "mint-central-stem", "name": "Branching Mint Stem", "role": "stem", "primitive": "curve-sweep", "material": "mint-stem-purple", "proportions": { "length": 0.11 } },
+      { "id": "mint-serrated-blades", "name": "Quilted Serrated Mint Leaves", "role": "body", "primitive": "botanical-leaf", "material": "mint-leaf-blade", "proportions": { "leafCount": 9 } },
+      { "id": "mint-dew-drops", "name": "Surface Water Droplets", "role": "garnish", "primitive": "instanced-cluster", "material": "dew-droplets-mint", "proportions": { "count": 48 } }
+    ]
+  }
+]

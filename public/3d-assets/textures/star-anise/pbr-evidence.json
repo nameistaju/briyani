@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "star-anise",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Cinematic Floating Star Anise.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise",
+  "palette": [
+    "#050000",
+    "#130300",
+    "#370C01",
+    "#922C09",
+    "#E98C4C"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise\\star-anise_albedo.png",
+      "url": "star-anise_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise\\star-anise_roughness.png",
+      "url": "star-anise_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise\\star-anise_height.png",
+      "url": "star-anise_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise\\star-anise_normal.png",
+      "url": "star-anise_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\star-anise\\star-anise_ao.png",
+      "url": "star-anise_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.8464
+    },
+    "mapStats": {
+      "valueRange": 0.48,
+      "heightP90Gradient": 0.1348,
+      "roughnessBase": 0.687,
+      "roughnessVariation": 0.183,
+      "normalStrength": 0.314,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#050000",
+      "#130300",
+      "#370C01",
+      "#922C09",
+      "#E98C4C"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

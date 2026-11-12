@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "green-chili",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Glossy Green Chili Pepper with Droplets.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili",
+  "palette": [
+    "#45640F",
+    "#284903",
+    "#6B8F0A",
+    "#9BAD4A",
+    "#E5ECC9"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili\\green-chili_albedo.png",
+      "url": "green-chili_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili\\green-chili_roughness.png",
+      "url": "green-chili_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili\\green-chili_height.png",
+      "url": "green-chili_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili\\green-chili_normal.png",
+      "url": "green-chili_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\green-chili\\green-chili_ao.png",
+      "url": "green-chili_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 181,
+      "y": 74,
+      "width": 1164,
+      "height": 799
+    },
+    "mask": {
+      "backgroundColor": "#FFFFFF",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.8555,
+      "foregroundCoverage": 0.1481
+    },
+    "mapStats": {
+      "valueRange": 0.724,
+      "heightP90Gradient": 0.05386,
+      "roughnessBase": 0.68,
+      "roughnessVariation": 0.083,
+      "normalStrength": 0.219,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#45640F",
+      "#284903",
+      "#6B8F0A",
+      "#9BAD4A",
+      "#E5ECC9"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

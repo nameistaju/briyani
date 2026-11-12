@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "tomato-slices",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Dramatic Floating Tomato Slices.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices",
+  "palette": [
+    "#030100",
+    "#CA260C",
+    "#F18E62",
+    "#190801",
+    "#5C6317"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices\\tomato-slices_albedo.png",
+      "url": "tomato-slices_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices\\tomato-slices_roughness.png",
+      "url": "tomato-slices_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices\\tomato-slices_height.png",
+      "url": "tomato-slices_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices\\tomato-slices_normal.png",
+      "url": "tomato-slices_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\tomato-slices\\tomato-slices_ao.png",
+      "url": "tomato-slices_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.7225
+    },
+    "mapStats": {
+      "valueRange": 0.6379,
+      "heightP90Gradient": 0.08826,
+      "roughnessBase": 0.687,
+      "roughnessVariation": 0.161,
+      "normalStrength": 0.26,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#030100",
+      "#CA260C",
+      "#F18E62",
+      "#190801",
+      "#5C6317"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

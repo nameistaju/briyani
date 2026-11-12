@@ -1,0 +1,89 @@
+{
+  "glbBytes": 7522556,
+  "meshCount": 4,
+  "triangleCount": 45948,
+  "vertexCount": 133349,
+  "materials": [
+    "biryani-masala-rice",
+    "cooked-basmati-rice",
+    "mound-fried-onion-garnish",
+    "mound-herb-garnish"
+  ],
+  "meshNames": [
+    "biryani-core-dome",
+    "individual-basmati-grains",
+    "birista-fried-onions",
+    "crown-herb-garnish"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "biryani-masala-rice",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "biryani-masala-rice",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "biryani-masala-rice",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.1014,
+      0,
+      -0.1053
+    ],
+    "max": [
+      0.1036,
+      0.1315,
+      0.1026
+    ],
+    "size": [
+      0.205,
+      0.1315,
+      0.208
+    ],
+    "center": [
+      0.0011,
+      0.0658,
+      -0.0013
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "biryani-core-dome",
+      "individual-basmati-grains",
+      "birista-and-herb-garnish"
+    ],
+    "meshNames": [
+      "biryani-core-dome",
+      "individual-basmati-grains",
+      "birista-fried-onions",
+      "crown-herb-garnish"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.118,
+        "center": [
+          0,
+          0.062,
+          0
+        ]
+      }
+    },
+    "destructionGroupNames": [
+      "rice-mound"
+    ]
+  }
+}

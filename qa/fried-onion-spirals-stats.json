@@ -1,0 +1,48 @@
+{
+  "slug": "fried-onion-spirals",
+  "category": "ingredients",
+  "reference": "heroSection/Crispy Fried Onion Spirals in Flight.png",
+  "triangles": 14672,
+  "rawTriangles": 14800,
+  "vertices": 10852,
+  "rawBytes": 6193256,
+  "optBytes": 125772,
+  "budgetKB": 400,
+  "size": [
+    0.09844717383384705,
+    0.07950827106833458,
+    0.09155085682868958
+  ],
+  "center": [
+    -0.0006663836538791656,
+    -0.000697968527674675,
+    0.0015711374580860138
+  ],
+  "materials": [
+    "onion-spiral-gold"
+  ],
+  "channels": [
+    "map",
+    "normalMap",
+    "roughnessMap",
+    "metalnessMap",
+    "aoMap",
+    "sheen",
+    "clearcoat"
+  ],
+  "sheetPath": "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\fried-onion-spirals.png",
+  "views": {
+    "teal": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\teal_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\teal_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\teal_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\teal_3.png"
+    ],
+    "maroon": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\maroon_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\maroon_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\maroon_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\fried-onion-spirals\\maroon_3.png"
+    ]
+  }
+}

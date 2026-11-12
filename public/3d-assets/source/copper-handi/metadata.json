@@ -1,0 +1,127 @@
+{
+  "glbBytes": 3203460,
+  "meshCount": 3,
+  "triangleCount": 18816,
+  "vertexCount": 9775,
+  "materials": [
+    "hammered-copper",
+    "rim-brass",
+    "brass-interior"
+  ],
+  "meshNames": [
+    "copper-belly-shell",
+    "flared-neck-collar",
+    "interior-bowl-liner"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "hammered-copper",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "hammered-copper",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "hammered-copper",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "map",
+      "material": "rim-brass",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "rim-brass",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "rim-brass",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.1441,
+      -0.0001,
+      -0.1433
+    ],
+    "max": [
+      0.1436,
+      0.161,
+      0.1438
+    ],
+    "size": [
+      0.2877,
+      0.1611,
+      0.2871
+    ],
+    "center": [
+      -0.0002,
+      0.0804,
+      0.0002
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "copper-belly-shell",
+      "flared-neck-collar",
+      "interior-bowl-liner"
+    ],
+    "meshNames": [
+      "copper-belly-shell",
+      "flared-neck-collar",
+      "interior-bowl-liner"
+    ],
+    "sockets": {
+      "rice-cavity": {
+        "position": [
+          0,
+          0.075,
+          0
+        ],
+        "socket": {
+          "id": "rice-cavity",
+          "innerBellyRadius": 0.134,
+          "neckInnerRadius": 0.106,
+          "floorY": 0.012,
+          "rimY": 0.16
+        }
+      },
+      "rim-top": {
+        "position": [
+          0,
+          0.16,
+          0
+        ],
+        "socket": {
+          "id": "rim-top",
+          "outerRadius": 0.141,
+          "innerRadius": 0.127
+        }
+      }
+    },
+    "colliders": {
+      "root": {
+        "type": "cylinder",
+        "radius": 0.143,
+        "height": 0.161
+      }
+    },
+    "destructionGroupNames": [
+      "vessel-body"
+    ]
+  }
+}

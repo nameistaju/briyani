@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "crispy-fried-onions",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\briyani\\Crispy Floating Fried Onions.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions",
+  "palette": [
+    "#040100",
+    "#E77717",
+    "#B33507",
+    "#680E03",
+    "#F6BD80"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions\\crispy-fried-onions_albedo.png",
+      "url": "crispy-fried-onions_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions\\crispy-fried-onions_roughness.png",
+      "url": "crispy-fried-onions_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions\\crispy-fried-onions_height.png",
+      "url": "crispy-fried-onions_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions\\crispy-fried-onions_normal.png",
+      "url": "crispy-fried-onions_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\fried-onions\\crispy-fried-onions_ao.png",
+      "url": "crispy-fried-onions_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.4306
+    },
+    "mapStats": {
+      "valueRange": 0.7758,
+      "heightP90Gradient": 0.14305,
+      "roughnessBase": 0.776,
+      "roughnessVariation": 0.176,
+      "normalStrength": 0.324,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#040100",
+      "#E77717",
+      "#B33507",
+      "#680E03",
+      "#F6BD80"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

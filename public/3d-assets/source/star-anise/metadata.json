@@ -1,0 +1,78 @@
+{
+  "glbBytes": 1188688,
+  "meshCount": 2,
+  "triangleCount": 4392,
+  "vertexCount": 13176,
+  "materials": [
+    "star-anise-husk",
+    "star-anise-seed"
+  ],
+  "meshNames": [
+    "anise-carpels",
+    "anise-seeds"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "star-anise-husk",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "star-anise-husk",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "star-anise-husk",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0201,
+      -0.0053,
+      -0.0199
+    ],
+    "max": [
+      0.0193,
+      0.004,
+      0.0191
+    ],
+    "size": [
+      0.0394,
+      0.0092,
+      0.0389
+    ],
+    "center": [
+      -0.0004,
+      -0.0006,
+      -0.0004
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "anise-carpels",
+      "anise-seeds"
+    ],
+    "meshNames": [
+      "anise-carpels",
+      "anise-seeds"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "cylinder",
+        "radius": 0.023,
+        "height": 0.015
+      }
+    },
+    "destructionGroupNames": [
+      "star-anise"
+    ]
+  }
+}

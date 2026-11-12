@@ -1,0 +1,76 @@
+{
+  "glbBytes": 2301076,
+  "meshCount": 2,
+  "triangleCount": 9428,
+  "vertexCount": 28284,
+  "materials": [
+    "golden-birista-onion"
+  ],
+  "meshNames": [
+    "fried-onion-ribbons",
+    "crispy-onion-shreds"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "golden-birista-onion",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "golden-birista-onion",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "golden-birista-onion",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0578,
+      -0.0552,
+      -0.0714
+    ],
+    "max": [
+      0.059,
+      0.0571,
+      0.0546
+    ],
+    "size": [
+      0.1168,
+      0.1124,
+      0.126
+    ],
+    "center": [
+      0.0006,
+      0.001,
+      -0.0084
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "fried-onion-ribbons",
+      "crispy-onion-shreds"
+    ],
+    "meshNames": [
+      "fried-onion-ribbons",
+      "crispy-onion-shreds"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.075
+      }
+    },
+    "destructionGroupNames": [
+      "fried-onions"
+    ]
+  }
+}

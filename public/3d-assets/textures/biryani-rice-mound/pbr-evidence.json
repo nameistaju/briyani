@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "basmati-rice-mound",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\briyani\\Floating Basmati Biryani Rice Mound.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound",
+  "palette": [
+    "#F19C0B",
+    "#040201",
+    "#E0A955",
+    "#F4CF98",
+    "#AB5F0A"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound\\basmati-rice-mound_albedo.png",
+      "url": "basmati-rice-mound_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound\\basmati-rice-mound_roughness.png",
+      "url": "basmati-rice-mound_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound\\basmati-rice-mound_height.png",
+      "url": "basmati-rice-mound_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound\\basmati-rice-mound_normal.png",
+      "url": "basmati-rice-mound_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\biryani-rice-mound\\basmati-rice-mound_ao.png",
+      "url": "basmati-rice-mound_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.4618
+    },
+    "mapStats": {
+      "valueRange": 0.8452,
+      "heightP90Gradient": 0.11982,
+      "roughnessBase": 0.818,
+      "roughnessVariation": 0.159,
+      "normalStrength": 0.297,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#F19C0B",
+      "#040201",
+      "#E0A955",
+      "#F4CF98",
+      "#AB5F0A"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

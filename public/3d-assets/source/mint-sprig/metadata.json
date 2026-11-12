@@ -1,0 +1,79 @@
+{
+  "glbBytes": 1448320,
+  "meshCount": 3,
+  "triangleCount": 5520,
+  "vertexCount": 15587,
+  "materials": [
+    "mint-sprig-stem",
+    "mint-sprig-leaf",
+    "dew-water-droplets"
+  ],
+  "meshNames": [
+    "mint-sprig-stem",
+    "mint-sprig-foliage",
+    "mint-sprig-dew"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "mint-sprig-leaf",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "mint-sprig-leaf",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "mint-sprig-leaf",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.076,
+      -0.0212,
+      -0.0425
+    ],
+    "max": [
+      0.0838,
+      0.0292,
+      0.0519
+    ],
+    "size": [
+      0.1598,
+      0.0504,
+      0.0944
+    ],
+    "center": [
+      0.0039,
+      0.004,
+      0.0047
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "mint-sprig-foliage"
+    ],
+    "meshNames": [
+      "mint-sprig-stem",
+      "mint-sprig-foliage",
+      "mint-sprig-dew"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.075
+      }
+    },
+    "destructionGroupNames": [
+      "mint-sprig"
+    ]
+  }
+}

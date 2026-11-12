@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "lemon-wedge",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Hyper-Realistic Floating Lemon Wedge.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge",
+  "palette": [
+    "#060300",
+    "#EAB310",
+    "#1F1500",
+    "#F8E299",
+    "#453001"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge\\lemon-wedge_albedo.png",
+      "url": "lemon-wedge_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge\\lemon-wedge_roughness.png",
+      "url": "lemon-wedge_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge\\lemon-wedge_height.png",
+      "url": "lemon-wedge_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge\\lemon-wedge_normal.png",
+      "url": "lemon-wedge_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\lemon-wedge\\lemon-wedge_ao.png",
+      "url": "lemon-wedge_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.7409
+    },
+    "mapStats": {
+      "valueRange": 0.8758,
+      "heightP90Gradient": 0.03867,
+      "roughnessBase": 0.699,
+      "roughnessVariation": 0.07,
+      "normalStrength": 0.202,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#060300",
+      "#EAB310",
+      "#1F1500",
+      "#F8E299",
+      "#453001"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

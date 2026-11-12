@@ -1,0 +1,24 @@
+{
+  "generator": "Sitepeel 1.1.0",
+  "title": "Tòpas - bar-topas.ch",
+  "source": "https://bar-topas.ch/",
+  "viewport": {
+    "width": 1280,
+    "height": 585
+  },
+  "elementCount": 1721,
+  "notes": [
+    "Scripts, frames, form values, editable text, data attributes and credential URL parameters are excluded. Review visible page text before sharing."
+  ],
+  "assetsIncluded": true,
+  "unavailableAssets": [
+    {
+      "url": "https://www&google.com/images/zippy_minus_sm.gif",
+      "reason": "Failed to fetch"
+    },
+    {
+      "url": "https://www&google.com/images/zippy_plus_sm.gif",
+      "reason": "Failed to fetch"
+    }
+  ]
+}

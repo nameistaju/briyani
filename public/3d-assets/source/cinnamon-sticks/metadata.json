@@ -1,0 +1,76 @@
+{
+  "glbBytes": 2342108,
+  "meshCount": 2,
+  "triangleCount": 12816,
+  "vertexCount": 38448,
+  "materials": [
+    "cinnamon-bark"
+  ],
+  "meshNames": [
+    "cassia-quills",
+    "bark-crumbs"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "cinnamon-bark",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "cinnamon-bark",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "cinnamon-bark",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0411,
+      -0.0408,
+      -0.0589
+    ],
+    "max": [
+      0.0411,
+      0.0345,
+      0.0641
+    ],
+    "size": [
+      0.0822,
+      0.0753,
+      0.123
+    ],
+    "center": [
+      0,
+      -0.0032,
+      0.0026
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "cassia-quills",
+      "bark-crumbs"
+    ],
+    "meshNames": [
+      "cassia-quills",
+      "bark-crumbs"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.065
+      }
+    },
+    "destructionGroupNames": [
+      "cinnamon-sticks"
+    ]
+  }
+}

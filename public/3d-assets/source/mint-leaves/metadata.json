@@ -1,0 +1,81 @@
+{
+  "glbBytes": 1579044,
+  "meshCount": 3,
+  "triangleCount": 6816,
+  "vertexCount": 19631,
+  "materials": [
+    "mint-stem-purple",
+    "mint-leaf-blade",
+    "dew-water-droplets"
+  ],
+  "meshNames": [
+    "mint-central-stem",
+    "mint-serrated-blades",
+    "mint-dew-drops"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "mint-leaf-blade",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "mint-leaf-blade",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "mint-leaf-blade",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0778,
+      -0.0492,
+      -0.0425
+    ],
+    "max": [
+      0.0828,
+      0.0665,
+      0.0609
+    ],
+    "size": [
+      0.1607,
+      0.1157,
+      0.1034
+    ],
+    "center": [
+      0.0025,
+      0.0086,
+      0.0092
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "mint-central-stem",
+      "mint-serrated-blades",
+      "mint-dew-drops"
+    ],
+    "meshNames": [
+      "mint-central-stem",
+      "mint-serrated-blades",
+      "mint-dew-drops"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.075
+      }
+    },
+    "destructionGroupNames": [
+      "mint-leaves"
+    ]
+  }
+}

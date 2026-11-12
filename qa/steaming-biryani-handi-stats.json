@@ -1,0 +1,55 @@
+{
+  "slug": "steaming-biryani-handi",
+  "category": "ingredients",
+  "reference": "heroSection/Steaming Chicken Biryani in Copper Handi.png",
+  "triangles": 53971,
+  "rawTriangles": 55492,
+  "vertices": 35798,
+  "rawBytes": 11647408,
+  "optBytes": 306064,
+  "budgetKB": 400,
+  "size": [
+    0.28526273369789124,
+    0.33500000834465027,
+    0.2869396358728409
+  ],
+  "center": [
+    -0.00007212162017822266,
+    0.16750000417232513,
+    0.000018112361431121826
+  ],
+  "materials": [
+    "steaming-handi-copper",
+    "PaletteMaterial001",
+    "biryani-rice-bed",
+    "PaletteMaterial002",
+    "PaletteMaterial003",
+    "PaletteMaterial004",
+    "PaletteMaterial005",
+    "PaletteMaterial006"
+  ],
+  "channels": [
+    "map",
+    "normalMap",
+    "roughnessMap",
+    "metalnessMap",
+    "aoMap",
+    "clearcoat",
+    "sheen"
+  ],
+  "sheetPath": "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\steaming-biryani-handi.png",
+  "views": {
+    "teal": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\teal_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\teal_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\teal_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\teal_3.png"
+    ],
+    "maroon": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\maroon_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\maroon_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\maroon_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\steaming-biryani-handi\\maroon_3.png"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "glbBytes": 1686988,
+  "meshCount": 5,
+  "triangleCount": 7280,
+  "vertexCount": 18179,
+  "materials": [
+    "red-chili-skin",
+    "green-chili-skin",
+    "chili-duo-calyx",
+    "chili-seeds",
+    "dew-water-droplets"
+  ],
+  "meshNames": [
+    "red-chili-pod",
+    "green-chili-pod",
+    "chili-duo-calyx",
+    "chili-slice-seeds",
+    "chili-duo-dew"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "red-chili-skin",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "red-chili-skin",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "red-chili-skin",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "map",
+      "material": "green-chili-skin",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "green-chili-skin",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "green-chili-skin",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0588,
+      -0.0395,
+      -0.0161
+    ],
+    "max": [
+      0.0653,
+      0.0425,
+      0.0281
+    ],
+    "size": [
+      0.1241,
+      0.0819,
+      0.0442
+    ],
+    "center": [
+      0.0032,
+      0.0015,
+      0.006
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "red-chili-pod",
+      "green-chili-pod",
+      "chili-duo-calyx",
+      "chili-slice-seeds",
+      "chili-duo-dew"
+    ],
+    "meshNames": [
+      "red-chili-pod",
+      "green-chili-pod",
+      "chili-duo-calyx",
+      "chili-slice-seeds",
+      "chili-duo-dew"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.06
+      }
+    },
+    "destructionGroupNames": [
+      "chili-duo"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "cinnamon-sticks",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Cinnamon Sticks in Dramatic Light.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks",
+  "palette": [
+    "#050100",
+    "#140600",
+    "#AC3F0B",
+    "#F59C54",
+    "#541501"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks\\cinnamon-sticks_albedo.png",
+      "url": "cinnamon-sticks_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks\\cinnamon-sticks_roughness.png",
+      "url": "cinnamon-sticks_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks\\cinnamon-sticks_height.png",
+      "url": "cinnamon-sticks_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks\\cinnamon-sticks_normal.png",
+      "url": "cinnamon-sticks_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cinnamon-sticks\\cinnamon-sticks_ao.png",
+      "url": "cinnamon-sticks_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.7732
+    },
+    "mapStats": {
+      "valueRange": 0.6796,
+      "heightP90Gradient": 0.08902,
+      "roughnessBase": 0.688,
+      "roughnessVariation": 0.15,
+      "normalStrength": 0.261,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#050100",
+      "#140600",
+      "#AC3F0B",
+      "#F59C54",
+      "#541501"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

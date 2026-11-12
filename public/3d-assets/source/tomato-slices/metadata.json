@@ -1,0 +1,82 @@
+{
+  "glbBytes": 621776,
+  "meshCount": 4,
+  "triangleCount": 4584,
+  "vertexCount": 13752,
+  "materials": [
+    "tomato-skin-flesh",
+    "tomato-seeds-gel",
+    "tomato-calyx-green",
+    "dew-water-droplets"
+  ],
+  "meshNames": [
+    "tomato-wedge-body",
+    "tomato-seeds-calyx",
+    "tomato-green-calyx",
+    "tomato-dew"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "tomato-skin-flesh",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "tomato-skin-flesh",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "tomato-skin-flesh",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0337,
+      -0.0385,
+      -0.0133
+    ],
+    "max": [
+      0.0436,
+      0.0411,
+      0.0324
+    ],
+    "size": [
+      0.0773,
+      0.0796,
+      0.0458
+    ],
+    "center": [
+      0.0049,
+      0.0013,
+      0.0095
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "tomato-wedge-body"
+    ],
+    "meshNames": [
+      "tomato-wedge-body",
+      "tomato-seeds-calyx",
+      "tomato-green-calyx",
+      "tomato-dew"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.048
+      }
+    },
+    "destructionGroupNames": [
+      "tomato-slices"
+    ]
+  }
+}

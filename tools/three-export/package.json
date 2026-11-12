@@ -1,0 +1,12 @@
+{
+  "name": "dumbaaz-three-export",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local Three.js builder, GLTFExporter, and multi-angle WebGL preview renderer for img2threejs factories",
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.57.0",
+    "three": "^0.175.0"
+  }
+}

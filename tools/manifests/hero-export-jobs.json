@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "biryani-rice-mound",
+    "factory": "public/3d-assets/source/biryani-rice-mound/createBiryaniRiceMoundModel.ts",
+    "exportName": "createBiryaniRiceMoundModel",
+    "glb": "public/3d-assets/hero/biryani-rice-mound.glb",
+    "preview": "public/3d-assets/previews/biryani-rice-mound.png",
+    "heroRender": "public/3d-assets/previews/biryani-rice-mound-hero.png",
+    "meta": "public/3d-assets/source/biryani-rice-mound/metadata.json",
+    "az": 15,
+    "el": 28
+  },
+  {
+    "slug": "chicken-drumstick",
+    "factory": "public/3d-assets/source/chicken-drumstick/createChickenDrumstickModel.ts",
+    "exportName": "createChickenDrumstickModel",
+    "glb": "public/3d-assets/hero/chicken-drumstick.glb",
+    "preview": "public/3d-assets/previews/chicken-drumstick.png",
+    "heroRender": "public/3d-assets/previews/chicken-drumstick-hero.png",
+    "meta": "public/3d-assets/source/chicken-drumstick/metadata.json",
+    "az": 22,
+    "el": 16
+  },
+  {
+    "slug": "fried-onions",
+    "factory": "public/3d-assets/source/fried-onions/createFriedOnionsModel.ts",
+    "exportName": "createFriedOnionsModel",
+    "glb": "public/3d-assets/hero/fried-onions.glb",
+    "preview": "public/3d-assets/previews/fried-onions.png",
+    "heroRender": "public/3d-assets/previews/fried-onions-hero.png",
+    "meta": "public/3d-assets/source/fried-onions/metadata.json",
+    "az": 12,
+    "el": 18
+  },
+  {
+    "slug": "mint-leaves",
+    "factory": "public/3d-assets/source/mint-leaves/createMintLeavesModel.ts",
+    "exportName": "createMintLeavesModel",
+    "glb": "public/3d-assets/hero/mint-leaves.glb",
+    "preview": "public/3d-assets/previews/mint-leaves.png",
+    "heroRender": "public/3d-assets/previews/mint-leaves-hero.png",
+    "meta": "public/3d-assets/source/mint-leaves/metadata.json",
+    "az": 18,
+    "el": 24
+  }
+]

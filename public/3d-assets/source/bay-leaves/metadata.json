@@ -1,0 +1,76 @@
+{
+  "glbBytes": 1095116,
+  "meshCount": 2,
+  "triangleCount": 1460,
+  "vertexCount": 4380,
+  "materials": [
+    "dried-bay-leaf"
+  ],
+  "meshNames": [
+    "primary-bay-leaf",
+    "bay-midrib-stem"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "dried-bay-leaf",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "dried-bay-leaf",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "dried-bay-leaf",
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0527,
+      -0.0242,
+      -0.0411
+    ],
+    "max": [
+      0.0494,
+      0.0103,
+      0.0512
+    ],
+    "size": [
+      0.1022,
+      0.0345,
+      0.0923
+    ],
+    "center": [
+      -0.0016,
+      -0.0069,
+      0.005
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "primary-bay-leaf",
+      "bay-midrib-stem"
+    ],
+    "meshNames": [
+      "primary-bay-leaf",
+      "bay-midrib-stem"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.055
+      }
+    },
+    "destructionGroupNames": [
+      "bay-leaves"
+    ]
+  }
+}

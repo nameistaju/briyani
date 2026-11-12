@@ -1,0 +1,49 @@
+{
+  "slug": "cardamom-pods",
+  "category": "ingredients",
+  "reference": "heroSection/Floating Cardamom Pods and Seeds.png",
+  "triangles": 19033,
+  "rawTriangles": 19856,
+  "vertices": 22085,
+  "rawBytes": 6618624,
+  "optBytes": 231892,
+  "budgetKB": 400,
+  "size": [
+    0.05000670813024044,
+    0.036202820017933846,
+    0.046194056048989296
+  ],
+  "center": [
+    -0.0014284579083323479,
+    -0.004493617452681065,
+    -0.002373400144279003
+  ],
+  "materials": [
+    "cardamom-fibrous-husk",
+    "cardamom-aromatic-seeds"
+  ],
+  "channels": [
+    "map",
+    "normalMap",
+    "roughnessMap",
+    "metalnessMap",
+    "aoMap",
+    "sheen",
+    "clearcoat"
+  ],
+  "sheetPath": "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\cardamom-pods.png",
+  "views": {
+    "teal": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\teal_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\teal_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\teal_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\teal_3.png"
+    ],
+    "maroon": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\maroon_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\maroon_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\maroon_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\cardamom-pods\\maroon_3.png"
+    ]
+  }
+}

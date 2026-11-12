@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "verdict": "pass",
+  "confidence": 0.86,
+  "estimatedFidelity": 0.86,
+  "targetThreshold": 0.7,
+  "materialId": "cilantro-sprig",
+  "sourceImage": "C:\\Users\\bantu\\Desktop\\Briyani\\heroSection\\Dewy Cilantro Sprig on Black.png",
+  "outDir": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig",
+  "palette": [
+    "#020100",
+    "#5A8403",
+    "#0A0A00",
+    "#A6C138",
+    "#273E03"
+  ],
+  "maps": {
+    "albedo": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig\\cilantro-sprig_albedo.png",
+      "url": "cilantro-sprig_albedo.png",
+      "channel": "albedo",
+      "source": "reference-pixel-extraction"
+    },
+    "roughness": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig\\cilantro-sprig_roughness.png",
+      "url": "cilantro-sprig_roughness.png",
+      "channel": "roughness",
+      "source": "reference-pixel-extraction"
+    },
+    "height": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig\\cilantro-sprig_height.png",
+      "url": "cilantro-sprig_height.png",
+      "channel": "height",
+      "source": "reference-pixel-extraction"
+    },
+    "normal": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig\\cilantro-sprig_normal.png",
+      "url": "cilantro-sprig_normal.png",
+      "channel": "normal",
+      "source": "reference-pixel-extraction"
+    },
+    "ao": {
+      "path": "C:\\Users\\bantu\\Desktop\\Briyani\\public\\3d-assets\\textures\\cilantro-sprig\\cilantro-sprig_ao.png",
+      "url": "cilantro-sprig_ao.png",
+      "channel": "ao",
+      "source": "reference-pixel-extraction"
+    }
+  },
+  "diagnostics": {
+    "sourceWidth": 1536,
+    "sourceHeight": 1024,
+    "mapSize": 512,
+    "cropBBoxPixels": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "mask": {
+      "backgroundColor": "#000000",
+      "backgroundNoise": 0.0,
+      "transparentPixelFraction": 0.0,
+      "foregroundCoverage": 0.6208
+    },
+    "mapStats": {
+      "valueRange": 0.6996,
+      "heightP90Gradient": 0.10745,
+      "roughnessBase": 0.691,
+      "roughnessVariation": 0.169,
+      "normalStrength": 0.282,
+      "blurRadius": 10
+    },
+    "palette": [
+      "#020100",
+      "#5A8403",
+      "#0A0A00",
+      "#A6C138",
+      "#273E03"
+    ]
+  },
+  "warnings": [
+    "single-image inverse rendering cannot prove true physical PBR; confidence is capped"
+  ],
+  "limitation": "single-image PBR extraction is an estimate; 70%+ extraction confidence still needs render screenshot review"
+}

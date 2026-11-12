@@ -1,0 +1,73 @@
+{
+  "glbBytes": 1312084,
+  "meshCount": 1,
+  "triangleCount": 8064,
+  "vertexCount": 24192,
+  "materials": [
+    "crimson-saffron-stigma"
+  ],
+  "meshNames": [
+    "saffron-strands"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "crimson-saffron-stigma",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "channel": "normalMap",
+      "material": "crimson-saffron-stigma",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "crimson-saffron-stigma",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.035,
+      -0.0217,
+      -0.0353
+    ],
+    "max": [
+      0.0263,
+      0.0258,
+      0.0264
+    ],
+    "size": [
+      0.0612,
+      0.0476,
+      0.0617
+    ],
+    "center": [
+      -0.0043,
+      0.002,
+      -0.0044
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "saffron-strands"
+    ],
+    "meshNames": [
+      "saffron-strands"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.035
+      }
+    },
+    "destructionGroupNames": [
+      "saffron-threads"
+    ]
+  }
+}

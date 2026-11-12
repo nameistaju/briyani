@@ -1,0 +1,970 @@
+{
+  "copper-handi": {
+    "reference": "briyani/Hammered Copper Biryani Handi Pot.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        78,
+        29,
+        2
+      ],
+      "hex": "#4e1d02"
+    },
+    "mid": {
+      "rgb": [
+        137,
+        66,
+        2
+      ],
+      "hex": "#894202"
+    },
+    "vibrant": {
+      "rgb": [
+        158,
+        77,
+        2
+      ],
+      "hex": "#9e4d02"
+    },
+    "bright": {
+      "rgb": [
+        215,
+        132,
+        79
+      ],
+      "hex": "#d7844f"
+    },
+    "highlight": {
+      "rgb": [
+        253,
+        192,
+        118
+      ],
+      "hex": "#fdc076"
+    }
+  },
+  "biryani-rice-mound": {
+    "reference": "briyani/Floating Basmati Biryani Rice Mound.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        191,
+        99,
+        2
+      ],
+      "hex": "#bf6302"
+    },
+    "mid": {
+      "rgb": [
+        229,
+        165,
+        12
+      ],
+      "hex": "#e5a50c"
+    },
+    "vibrant": {
+      "rgb": [
+        253,
+        193,
+        2
+      ],
+      "hex": "#fdc102"
+    },
+    "bright": {
+      "rgb": [
+        252,
+        199,
+        88
+      ],
+      "hex": "#fcc758"
+    },
+    "highlight": {
+      "rgb": [
+        250,
+        213,
+        164
+      ],
+      "hex": "#fad5a4"
+    }
+  },
+  "chicken-drumstick": {
+    "reference": "briyani/Spicy Masala Chicken Drumstick.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        67,
+        40,
+        26
+      ],
+      "hex": "#43281a"
+    },
+    "mid": {
+      "rgb": [
+        165,
+        70,
+        40
+      ],
+      "hex": "#a54628"
+    },
+    "vibrant": {
+      "rgb": [
+        243,
+        129,
+        6
+      ],
+      "hex": "#f38106"
+    },
+    "bright": {
+      "rgb": [
+        244,
+        123,
+        2
+      ],
+      "hex": "#f47b02"
+    },
+    "highlight": {
+      "rgb": [
+        246,
+        162,
+        52
+      ],
+      "hex": "#f6a234"
+    }
+  },
+  "fried-onions": {
+    "reference": "briyani/Crispy Floating Fried Onions.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        68,
+        41,
+        1
+      ],
+      "hex": "#442901"
+    },
+    "mid": {
+      "rgb": [
+        207,
+        77,
+        20
+      ],
+      "hex": "#cf4d14"
+    },
+    "vibrant": {
+      "rgb": [
+        246,
+        133,
+        5
+      ],
+      "hex": "#f68505"
+    },
+    "bright": {
+      "rgb": [
+        230,
+        157,
+        68
+      ],
+      "hex": "#e69d44"
+    },
+    "highlight": {
+      "rgb": [
+        248,
+        195,
+        105
+      ],
+      "hex": "#f8c369"
+    }
+  },
+  "mint-leaves": {
+    "reference": "briyani/Dewy Mint Leaves in Motion.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        42,
+        98,
+        1
+      ],
+      "hex": "#2a6201"
+    },
+    "mid": {
+      "rgb": [
+        84,
+        149,
+        2
+      ],
+      "hex": "#549502"
+    },
+    "vibrant": {
+      "rgb": [
+        135,
+        189,
+        3
+      ],
+      "hex": "#87bd03"
+    },
+    "bright": {
+      "rgb": [
+        137,
+        200,
+        25
+      ],
+      "hex": "#89c819"
+    },
+    "highlight": {
+      "rgb": [
+        164,
+        218,
+        66
+      ],
+      "hex": "#a4da42"
+    }
+  },
+  "star-anise": {
+    "reference": "heroSection/Cinematic Floating Star Anise.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        46,
+        14,
+        0
+      ],
+      "hex": "#2e0e00"
+    },
+    "mid": {
+      "rgb": [
+        138,
+        33,
+        0
+      ],
+      "hex": "#8a2100"
+    },
+    "vibrant": {
+      "rgb": [
+        219,
+        90,
+        2
+      ],
+      "hex": "#db5a02"
+    },
+    "bright": {
+      "rgb": [
+        210,
+        106,
+        47
+      ],
+      "hex": "#d26a2f"
+    },
+    "highlight": {
+      "rgb": [
+        247,
+        151,
+        53
+      ],
+      "hex": "#f79735"
+    }
+  },
+  "cinnamon-sticks": {
+    "reference": "heroSection/Cinnamon Sticks in Dramatic Light.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        75,
+        16,
+        1
+      ],
+      "hex": "#4b1001"
+    },
+    "mid": {
+      "rgb": [
+        144,
+        69,
+        15
+      ],
+      "hex": "#90450f"
+    },
+    "vibrant": {
+      "rgb": [
+        199,
+        77,
+        8
+      ],
+      "hex": "#c74d08"
+    },
+    "bright": {
+      "rgb": [
+        240,
+        148,
+        78
+      ],
+      "hex": "#f0944e"
+    },
+    "highlight": {
+      "rgb": [
+        252,
+        180,
+        118
+      ],
+      "hex": "#fcb476"
+    }
+  },
+  "fried-onion-spirals": {
+    "reference": "heroSection/Crispy Fried Onion Spirals in Flight.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        43,
+        13,
+        0
+      ],
+      "hex": "#2b0d00"
+    },
+    "mid": {
+      "rgb": [
+        178,
+        44,
+        3
+      ],
+      "hex": "#b22c03"
+    },
+    "vibrant": {
+      "rgb": [
+        250,
+        138,
+        3
+      ],
+      "hex": "#fa8a03"
+    },
+    "bright": {
+      "rgb": [
+        213,
+        137,
+        107
+      ],
+      "hex": "#d5896b"
+    },
+    "highlight": {
+      "rgb": [
+        251,
+        183,
+        95
+      ],
+      "hex": "#fbb75f"
+    }
+  },
+  "crispy-chicken-drumstick": {
+    "reference": "heroSection/Crispy Spiced Chicken Drumstick.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        76,
+        10,
+        0
+      ],
+      "hex": "#4c0a00"
+    },
+    "mid": {
+      "rgb": [
+        142,
+        59,
+        46
+      ],
+      "hex": "#8e3b2e"
+    },
+    "vibrant": {
+      "rgb": [
+        244,
+        136,
+        4
+      ],
+      "hex": "#f48804"
+    },
+    "bright": {
+      "rgb": [
+        231,
+        127,
+        12
+      ],
+      "hex": "#e77f0c"
+    },
+    "highlight": {
+      "rgb": [
+        240,
+        171,
+        127
+      ],
+      "hex": "#f0ab7f"
+    }
+  },
+  "cilantro-sprig": {
+    "reference": "heroSection/Dewy Cilantro Sprig on Black.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        69,
+        84,
+        7
+      ],
+      "hex": "#455407"
+    },
+    "mid": {
+      "rgb": [
+        114,
+        126,
+        39
+      ],
+      "hex": "#727e27"
+    },
+    "vibrant": {
+      "rgb": [
+        127,
+        163,
+        1
+      ],
+      "hex": "#7fa301"
+    },
+    "bright": {
+      "rgb": [
+        152,
+        184,
+        18
+      ],
+      "hex": "#98b812"
+    },
+    "highlight": {
+      "rgb": [
+        177,
+        201,
+        76
+      ],
+      "hex": "#b1c94c"
+    }
+  },
+  "tomato-slices": {
+    "reference": "heroSection/Dramatic Floating Tomato Slices.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        176,
+        7,
+        1
+      ],
+      "hex": "#b00701"
+    },
+    "mid": {
+      "rgb": [
+        178,
+        69,
+        43
+      ],
+      "hex": "#b2452b"
+    },
+    "vibrant": {
+      "rgb": [
+        235,
+        83,
+        2
+      ],
+      "hex": "#eb5302"
+    },
+    "bright": {
+      "rgb": [
+        251,
+        124,
+        65
+      ],
+      "hex": "#fb7c41"
+    },
+    "highlight": {
+      "rgb": [
+        248,
+        163,
+        137
+      ],
+      "hex": "#f8a389"
+    }
+  },
+  "basmati-rice-cluster": {
+    "reference": "heroSection/Floating Basmati Rice Grain Cluster.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        135,
+        99,
+        56
+      ],
+      "hex": "#876338"
+    },
+    "mid": {
+      "rgb": [
+        215,
+        187,
+        156
+      ],
+      "hex": "#d7bb9c"
+    },
+    "vibrant": {
+      "rgb": [
+        199,
+        127,
+        26
+      ],
+      "hex": "#c77f1a"
+    },
+    "bright": {
+      "rgb": [
+        235,
+        223,
+        214
+      ],
+      "hex": "#ebdfd6"
+    },
+    "highlight": {
+      "rgb": [
+        247,
+        240,
+        236
+      ],
+      "hex": "#f7f0ec"
+    }
+  },
+  "bay-leaves": {
+    "reference": "heroSection/Floating Bay Leaves with Golden Veins.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        89,
+        73,
+        6
+      ],
+      "hex": "#594906"
+    },
+    "mid": {
+      "rgb": [
+        155,
+        112,
+        14
+      ],
+      "hex": "#9b700e"
+    },
+    "vibrant": {
+      "rgb": [
+        130,
+        92,
+        2
+      ],
+      "hex": "#825c02"
+    },
+    "bright": {
+      "rgb": [
+        201,
+        160,
+        59
+      ],
+      "hex": "#c9a03b"
+    },
+    "highlight": {
+      "rgb": [
+        226,
+        186,
+        87
+      ],
+      "hex": "#e2ba57"
+    }
+  },
+  "cardamom-pods": {
+    "reference": "heroSection/Floating Cardamom Pods and Seeds.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        56,
+        25,
+        0
+      ],
+      "hex": "#381900"
+    },
+    "mid": {
+      "rgb": [
+        95,
+        86,
+        4
+      ],
+      "hex": "#5f5604"
+    },
+    "vibrant": {
+      "rgb": [
+        192,
+        150,
+        4
+      ],
+      "hex": "#c09604"
+    },
+    "bright": {
+      "rgb": [
+        212,
+        194,
+        49
+      ],
+      "hex": "#d4c231"
+    },
+    "highlight": {
+      "rgb": [
+        235,
+        224,
+        115
+      ],
+      "hex": "#ebe073"
+    }
+  },
+  "cloves": {
+    "reference": "heroSection/Floating Cloves in Golden Light.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        55,
+        17,
+        1
+      ],
+      "hex": "#371101"
+    },
+    "mid": {
+      "rgb": [
+        120,
+        53,
+        24
+      ],
+      "hex": "#783518"
+    },
+    "vibrant": {
+      "rgb": [
+        189,
+        63,
+        5
+      ],
+      "hex": "#bd3f05"
+    },
+    "bright": {
+      "rgb": [
+        236,
+        119,
+        32
+      ],
+      "hex": "#ec7720"
+    },
+    "highlight": {
+      "rgb": [
+        253,
+        172,
+        73
+      ],
+      "hex": "#fdac49"
+    }
+  },
+  "red-onion-rings": {
+    "reference": "heroSection/Floating Red Onion Rings in Motion.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        156,
+        5,
+        75
+      ],
+      "hex": "#9c054b"
+    },
+    "mid": {
+      "rgb": [
+        222,
+        79,
+        166
+      ],
+      "hex": "#de4fa6"
+    },
+    "vibrant": {
+      "rgb": [
+        184,
+        3,
+        92
+      ],
+      "hex": "#b8035c"
+    },
+    "bright": {
+      "rgb": [
+        232,
+        187,
+        209
+      ],
+      "hex": "#e8bbd1"
+    },
+    "highlight": {
+      "rgb": [
+        246,
+        215,
+        235
+      ],
+      "hex": "#f6d7eb"
+    }
+  },
+  "mint-sprig": {
+    "reference": "heroSection/Glistening Fresh Mint Sprig.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        23,
+        31,
+        0
+      ],
+      "hex": "#171f00"
+    },
+    "mid": {
+      "rgb": [
+        67,
+        123,
+        1
+      ],
+      "hex": "#437b01"
+    },
+    "vibrant": {
+      "rgb": [
+        146,
+        192,
+        1
+      ],
+      "hex": "#92c001"
+    },
+    "bright": {
+      "rgb": [
+        126,
+        176,
+        1
+      ],
+      "hex": "#7eb001"
+    },
+    "highlight": {
+      "rgb": [
+        156,
+        193,
+        90
+      ],
+      "hex": "#9cc15a"
+    }
+  },
+  "chili-duo": {
+    "reference": "heroSection/Glossy Floating Chili Duo.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        29,
+        48,
+        1
+      ],
+      "hex": "#1d3001"
+    },
+    "mid": {
+      "rgb": [
+        226,
+        10,
+        6
+      ],
+      "hex": "#e20a06"
+    },
+    "vibrant": {
+      "rgb": [
+        142,
+        178,
+        3
+      ],
+      "hex": "#8eb203"
+    },
+    "bright": {
+      "rgb": [
+        231,
+        141,
+        77
+      ],
+      "hex": "#e78d4d"
+    },
+    "highlight": {
+      "rgb": [
+        214,
+        219,
+        103
+      ],
+      "hex": "#d6db67"
+    }
+  },
+  "green-chili": {
+    "reference": "heroSection/Glossy Green Chili Pepper with Droplets.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        38,
+        75,
+        1
+      ],
+      "hex": "#264b01"
+    },
+    "mid": {
+      "rgb": [
+        78,
+        120,
+        1
+      ],
+      "hex": "#4e7801"
+    },
+    "vibrant": {
+      "rgb": [
+        114,
+        155,
+        0
+      ],
+      "hex": "#729b00"
+    },
+    "bright": {
+      "rgb": [
+        162,
+        186,
+        66
+      ],
+      "hex": "#a2ba42"
+    },
+    "highlight": {
+      "rgb": [
+        229,
+        237,
+        189
+      ],
+      "hex": "#e5edbd"
+    }
+  },
+  "lemon-wedge": {
+    "reference": "heroSection/Hyper-Realistic Floating Lemon Wedge.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        36,
+        24,
+        0
+      ],
+      "hex": "#241800"
+    },
+    "mid": {
+      "rgb": [
+        235,
+        177,
+        7
+      ],
+      "hex": "#ebb107"
+    },
+    "vibrant": {
+      "rgb": [
+        250,
+        201,
+        2
+      ],
+      "hex": "#fac902"
+    },
+    "bright": {
+      "rgb": [
+        248,
+        212,
+        81
+      ],
+      "hex": "#f8d451"
+    },
+    "highlight": {
+      "rgb": [
+        250,
+        230,
+        151
+      ],
+      "hex": "#fae697"
+    }
+  },
+  "steaming-biryani-handi": {
+    "reference": "heroSection/Steaming Chicken Biryani in Copper Handi.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        91,
+        24,
+        0
+      ],
+      "hex": "#5b1800"
+    },
+    "mid": {
+      "rgb": [
+        174,
+        62,
+        10
+      ],
+      "hex": "#ae3e0a"
+    },
+    "vibrant": {
+      "rgb": [
+        243,
+        165,
+        3
+      ],
+      "hex": "#f3a503"
+    },
+    "bright": {
+      "rgb": [
+        230,
+        151,
+        87
+      ],
+      "hex": "#e69757"
+    },
+    "highlight": {
+      "rgb": [
+        252,
+        197,
+        119
+      ],
+      "hex": "#fcc577"
+    }
+  },
+  "saffron-threads": {
+    "reference": "heroSection/Vivid Saffron Threads on Dark Background.png",
+    "bgType": "black",
+    "dark": {
+      "rgb": [
+        49,
+        15,
+        0
+      ],
+      "hex": "#310f00"
+    },
+    "mid": {
+      "rgb": [
+        130,
+        19,
+        16
+      ],
+      "hex": "#821310"
+    },
+    "vibrant": {
+      "rgb": [
+        243,
+        122,
+        6
+      ],
+      "hex": "#f37a06"
+    },
+    "bright": {
+      "rgb": [
+        217,
+        50,
+        24
+      ],
+      "hex": "#d93218"
+    },
+    "highlight": {
+      "rgb": [
+        224,
+        98,
+        46
+      ],
+      "hex": "#e0622e"
+    }
+  }
+}

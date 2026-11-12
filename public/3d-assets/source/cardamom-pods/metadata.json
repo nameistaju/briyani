@@ -1,0 +1,95 @@
+{
+  "glbBytes": 1484996,
+  "meshCount": 2,
+  "triangleCount": 3952,
+  "vertexCount": 11856,
+  "materials": [
+    "cardamom-green-husk",
+    "cardamom-black-seed"
+  ],
+  "meshNames": [
+    "whole-cardamom-pod",
+    "split-pod-seeds"
+  ],
+  "textures": [
+    {
+      "channel": "map",
+      "material": "cardamom-green-husk",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "normalMap",
+      "material": "cardamom-green-husk",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "cardamom-green-husk",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "channel": "map",
+      "material": "cardamom-black-seed",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "channel": "normalMap",
+      "material": "cardamom-black-seed",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "channel": "roughnessMap",
+      "material": "cardamom-black-seed",
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "boundingBox": {
+    "min": [
+      -0.0246,
+      -0.0195,
+      -0.0061
+    ],
+    "max": [
+      0.0261,
+      0.0144,
+      0.014
+    ],
+    "size": [
+      0.0506,
+      0.0338,
+      0.0201
+    ],
+    "center": [
+      0.0007,
+      -0.0026,
+      0.004
+    ]
+  },
+  "sculptRuntime": {
+    "nodeNames": [
+      "root",
+      "whole-cardamom-pod",
+      "split-pod-seeds"
+    ],
+    "meshNames": [
+      "whole-cardamom-pod",
+      "split-pod-seeds"
+    ],
+    "sockets": {},
+    "colliders": {
+      "root": {
+        "type": "sphere",
+        "radius": 0.035
+      }
+    },
+    "destructionGroupNames": [
+      "cardamom-pods"
+    ]
+  }
+}

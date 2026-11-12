@@ -1,0 +1,4219 @@
+{
+  "targetName": "Hammered Copper Biryani Handi",
+  "targetId": "hammered-copper-biryani-handi",
+  "schemaVersion": "2.1",
+  "terminologyProfile": {
+    "domain": "real-time procedural Three.js asset",
+    "geometryTerms": [
+      "silhouette",
+      "topology",
+      "primitive",
+      "bevel",
+      "chamfer",
+      "taper",
+      "bend",
+      "boolean cut",
+      "edge loop",
+      "surface normal",
+      "displacement"
+    ],
+    "materialTerms": [
+      "albedo",
+      "baseColor",
+      "roughness",
+      "metalness",
+      "normal map",
+      "bump map",
+      "ambient occlusion",
+      "cavity dirt",
+      "edge wear",
+      "clearcoat"
+    ],
+    "lightingTerms": [
+      "key light",
+      "fill light",
+      "rim light",
+      "HDRI/environment reflection",
+      "contact shadow"
+    ],
+    "descriptionRule": "Use measurable 3D graphics terms. Avoid vague words unless they are paired with concrete geometry/material/shader parameters."
+  },
+  "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png",
+  "referenceCamera": {
+    "solved": false,
+    "fovDegrees": 40.0,
+    "aspect": 1.0,
+    "orientation": {
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "roll": 0.0
+    },
+    "positionHint": [
+      0.0,
+      0.0,
+      3.0
+    ],
+    "note": "For likeness work, solve the reference camera (forge/stage1_intake/solve_camera_pose.py) so the review render aligns with the photo and the reference can be projected. Confirm by overlay review."
+  },
+  "suitability": "pass",
+  "scores": {
+    "object_isolation": 3,
+    "silhouette_readability": 3,
+    "depth_inference": 3,
+    "primitive_decomposition": 3,
+    "material_procedurality": 3,
+    "occlusion_risk": 1,
+    "interaction_fit": 3
+  },
+  "preSpecAssessment": {
+    "objectClass": {
+      "primaryType": "hammered copper biryani handi pot",
+      "primaryDomain": "object",
+      "formLanguage": [
+        "rotational-lathe",
+        "organic-hammered-relief"
+      ],
+      "structureKind": [
+        "hollow-vessel",
+        "rolled-rim-collar"
+      ],
+      "motionPotential": [
+        "translate",
+        "rotate",
+        "fill-interior-cavity"
+      ],
+      "materialFamilies": [
+        "hammered-copper",
+        "brushed-brass-interior"
+      ],
+      "notes": "Radial-symmetric traditional Indian dum biryani cooking vessel with hammered exterior copper body and warm golden-brass brushed interior."
+    },
+    "complexity": {
+      "tier": "complex",
+      "scores": {
+        "silhouetteComplexity": 2,
+        "componentCount": 2,
+        "hierarchyDepth": 2,
+        "repetitionDensity": 3,
+        "materialLayerCount": 3,
+        "localDetailDensity": 3,
+        "occlusionRisk": 1,
+        "actionReadinessNeed": 3
+      },
+      "estimatedCounts": {
+        "macroComponents": 3,
+        "mesoComponents": 8,
+        "microFeatureGroups": 5,
+        "materialLayers": 3,
+        "repetitionSystems": 1
+      },
+      "reasoning": [
+        "Assess 'Hammered Copper Biryani Handi' from the image before finalizing componentTree/materials."
+      ]
+    },
+    "specDepthDecision": {
+      "requiredDepth": "complex",
+      "minimumComponentLevels": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "needsRepetitionSystems": true,
+      "needsMaterialLocalOverrides": true,
+      "needsMultipleReviewViews": true,
+      "needsActionReadyHierarchy": true,
+      "rationale": "Choose simple/moderate/complex/ultra-complex from observed structure, not from a hardcoded domain."
+    },
+    "unknownsToResolveBeforeImplementation": [],
+    "detailInventory": {
+      "scanMethod": "component-zones",
+      "targetMinDetails": 10,
+      "note": "Enumerate every identity-defining small detail before authoring the spec. Each detail must map to a component.localFeatures entry or material.localOverrides entry, never prose only. Use forge/stage1_intake/build_detail_inventory.py to scan zones.",
+      "details": [
+        {
+          "id": "handi-detail-1",
+          "kind": "contour",
+          "description": "Planished circular hammered copper facets across exterior belly",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "copper-belly-shell"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-2",
+          "kind": "bevel",
+          "description": "Rolled outward brass-copper rim lip bead",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "rolled-rim-lip"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-3",
+          "kind": "groove",
+          "description": "Concave neck collar crease below flared rim",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "flared-neck-collar"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-4",
+          "kind": "gloss",
+          "description": "Specular brushed metal interior wall highlights",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "brass-interior"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-5",
+          "kind": "stain",
+          "description": "Dark oxidized copper patina in hammered dimple valleys and lower heat-patina base",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "hammered-copper"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-6",
+          "kind": "scratch",
+          "description": "Concentric radial lathe-polishing streaks inside bowl",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "brass-interior"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-7",
+          "kind": "bevel",
+          "description": "Rounded foot transition at base bottom",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "vessel-base-foot"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-8",
+          "kind": "seam",
+          "description": "Interior-to-rim transition fillet",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "component.localFeatures",
+            "ref": "interior-bowl-liner"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-9",
+          "kind": "gloss",
+          "description": "Specular highlight band on top rolled rim edge",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "rim-brass"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        },
+        {
+          "id": "handi-detail-10",
+          "kind": "stain",
+          "description": "Subtle soot/heat darkening toward bottom curvature",
+          "region": {
+            "x": 0.2,
+            "y": 0.2,
+            "width": 0.6,
+            "height": 0.6,
+            "units": "normalized"
+          },
+          "scale": "meso",
+          "affects": "silhouette-and-shading",
+          "mapsTo": {
+            "type": "material.localOverrides",
+            "ref": "hammered-copper"
+          },
+          "evidenceRef": "full-object",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "anatomy": {
+      "applies": false,
+      "styleHeads": 0.0,
+      "proportions": {
+        "headUnit": 0.0,
+        "torso": 0.0,
+        "legs": 0.0,
+        "shoulderWidth": 0.0,
+        "hipWidth": 0.0
+      },
+      "pose": {
+        "type": "unassessed",
+        "jointAngles": {}
+      },
+      "faceLandmarks": {
+        "eyeLine": 0.0,
+        "eyeSpacing": 0.0,
+        "noseBase": 0.0,
+        "mouthLine": 0.0,
+        "hairline": 0.0
+      },
+      "features": [],
+      "confidence": 0.0,
+      "note": "Only meaningful when objectClass.primaryDomain is character or hybrid. Set applies=true and fill from forge/stage1_intake/extract_landmarks.py. See grimoire/character/reconstruction.md and grimoire/character/likeness_maximization.md."
+    },
+    "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png"
+  },
+  "qualityContract": {
+    "qualityBar": "complex",
+    "definitionOfDone": [
+      "The rendered model matches the reference silhouette, primary proportions, visible component hierarchy, material response, and most recognizable local features for the selected fidelity tier."
+    ],
+    "minimumSpecDepth": {
+      "macroComponents": 3,
+      "mesoComponents": 8,
+      "microFeatureGroups": 5,
+      "materialLayers": 3,
+      "repetitionSystems": 1,
+      "reviewViewpoints": 4
+    },
+    "featureGroups": [
+      {
+        "id": "overall-silhouette",
+        "name": "Overall silhouette and proportions",
+        "required": true,
+        "qualityCriteria": [
+          "Bounding shape, dominant curves, negative spaces, and scale relationships are explicitly described."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model reads as a generic placeholder instead of the reference object",
+          "major proportions are guessed without evidence"
+        ]
+      },
+      {
+        "id": "primary-structure",
+        "name": "Primary structure and hierarchy",
+        "required": true,
+        "qualityCriteria": [
+          "Major parts, joints, seams, contact points, and parent-child relationships are named before code generation."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "large visible parts are merged into one mesh",
+          "component hierarchy is too shallow for the observed complexity"
+        ]
+      },
+      {
+        "id": "attachment-joint-correctness",
+        "name": "Attachment and joint correctness",
+        "required": true,
+        "qualityCriteria": [
+          "Every visible child appendage, branch, limb, handle, connector, tube, cable, horn, wing, leg, or hinged part has an attachment contract with parent socket, localStart/localEnd, contact type, embed/overlap, and gap tolerance."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "child part root floats away from the parent",
+          "branch/limb/tube is centered in space instead of pivoting from its root",
+          "parent-child transform mixes world and local coordinates"
+        ]
+      },
+      {
+        "id": "surface-material-response",
+        "name": "Surface material response",
+        "required": true,
+        "qualityCriteria": [
+          "Albedo zones, roughness, normal/bump/displacement intent, cavity dirt, edge wear, and local overrides are specified where visible.",
+          "Important materials define independent albedo, roughness, height/normal, and AO responses instead of reusing one texture for unrelated PBR channels.",
+          "Surface response is decomposed into macro, meso, and micro frequency bands with scale and amplitude tied to object scale."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "surface looks like flat plastic",
+          "local material variation is missing or not tied to image evidence"
+        ]
+      },
+      {
+        "id": "reference-lookdev",
+        "name": "Reference color, material, and lighting response",
+        "required": true,
+        "qualityCriteria": [
+          "Material-pass names the reference-derived albedo palette, roughness variation, tactile normal/bump/displacement response, and local masks.",
+          "When a source image is available, run reference PBR extraction and require confidence >= 0.7 before treating maps as implementation-ready.",
+          "Lighting-pass names key/fill/rim or environment light, exposure, tone mapping, background, and contact shadow behavior.",
+          "Neutral, grazing-angle, and reference-matched renders prove that surface relief survives relighting and is not painted into albedo."
+        ],
+        "evidenceRefs": [
+          "full-object"
+        ],
+        "failureModes": [
+          "model has acceptable shape but reads as flat shaded or plastic",
+          "colors are a generic average instead of reference-observed local color zones",
+          "lighting is evenly ambient and cannot reproduce the source value range"
+        ]
+      }
+    ],
+    "visualDeltaChecks": [
+      "silhouette and negative-space delta",
+      "component hierarchy depth delta",
+      "repetition density and distribution delta",
+      "material albedo/roughness/normal response delta",
+      "local feature placement and scale delta"
+    ],
+    "antiShallowSpecRules": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md).",
+      "Adjacent components must overlap by at least 0.02 world units at shared seams (source: grimoire/build/geometry_patterns.md).",
+      "Raised or recessed relief and fasteners must be geometry, instanced micro-parts, or displacement; a map alone is an approximation (source: grimoire/build/geometry_patterns.md)."
+    ],
+    "mustNotDo": [
+      "Do not proceed to code if qualityContract.qualityBar is unassessed.",
+      "Do not proceed to code if the spec only contains a root component for a moderate or complex object.",
+      "Do not proceed to code if required featureGroups are not represented by componentTree, materials, or repetitionSystems.",
+      "Do not proceed to code if visible local features are described only in prose and not attached to components/materials/evidenceRefs.",
+      "Do not proceed past structural-pass if attached child parts lack attachment.parentSocket, localStart, localEnd, embedDepth/overlap, and gapTolerance.",
+      "Do not pass material look-dev when albedo is reused as roughness, height, normal, or AO.",
+      "Do not pass material look-dev without macro, meso, and micro surface frequency bands for close-up materials.",
+      "Do not pass reference-fidelity material look-dev from a source image without usable referencePbr maps or an explicit documented limitation.",
+      "Do not patch a spec with extracted PBR maps when extraction confidence is below the target threshold unless the user explicitly accepts lower fidelity.",
+      "Do not place adjacent separate-geometry parts below 0.02 world-unit seam overlap (source: grimoire/build/geometry_patterns.md).",
+      "Do not satisfy raised or recessed relief, fasteners, or grip structure with a map alone when the feature affects form; use geometry or displacement (source: grimoire/build/geometry_patterns.md).",
+      "Adjacent components must overlap by at least 0.02 world units at shared seams (source: grimoire/build/geometry_patterns.md).",
+      "Raised or recessed relief and fasteners must be geometry, instanced micro-parts, or displacement; a map alone is an approximation (source: grimoire/build/geometry_patterns.md)."
+    ]
+  },
+  "qualityTargets": {
+    "targetFidelity": 0.7,
+    "mustMatch": [
+      "macro silhouette and proportions",
+      "primary material albedo/roughness response",
+      "reference-derived PBR material response at or above 0.7 confidence when source pixels are usable",
+      "most recognizable local features"
+    ],
+    "niceToHave": [
+      "micro scratches, stains, chips, and dirt masks",
+      "secondary lighting match"
+    ],
+    "fpsTarget": 60,
+    "reviewViewpoints": [
+      "front",
+      "three-quarter",
+      "side",
+      "thickness-axis",
+      "long-axis"
+    ]
+  },
+  "selfCorrectLoop": {
+    "enabled": true,
+    "visualAcceptance": {
+      "reviewer": "ai-vision",
+      "threshold": 0.7,
+      "comparisonArtifactRequired": true,
+      "layerScoresRequired": true,
+      "codePixelDiffIsAcceptanceAuthority": false,
+      "scoringRule": "AI vision must inspect a side-by-side reference/render sheet and score the current pass from 0 to 1. Pixel-diff code may assist diagnostics but cannot approve a pass.",
+      "requiredLayerScores": [
+        "silhouetteProportion",
+        "componentStructure",
+        "formDetail",
+        "materialSurface",
+        "lightingCamera"
+      ],
+      "featureReviewPolicy": {
+        "enabled": true,
+        "reviewUnit": "semantic-subsystem",
+        "maxCriticalFeaturesPerPass": 5,
+        "maxImportantFeaturesPerPass": 3,
+        "criticalDefaultThreshold": 0.8,
+        "importantAverageThreshold": 0.65,
+        "adaptiveEscalation": true,
+        "singleImagePairOnly": true,
+        "selectionRule": "Choose only the most visually salient, identity-defining, user-prioritized, or high-risk semantic systems. Group repeated parts instead of reviewing every mesh. AI vision scores every selected feature from the same full reference/render pair."
+      }
+    },
+    "reviewAfterPasses": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "surface-pass",
+      "lighting-pass",
+      "interaction-pass",
+      "optimization-pass"
+    ],
+    "allowedActions": [
+      "continue",
+      "refine-spec",
+      "refine-code",
+      "request-input",
+      "stop"
+    ],
+    "specRefineTriggers": [
+      "missing component",
+      "wrong primitive family",
+      "wrong proportions",
+      "material layer under-specified",
+      "local feature not traceable to viewEvidence",
+      "reference ambiguity discovered during implementation"
+    ],
+    "codeRefineTriggers": [
+      "spec is adequate but generated geometry/material does not match",
+      "browser render differs from reference",
+      "performance budget exceeded",
+      "lighting hides geometry or material response"
+    ],
+    "stopCriteria": [
+      "target fidelity reached or user accepts current approximation",
+      "remaining gaps require new reference images or manual art"
+    ],
+    "screenshotPolicy": {
+      "requiredForPasses": [
+        "blockout",
+        "structural-pass",
+        "form-refinement",
+        "material-pass",
+        "surface-pass",
+        "lighting-pass",
+        "interaction-pass"
+      ],
+      "preferredCapture": "in-app-browser-screenshot",
+      "fallbackCapture": "user-supplied-screenshot-path",
+      "minimumEvidence": "Each visual pass needs a reference image, rendered screenshot, side-by-side comparison sheet, AI vision score, layer scores, and critique before choosing continue.",
+      "reviewPairRule": "Compare the same camera/viewpoint whenever possible; do not judge a front reference against a random render angle.",
+      "acceptanceAuthority": "AI vision review of the comparison sheet. Code-generated pixel similarity is not sufficient evidence."
+    }
+  },
+  "featureReviewTargets": [
+    {
+      "id": "handi-lathe-silhouette",
+      "name": "Bulbous Belly and Flared Rolled Rim Silhouette",
+      "tier": "critical",
+      "passIds": [
+        "blockout",
+        "structural-pass"
+      ],
+      "minimumScore": 0.85,
+      "mustPass": true,
+      "componentRefs": [
+        "root",
+        "copper-belly-shell",
+        "rolled-rim-lip"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    },
+    {
+      "id": "handi-hollow-bowl",
+      "name": "Hollow Interior Bowl for Biryani Assembly",
+      "tier": "critical",
+      "passIds": [
+        "structural-pass",
+        "form-refinement"
+      ],
+      "minimumScore": 0.85,
+      "mustPass": true,
+      "componentRefs": [
+        "interior-bowl-liner"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    },
+    {
+      "id": "handi-hammered-copper-pbr",
+      "name": "Hammered Dimple Relief and Copper/Brass PBR Contrast",
+      "tier": "critical",
+      "passIds": [
+        "material-pass",
+        "surface-pass"
+      ],
+      "minimumScore": 0.8,
+      "mustPass": true,
+      "componentRefs": [
+        "copper-belly-shell",
+        "interior-bowl-liner"
+      ],
+      "evidenceRefs": [
+        "full-object"
+      ]
+    }
+  ],
+  "sculptPipeline": {
+    "passGateMode": "locked-sequential",
+    "passOrder": [
+      "blockout",
+      "structural-pass",
+      "form-refinement",
+      "material-pass",
+      "surface-pass",
+      "lighting-pass",
+      "interaction-pass",
+      "optimization-pass"
+    ],
+    "currentPass": "blockout",
+    "completedPasses": [],
+    "lastCompletedPass": "",
+    "blockedReason": "blockout requires a browser screenshot and self-correction review before structural-pass unlocks",
+    "nextRequiredEvidence": [
+      "blockout browser render screenshot from your agent's browser/screenshot tool",
+      "side-by-side reference/render comparison sheet",
+      "AI vision score >= 0.7 with layer scores and mismatch critique",
+      "critical semantic feature scores from the same image pair meeting their individual thresholds",
+      "reviewHistory entry for blockout with action=continue"
+    ]
+  },
+  "lookDevTargets": {
+    "qualityPriority": "reference-fidelity",
+    "materialPass": {
+      "albedoPaletteRequired": true,
+      "roughnessVariationRequired": true,
+      "normalOrBumpRequired": true,
+      "localOverridesRequired": true,
+      "minimumTextureResolution": 1024,
+      "preferredTextureResolution": 2048,
+      "independentMapChannels": [
+        "albedo",
+        "roughness",
+        "height",
+        "normal",
+        "ambient-occlusion"
+      ],
+      "requiredSurfaceFrequencyBands": [
+        "macro",
+        "meso",
+        "micro"
+      ],
+      "geometryReliefRequiredWhenSilhouetteAffected": true,
+      "referencePbrExtraction": {
+        "requiredWhenSourceImagePresent": true,
+        "targetThreshold": 0.7,
+        "stopOnLowConfidence": true,
+        "script": "forge/stage1_intake/extract_pbr_evidence.py",
+        "acceptedLimitation": "single-image extraction is reference-derived inference, not exact photogrammetry"
+      },
+      "mustAvoid": [
+        "single flat albedo per material",
+        "uniform roughness",
+        "albedo texture reused as roughness/height/normal/AO",
+        "single-frequency random noise",
+        "plastic-looking smooth bark, stone, cloth, foliage, or aged material",
+        "local color/detail described only in prose without material masks",
+        "claiming exact PBR recovery when confidence is below the target threshold"
+      ]
+    },
+    "lightingPass": {
+      "requiredTerms": [
+        "key light",
+        "fill light",
+        "rim or environment light",
+        "exposure",
+        "tone mapping",
+        "background",
+        "contact shadow"
+      ],
+      "mustAvoid": [
+        "ambient-only lighting",
+        "flat value range",
+        "missing contact shadow",
+        "reference lighting copied without separating material readability"
+      ]
+    },
+    "screenshotReview": [
+      "Compare albedo palette and local color zones.",
+      "Compare roughness/normal/bump response under light.",
+      "Compare cavity dirt, edge wear, stains, moss, scratches, or other local masks.",
+      "Compare key/fill/rim structure, exposure, tone mapping, background, and contact shadows.",
+      "Capture a neutral-light render to verify material readability without reference lighting.",
+      "Capture a grazing-light close-up to expose flat normals, uniform roughness, tiling, and plastic highlights.",
+      "Capture a reference-matched render from the same camera framing as the source."
+    ]
+  },
+  "actionReadiness": {
+    "contract": "Every macro/meso component should be generated as a stable named Object3D pivot node with a mesh child, action metadata, optional sockets, collider proxy, and destruction metadata.",
+    "defaultRigType": "action-ready-static-rig",
+    "rootMotionNode": "root",
+    "requiredComponentFields": [
+      "id",
+      "parent",
+      "transform",
+      "attachment for child appendages, connectors, limbs, tubes, handles, legs, horns, wings, branches, or cables",
+      "actionProfile.animationRole",
+      "actionProfile.pivot",
+      "actionProfile.collider",
+      "actionProfile.destruction"
+    ],
+    "transformChannels": [
+      "translate",
+      "rotate",
+      "scale",
+      "bend",
+      "twist",
+      "detach",
+      "visibility",
+      "material-state"
+    ],
+    "authoringRules": [
+      "Do not collapse independently movable parts into one mesh.",
+      "Put transforms on component pivot groups, not only on raw meshes.",
+      "For attached child parts, put the pivot at the semantic root/socket and build visible geometry from localStart to localEnd.",
+      "Represent hinge, socket, detachable, and breakable intent even when no animation is implemented yet.",
+      "Use simplified collider proxies for runtime physics instead of visual mesh colliders by default."
+    ],
+    "destructionPolicy": {
+      "defaultBreakable": false,
+      "fractureGroupNaming": "Use stable semantic names such as body-shell, left-hinge, glass-panel, branch-segment.",
+      "debrisStrategy": "Prefer detachable component groups and a small number of procedural fragments over random mesh explosion."
+    }
+  },
+  "assumptions": [],
+  "coordinateFrame": {
+    "front": "+Z",
+    "up": "+Y",
+    "scaleReference": "1 world unit = 1 meter (handi outer diameter 0.28m, height 0.16m, bottom resting at y=0)"
+  },
+  "silhouette": {
+    "boundingShape": "squat rotund vessel with constricted neck and flared rolled rim",
+    "aspectRatios": [
+      "diameter:height = 1.75:1",
+      "rimDiameter:bellyDiameter = 0.98:1",
+      "neckDiameter:bellyDiameter = 0.78:1"
+    ],
+    "symmetry": "radial",
+    "dominantCurves": [
+      "convex bulbous lower belly",
+      "concave neck throat",
+      "flared collar lip",
+      "rolled torus rim bead"
+    ],
+    "negativeSpaces": [
+      "open circular top mouth leading into hollow interior cavity"
+    ],
+    "landmarks": [
+      "base foot curve y=0.00",
+      "max belly bulge y=0.068 r=0.143",
+      "neck waist y=0.128 r=0.112",
+      "flared rim lip y=0.158 r=0.140"
+    ]
+  },
+  "viewEvidence": [
+    {
+      "id": "full-object",
+      "view": "primary",
+      "imageRegion": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "units": "normalized"
+      },
+      "observations": [],
+      "confidence": 0.5
+    }
+  ],
+  "componentTree": [
+    {
+      "id": "root",
+      "name": "Copper Handi Vessel Root",
+      "level": "macro",
+      "role": "body",
+      "importance": 0.95,
+      "confidence": 0.92,
+      "primitive": "lathe",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Lathed rotational vessel silhouette with continuous belly, neck, and rolled rim.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map",
+        "latheProfile": {
+          "segments": 72,
+          "points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.055,
+              0.002
+            ],
+            [
+              0.095,
+              0.015
+            ],
+            [
+              0.13,
+              0.042
+            ],
+            [
+              0.143,
+              0.072
+            ],
+            [
+              0.138,
+              0.102
+            ],
+            [
+              0.115,
+              0.128
+            ],
+            [
+              0.113,
+              0.135
+            ],
+            [
+              0.136,
+              0.154
+            ],
+            [
+              0.141,
+              0.159
+            ],
+            [
+              0.134,
+              0.16
+            ],
+            [
+              0.128,
+              0.154
+            ],
+            [
+              0.107,
+              0.131
+            ],
+            [
+              0.132,
+              0.098
+            ],
+            [
+              0.135,
+              0.068
+            ],
+            [
+              0.118,
+              0.036
+            ],
+            [
+              0.08,
+              0.016
+            ],
+            [
+              0.0,
+              0.011
+            ]
+          ]
+        }
+      },
+      "parent": null,
+      "attachment": null,
+      "dimensions": {
+        "width": 0.286,
+        "height": 0.16,
+        "depth": 0.286,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "root",
+        "pivot": {
+          "mode": "base",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [
+          {
+            "id": "rice-cavity",
+            "localPosition": [
+              0,
+              0.075,
+              0
+            ],
+            "radius": 0.115
+          },
+          {
+            "id": "rim-top",
+            "localPosition": [
+              0,
+              0.158,
+              0
+            ],
+            "radius": 0.138
+          }
+        ],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.08,
+            0
+          ],
+          "scale": [
+            0.286,
+            0.16,
+            0.286
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "bevel highlight",
+          "placement": "rim"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "copper-belly-shell",
+      "name": "Hammered Exterior Belly Shell",
+      "level": "macro",
+      "role": "body",
+      "importance": 0.95,
+      "confidence": 0.92,
+      "primitive": "lathe",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Exterior rounded copper belly exhibiting hammered circular facets.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [
+          "hammered-voronoi-dimple-displacement"
+        ],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map",
+        "latheProfile": {
+          "segments": 72,
+          "points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.055,
+              0.002
+            ],
+            [
+              0.095,
+              0.015
+            ],
+            [
+              0.13,
+              0.042
+            ],
+            [
+              0.143,
+              0.072
+            ],
+            [
+              0.138,
+              0.102
+            ],
+            [
+              0.115,
+              0.128
+            ],
+            [
+              0.113,
+              0.135
+            ],
+            [
+              0.136,
+              0.154
+            ],
+            [
+              0.141,
+              0.159
+            ],
+            [
+              0.134,
+              0.16
+            ],
+            [
+              0.128,
+              0.154
+            ],
+            [
+              0.107,
+              0.131
+            ],
+            [
+              0.132,
+              0.098
+            ],
+            [
+              0.135,
+              0.068
+            ],
+            [
+              0.118,
+              0.036
+            ],
+            [
+              0.08,
+              0.016
+            ],
+            [
+              0.0,
+              0.011
+            ]
+          ]
+        }
+      },
+      "parent": "root",
+      "attachment": {
+        "parentSocket": "root-center",
+        "localStart": [
+          0,
+          0,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.13,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.286,
+        "height": 0.13,
+        "depth": 0.286,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.065,
+            0
+          ],
+          "scale": [
+            0.286,
+            0.13,
+            0.286
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "chip or dent",
+          "placement": "exterior-belly"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "interior-bowl-liner",
+      "name": "Brushed Brass Interior Bowl",
+      "level": "macro",
+      "role": "body",
+      "importance": 0.95,
+      "confidence": 0.92,
+      "primitive": "lathe",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Hollow brushed golden-brass inner bowl wall and floor.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map",
+        "latheProfile": {
+          "segments": 72,
+          "points": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.055,
+              0.002
+            ],
+            [
+              0.095,
+              0.015
+            ],
+            [
+              0.13,
+              0.042
+            ],
+            [
+              0.143,
+              0.072
+            ],
+            [
+              0.138,
+              0.102
+            ],
+            [
+              0.115,
+              0.128
+            ],
+            [
+              0.113,
+              0.135
+            ],
+            [
+              0.136,
+              0.154
+            ],
+            [
+              0.141,
+              0.159
+            ],
+            [
+              0.134,
+              0.16
+            ],
+            [
+              0.128,
+              0.154
+            ],
+            [
+              0.107,
+              0.131
+            ],
+            [
+              0.132,
+              0.098
+            ],
+            [
+              0.135,
+              0.068
+            ],
+            [
+              0.118,
+              0.036
+            ],
+            [
+              0.08,
+              0.016
+            ],
+            [
+              0.0,
+              0.011
+            ]
+          ]
+        }
+      },
+      "parent": "root",
+      "attachment": {
+        "parentSocket": "root-center",
+        "localStart": [
+          0,
+          0.01,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.15,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.268,
+        "height": 0.145,
+        "depth": 0.268,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.01,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.0725,
+            0
+          ],
+          "scale": [
+            0.268,
+            0.145,
+            0.268
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "brass-interior"
+        }
+      },
+      "material": "brass-interior",
+      "materialLayers": [
+        "brass-interior"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "scratch cluster",
+          "placement": "interior-wall"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "flared-neck-collar",
+      "name": "Flared Neck Collar",
+      "level": "meso",
+      "role": "rim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "lathe",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Constricted throat transitioning smoothly into flared top collar.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-top",
+        "localStart": [
+          0,
+          0.125,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.157,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.272,
+        "height": 0.032,
+        "depth": 0.272,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.125,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.016,
+            0
+          ],
+          "scale": [
+            0.272,
+            0.032,
+            0.272
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "rim-brass"
+        }
+      },
+      "material": "rim-brass",
+      "materialLayers": [
+        "rim-brass"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "recessed groove",
+          "placement": "neck-throat"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "rolled-rim-lip",
+      "name": "Rolled Rim Bead",
+      "level": "meso",
+      "role": "rim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "continuous-sculpt",
+      "topologyRationale": "Rolled rounded top rim torus ring.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "flared-neck-collar",
+      "attachment": {
+        "parentSocket": "collar-top",
+        "localStart": [
+          0,
+          0.154,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.16,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.278,
+        "height": 0.008,
+        "depth": 0.278,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.157,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.004,
+            0
+          ],
+          "scale": [
+            0.278,
+            0.008,
+            0.278
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "rim-brass"
+        }
+      },
+      "material": "rim-brass",
+      "materialLayers": [
+        "rim-brass"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "bevel highlight",
+          "placement": "rim-top"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "vessel-base-foot",
+      "name": "Rounded Base Foot",
+      "level": "meso",
+      "role": "base",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "cylinder",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Darkened bottom base contact area resting at y=0.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-bottom",
+        "localStart": [
+          0,
+          0,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.012,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.12,
+        "height": 0.012,
+        "depth": 0.12,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.006,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.006,
+            0
+          ],
+          "scale": [
+            0.12,
+            0.012,
+            0.12
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "stain or dirt patch",
+          "placement": "bottom-foot"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "shoulder-transition-band",
+      "name": "Upper Shoulder Transition",
+      "level": "meso",
+      "role": "trim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Subtle ridge where hammered belly meets brushed neck.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-neck",
+        "localStart": [
+          0,
+          0.125,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.132,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.23,
+        "height": 0.006,
+        "depth": 0.23,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.128,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.003,
+            0
+          ],
+          "scale": [
+            0.23,
+            0.006,
+            0.23
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "seam line",
+          "placement": "neck-shoulder"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "inner-rim-fillet",
+      "name": "Inner Rim Fillet",
+      "level": "meso",
+      "role": "trim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Inner lip curve bridging flared collar to interior wall.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "flared-neck-collar",
+      "attachment": {
+        "parentSocket": "collar-inner",
+        "localStart": [
+          0,
+          0.152,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.158,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.264,
+        "height": 0.007,
+        "depth": 0.264,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.155,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.0035,
+            0
+          ],
+          "scale": [
+            0.264,
+            0.007,
+            0.264
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "brass-interior"
+        }
+      },
+      "material": "brass-interior",
+      "materialLayers": [
+        "brass-interior"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "bevel highlight",
+          "placement": "inner-lip"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "belly-mid-band",
+      "name": "Mid-Belly Hammered Band",
+      "level": "meso",
+      "role": "trim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Primary specular highlight band around maximum vessel girth.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [
+          "hammered-voronoi-dimple-displacement"
+        ],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-equator",
+        "localStart": [
+          0,
+          0.065,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.075,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.286,
+        "height": 0.01,
+        "depth": 0.286,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.07,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.005,
+            0
+          ],
+          "scale": [
+            0.286,
+            0.01,
+            0.286
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "chip or dent",
+          "placement": "belly-equator"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "lower-belly-patina-band",
+      "name": "Lower Heat-Patina Band",
+      "level": "meso",
+      "role": "trim",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Heat-darkened lower curvature band above base foot.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [
+          "hammered-voronoi-dimple-displacement"
+        ],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-lower",
+        "localStart": [
+          0,
+          0.022,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.034,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.236,
+        "height": 0.01,
+        "depth": 0.236,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.028,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.005,
+            0
+          ],
+          "scale": [
+            0.236,
+            0.01,
+            0.236
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "stain or dirt patch",
+          "placement": "lower-belly"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "interior-floor-disc",
+      "name": "Interior Floor Disc",
+      "level": "meso",
+      "role": "base",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "cylinder",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Slightly domed interior bottom floor.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "interior-bowl-liner",
+      "attachment": {
+        "parentSocket": "interior-bottom",
+        "localStart": [
+          0,
+          0.01,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.016,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.14,
+        "height": 0.006,
+        "depth": 0.14,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.012,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.003,
+            0
+          ],
+          "scale": [
+            0.14,
+            0.006,
+            0.14
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "brass-interior"
+        }
+      },
+      "material": "brass-interior",
+      "materialLayers": [
+        "brass-interior"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "scratch cluster",
+          "placement": "interior-floor"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "hammered-dimple-group-upper",
+      "name": "Upper Belly Hammered Dimples",
+      "level": "micro",
+      "role": "surface-detail",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "instanced-cluster",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Planished circular dimple facets around upper shoulder.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-upper",
+        "localStart": [
+          0,
+          0.095,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.115,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.26,
+        "height": 0.03,
+        "depth": 0.26,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.1,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.015,
+            0
+          ],
+          "scale": [
+            0.26,
+            0.03,
+            0.26
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "chip or dent",
+          "placement": "upper-shoulder"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "hammered-dimple-group-mid",
+      "name": "Mid Belly Hammered Dimples",
+      "level": "micro",
+      "role": "surface-detail",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "instanced-cluster",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Primary circular hammered dimple grid at belly equator.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-equator",
+        "localStart": [
+          0,
+          0.055,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.085,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.286,
+        "height": 0.04,
+        "depth": 0.286,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.07,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.02,
+            0
+          ],
+          "scale": [
+            0.286,
+            0.04,
+            0.286
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "chip or dent",
+          "placement": "mid-belly"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "hammered-dimple-group-lower",
+      "name": "Lower Belly Hammered Dimples",
+      "level": "micro",
+      "role": "surface-detail",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "instanced-cluster",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Planished circular facets curving toward base.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "copper-belly-shell",
+      "attachment": {
+        "parentSocket": "belly-lower",
+        "localStart": [
+          0,
+          0.025,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.045,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.24,
+        "height": 0.03,
+        "depth": 0.24,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.035,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.015,
+            0
+          ],
+          "scale": [
+            0.24,
+            0.03,
+            0.24
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "hammered-copper"
+        }
+      },
+      "material": "hammered-copper",
+      "materialLayers": [
+        "hammered-copper"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "chip or dent",
+          "placement": "lower-belly"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "rim-polish-micro-streaks",
+      "name": "Rim Lathe Polish Micro-Grooves",
+      "level": "micro",
+      "role": "surface-detail",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Fine concentric spinning marks on flared brass rim.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "flared-neck-collar",
+      "attachment": {
+        "parentSocket": "collar-face",
+        "localStart": [
+          0,
+          0.145,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.151,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.26,
+        "height": 0.004,
+        "depth": 0.26,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.148,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.002,
+            0
+          ],
+          "scale": [
+            0.26,
+            0.004,
+            0.26
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "rim-brass"
+        }
+      },
+      "material": "rim-brass",
+      "materialLayers": [
+        "rim-brass"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "scratch cluster",
+          "placement": "flared-rim"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    },
+    {
+      "id": "interior-brush-micro-rings",
+      "name": "Interior Concentric Brush Rings",
+      "level": "micro",
+      "role": "surface-detail",
+      "importance": 0.75,
+      "confidence": 0.92,
+      "primitive": "torus",
+      "topologyClass": "assembled-solid",
+      "topologyRationale": "Fine circular brushed grain inside brass bowl.",
+      "geometryDescriptor": {
+        "topologyIntent": "smooth manifold radial lathe profile with hammered relief",
+        "edgeTreatment": {
+          "type": "chamfer",
+          "bevelRadius": 0.004,
+          "segments": 3
+        },
+        "deformationStack": [],
+        "uvStrategy": "cylindrical radial UV wrap",
+        "normalStrategy": "analytic smooth vertex normals plus tangent normal map"
+      },
+      "parent": "interior-bowl-liner",
+      "attachment": {
+        "parentSocket": "interior-wall",
+        "localStart": [
+          0,
+          0.085,
+          0
+        ],
+        "localEnd": [
+          0,
+          0.095,
+          0
+        ],
+        "contactType": "overlap",
+        "embedDepth": 0.025,
+        "overlap": 0.025,
+        "gapTolerance": 0.002
+      },
+      "dimensions": {
+        "width": 0.24,
+        "height": 0.004,
+        "depth": 0.24,
+        "units": "meters",
+        "confidence": 0.92
+      },
+      "transform": {
+        "position": [
+          0,
+          0.09,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "actionProfile": {
+        "animationRole": "static-part",
+        "pivot": {
+          "mode": "center",
+          "localPosition": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "confidence": 0.95
+        },
+        "transformChannels": {
+          "translate": true,
+          "rotate": true,
+          "scale": true,
+          "bend": false,
+          "twist": false,
+          "detach": false,
+          "visibility": true,
+          "materialState": true
+        },
+        "sockets": [],
+        "collider": {
+          "type": "cylinder",
+          "offset": [
+            0,
+            0.002,
+            0
+          ],
+          "scale": [
+            0.24,
+            0.004,
+            0.24
+          ],
+          "isTrigger": false,
+          "notes": "Vessel collider"
+        },
+        "constraints": [],
+        "destruction": {
+          "breakable": false,
+          "fractureGroup": "vessel-body",
+          "seamRefs": [],
+          "detachableFragments": [],
+          "breakImpulse": 0.0,
+          "debrisMaterial": "brass-interior"
+        }
+      },
+      "material": "brass-interior",
+      "materialLayers": [
+        "brass-interior"
+      ],
+      "colorMaterialRecipe": {
+        "materialClass": "metal",
+        "materialClassConfidence": 0.92,
+        "dominantAlbedo": "rgba(193, 113, 55, 1.0)",
+        "secondaryAlbedo": "rgba(131, 66, 23, 1.0)",
+        "finishStyle": "hammered-metallic",
+        "roughnessRange": [
+          0.18,
+          0.38
+        ]
+      },
+      "deformations": [],
+      "joints": [],
+      "seams": [],
+      "localFeatures": [
+        {
+          "type": "scratch cluster",
+          "placement": "interior-wall"
+        }
+      ],
+      "surfaceDetail": {
+        "macroRoughness": 0.28,
+        "microRoughness": 0.22,
+        "bumpAmplitude": 0.012,
+        "normalPattern": "hammered-dimples",
+        "displacementPattern": "voronoi-facets",
+        "occlusionPattern": "dimple-crease",
+        "edgeWearPattern": "rim-polish",
+        "notes": "Hammered copper vessel surface"
+      },
+      "evidenceRefs": [
+        "full-object"
+      ],
+      "details": [],
+      "fidelityTier": "hero"
+    }
+  ],
+  "materials": [
+    {
+      "id": "hammered-copper",
+      "name": "Hammered Exterior Copper",
+      "type": "physical",
+      "shaderModel": "MeshPhysicalMaterial",
+      "baseColor": "#C17137",
+      "color": "#C17137",
+      "albedo": {
+        "dominant": "#C17137",
+        "secondary": [
+          "#834217",
+          "#502306",
+          "#F4BF87"
+        ],
+        "samplingNotes": "Sampled from reference pixels."
+      },
+      "colorVariation": {
+        "palette": [
+          "#C17137",
+          "#834217",
+          "#502306",
+          "#F4BF87"
+        ],
+        "pattern": "hammered-cell-patina",
+        "amplitude": 0.18,
+        "heightCorrelation": 0.6
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          1.0,
+          1.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Seamless UV wrap"
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2.0,
+          "amplitude": 0.35,
+          "role": "heat patina gradient from base to neck"
+        },
+        {
+          "id": "meso",
+          "frequency": 18.0,
+          "amplitude": 0.45,
+          "role": "hammered planishing dimples"
+        },
+        {
+          "id": "micro",
+          "frequency": 64.0,
+          "amplitude": 0.12,
+          "role": "fine metallic polish micro-grain"
+        }
+      ],
+      "roughness": {
+        "base": 0.28,
+        "variation": 0.14,
+        "map": "independent-procedural-field",
+        "localResponse": "higher roughness in dimple creases"
+      },
+      "metalness": {
+        "base": 0.92,
+        "variation": 0.05
+      },
+      "normal": {
+        "pattern": "derived-from-independent-height-field",
+        "strength": 0.75,
+        "scale": 16.0,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "hammered-dimples",
+        "amplitude": 0.015,
+        "scale": 16.0
+      },
+      "displacement": {
+        "pattern": "hammered-facets",
+        "amplitude": 0.0025,
+        "scale": 16.0,
+        "silhouetteAffects": true
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.35,
+        "contactShadowBias": 0.3,
+        "notes": "Darken dimple edges and neck crease"
+      },
+      "wear": {
+        "edgeWear": 0.28,
+        "scratches": [
+          "fine radial buffing marks"
+        ],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.18,
+        "cavityBias": 0.7,
+        "color": "#2b1204"
+      },
+      "localOverrides": [
+        {
+          "region": "dimple-valleys",
+          "effect": "darker patina + higher roughness",
+          "patinaColor": "#4a1e08",
+          "cavityBias": 0.8
+        },
+        {
+          "region": "lower-heat-zone",
+          "effect": "warm darkened copper near bottom foot",
+          "patinaColor": "#502306",
+          "streak": "vertical"
+        }
+      ],
+      "referencePbr": {
+        "usable": true,
+        "confidence": 0.86,
+        "targetThreshold": 0.7,
+        "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png",
+        "palette": [
+          "#502306",
+          "#834217",
+          "#C17137",
+          "#050200",
+          "#F4BF87"
+        ],
+        "maps": {
+          "albedo": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_albedo.png",
+            "url": "hammered-copper_albedo.png",
+            "channel": "albedo"
+          },
+          "roughness": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_roughness.png",
+            "url": "hammered-copper_roughness.png",
+            "channel": "roughness"
+          },
+          "height": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_height.png",
+            "url": "hammered-copper_height.png",
+            "channel": "height"
+          },
+          "normal": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_normal.png",
+            "url": "hammered-copper_normal.png",
+            "channel": "normal"
+          },
+          "ao": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_ao.png",
+            "url": "hammered-copper_ao.png",
+            "channel": "ao"
+          }
+        }
+      },
+      "shaderNotes": [
+        "Independent procedural albedo, normal, and roughness CanvasTextures."
+      ],
+      "notes": "Hammered Exterior Copper"
+    },
+    {
+      "id": "brass-interior",
+      "name": "Brushed Golden Brass Interior",
+      "type": "physical",
+      "shaderModel": "MeshPhysicalMaterial",
+      "baseColor": "#C78E44",
+      "color": "#C78E44",
+      "albedo": {
+        "dominant": "#C78E44",
+        "secondary": [
+          "#9C6624",
+          "#F4BF87",
+          "#6B4112"
+        ],
+        "samplingNotes": "Sampled from reference pixels."
+      },
+      "colorVariation": {
+        "palette": [
+          "#C78E44",
+          "#9C6624",
+          "#F4BF87",
+          "#6B4112"
+        ],
+        "pattern": "hammered-cell-patina",
+        "amplitude": 0.18,
+        "heightCorrelation": 0.6
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          1.0,
+          1.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Seamless UV wrap"
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2.0,
+          "amplitude": 0.35,
+          "role": "heat patina gradient from base to neck"
+        },
+        {
+          "id": "meso",
+          "frequency": 18.0,
+          "amplitude": 0.45,
+          "role": "hammered planishing dimples"
+        },
+        {
+          "id": "micro",
+          "frequency": 64.0,
+          "amplitude": 0.12,
+          "role": "fine metallic polish micro-grain"
+        }
+      ],
+      "roughness": {
+        "base": 0.24,
+        "variation": 0.14,
+        "map": "independent-procedural-field",
+        "localResponse": "higher roughness in dimple creases"
+      },
+      "metalness": {
+        "base": 0.9,
+        "variation": 0.05
+      },
+      "normal": {
+        "pattern": "derived-from-independent-height-field",
+        "strength": 0.35,
+        "scale": 16.0,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "hammered-dimples",
+        "amplitude": 0.015,
+        "scale": 16.0
+      },
+      "displacement": {
+        "pattern": "hammered-facets",
+        "amplitude": 0.0025,
+        "scale": 16.0,
+        "silhouetteAffects": true
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.35,
+        "contactShadowBias": 0.3,
+        "notes": "Darken dimple edges and neck crease"
+      },
+      "wear": {
+        "edgeWear": 0.28,
+        "scratches": [
+          "fine radial buffing marks"
+        ],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.18,
+        "cavityBias": 0.7,
+        "color": "#2b1204"
+      },
+      "localOverrides": [
+        {
+          "region": "interior-bowl",
+          "effect": "radial concentric spun-metal brush streaks",
+          "roughness": 0.22
+        }
+      ],
+      "referencePbr": {
+        "usable": true,
+        "confidence": 0.86,
+        "targetThreshold": 0.7,
+        "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png",
+        "palette": [
+          "#502306",
+          "#834217",
+          "#C17137",
+          "#050200",
+          "#F4BF87"
+        ],
+        "maps": {
+          "albedo": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_albedo.png",
+            "url": "hammered-copper_albedo.png",
+            "channel": "albedo"
+          },
+          "roughness": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_roughness.png",
+            "url": "hammered-copper_roughness.png",
+            "channel": "roughness"
+          },
+          "height": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_height.png",
+            "url": "hammered-copper_height.png",
+            "channel": "height"
+          },
+          "normal": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_normal.png",
+            "url": "hammered-copper_normal.png",
+            "channel": "normal"
+          },
+          "ao": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_ao.png",
+            "url": "hammered-copper_ao.png",
+            "channel": "ao"
+          }
+        }
+      },
+      "shaderNotes": [
+        "Independent procedural albedo, normal, and roughness CanvasTextures."
+      ],
+      "notes": "Brushed Golden Brass Interior"
+    },
+    {
+      "id": "rim-brass",
+      "name": "Polished Rolled Rim Brass-Copper",
+      "type": "physical",
+      "shaderModel": "MeshPhysicalMaterial",
+      "baseColor": "#D99F57",
+      "color": "#D99F57",
+      "albedo": {
+        "dominant": "#D99F57",
+        "secondary": [
+          "#B37632",
+          "#F7D39C"
+        ],
+        "samplingNotes": "Sampled from reference pixels."
+      },
+      "colorVariation": {
+        "palette": [
+          "#D99F57",
+          "#B37632",
+          "#F7D39C"
+        ],
+        "pattern": "hammered-cell-patina",
+        "amplitude": 0.18,
+        "heightCorrelation": 0.6
+      },
+      "textureResolution": 1024,
+      "textureProjection": {
+        "mode": "uv",
+        "repeat": [
+          1.0,
+          1.0
+        ],
+        "anisotropy": 8,
+        "texelDensityIntent": "Seamless UV wrap"
+      },
+      "surfaceFrequencyBands": [
+        {
+          "id": "macro",
+          "frequency": 2.0,
+          "amplitude": 0.35,
+          "role": "heat patina gradient from base to neck"
+        },
+        {
+          "id": "meso",
+          "frequency": 18.0,
+          "amplitude": 0.45,
+          "role": "hammered planishing dimples"
+        },
+        {
+          "id": "micro",
+          "frequency": 64.0,
+          "amplitude": 0.12,
+          "role": "fine metallic polish micro-grain"
+        }
+      ],
+      "roughness": {
+        "base": 0.2,
+        "variation": 0.14,
+        "map": "independent-procedural-field",
+        "localResponse": "higher roughness in dimple creases"
+      },
+      "metalness": {
+        "base": 0.94,
+        "variation": 0.05
+      },
+      "normal": {
+        "pattern": "derived-from-independent-height-field",
+        "strength": 0.25,
+        "scale": 16.0,
+        "space": "tangent"
+      },
+      "bump": {
+        "pattern": "hammered-dimples",
+        "amplitude": 0.015,
+        "scale": 16.0
+      },
+      "displacement": {
+        "pattern": "hammered-facets",
+        "amplitude": 0.0025,
+        "scale": 16.0,
+        "silhouetteAffects": true
+      },
+      "ambientOcclusion": {
+        "cavityStrength": 0.35,
+        "contactShadowBias": 0.3,
+        "notes": "Darken dimple edges and neck crease"
+      },
+      "wear": {
+        "edgeWear": 0.28,
+        "scratches": [
+          "fine radial buffing marks"
+        ],
+        "chips": []
+      },
+      "dirt": {
+        "amount": 0.18,
+        "cavityBias": 0.7,
+        "color": "#2b1204"
+      },
+      "localOverrides": [
+        {
+          "region": "rim-crown",
+          "effect": "bright specular bevel highlight",
+          "roughness": 0.16
+        }
+      ],
+      "referencePbr": {
+        "usable": true,
+        "confidence": 0.86,
+        "targetThreshold": 0.7,
+        "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png",
+        "palette": [
+          "#502306",
+          "#834217",
+          "#C17137",
+          "#050200",
+          "#F4BF87"
+        ],
+        "maps": {
+          "albedo": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_albedo.png",
+            "url": "hammered-copper_albedo.png",
+            "channel": "albedo"
+          },
+          "roughness": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_roughness.png",
+            "url": "hammered-copper_roughness.png",
+            "channel": "roughness"
+          },
+          "height": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_height.png",
+            "url": "hammered-copper_height.png",
+            "channel": "height"
+          },
+          "normal": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_normal.png",
+            "url": "hammered-copper_normal.png",
+            "channel": "normal"
+          },
+          "ao": {
+            "path": "public/3d-assets/textures/copper-handi/hammered-copper_ao.png",
+            "url": "hammered-copper_ao.png",
+            "channel": "ao"
+          }
+        }
+      },
+      "shaderNotes": [
+        "Independent procedural albedo, normal, and roughness CanvasTextures."
+      ],
+      "notes": "Polished Rolled Rim Brass-Copper"
+    }
+  ],
+  "repetitionSystems": [
+    {
+      "id": "hammered-dimple-lattice",
+      "type": "radial-staggered-dimples",
+      "count": 240,
+      "targetComponent": "copper-belly-shell",
+      "notes": "Staggered concentric rings of planished hammer indentations across exterior copper belly."
+    }
+  ],
+  "buildPasses": [
+    {
+      "id": "blockout",
+      "goal": "Match macro silhouette and proportions.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Silhouette reads correctly without materials.",
+        "Quality contract has named all required macro feature groups before code generation.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "structural-pass",
+      "goal": "Build the component hierarchy implied by the pre-spec complexity assessment.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Macro, meso, and repeated structures meet qualityContract.minimumSpecDepth.",
+        "Parent-child relations, joints, seams, sockets, and contact points are explicit.",
+        "Every attached child appendage/connector has parentSocket, localStart/localEnd, contactType, embedDepth or overlap, and gapTolerance.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "form-refinement",
+      "goal": "Refine shape, deformation, bevels, tapers, curves, asymmetry, and visible local geometry.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Important visible forms are represented in component geometryDescriptor, deformations, localFeatures, or repetitionSystems.",
+        "Endpoint-based child parts are rooted at their attachment sockets and do not visibly float away from parents.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "material-pass",
+      "goal": "Match material color, roughness, bump, and local variation.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Reference-derived albedo palette records dominant, secondary, and accent colors per visible material.",
+        "Each important material defines roughness variation and at least one normal/bump/displacement response.",
+        "Local material overrides, dirt/wear/stains/moss/chips/scratches or equivalent masks are tied to evidenceRefs.",
+        "Thin, transparent, reflective, wet, or fibrous materials document alpha/transmission/clearcoat/metalness/fiber response when relevant.",
+        "Generated preview uses procedural albedo/roughness/bump texture or vertex color variation instead of one flat color.",
+        "Generated preview uses independent PBR maps at 1024px or higher for the quality-first tier.",
+        "If source pixels are available, referencePbr extraction passed at confidence >= 0.7 or the pass is stopped/requesting better references.",
+        "Macro, meso, and micro surface frequency bands are visible at the intended review distance without obvious tiling.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "surface-pass",
+      "goal": "Add procedural surface locality such as normal/bump/displacement, AO, dirt, stains, chips, grain, moss, scratches, and wear.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Every required material feature group has local overrides or surfaceDetail tied to evidenceRefs.",
+        "A grazing-angle close-up proves that normal/height detail breaks highlights naturally and does not read as smooth plastic.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "lighting-pass",
+      "goal": "Make material and form readable under neutral turntable lighting plus optional reference lighting.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "lightingFromPhoto identifies key light direction/color/intensity, fill light, rim or environment light, and ambient color.",
+        "Exposure, tone mapping, background color/gradient, shadow softness, and contact shadow behavior are specified.",
+        "Lighting does not hide geometry/material gaps and screenshots can be compared fairly to the reference.",
+        "Neutral, grazing, and reference-matched lighting checks distinguish material errors from lighting errors.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "interaction-pass",
+      "goal": "Make the model ready for future animation, transformation, physics, or destruction.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Macro and movable meso components have stable pivot nodes.",
+        "Sockets, collider proxies, and destruction metadata are present for future runtime actions.",
+        "AI vision comparison score meets selfCorrectLoop.visualAcceptance.threshold."
+      ]
+    },
+    {
+      "id": "optimization-pass",
+      "goal": "Protect runtime performance after visual fidelity is accepted.",
+      "componentRefs": [
+        "root"
+      ],
+      "acceptance": [
+        "Triangle count, draw calls, instancing, LOD strategy, and FPS target are documented or verified.",
+        "Repeated detail is instanced or simplified where possible without breaking silhouette/material believability."
+      ]
+    }
+  ],
+  "visualEvidence": [],
+  "reviewHistory": [],
+  "lodPlan": [
+    {
+      "tier": "near",
+      "distance": 0,
+      "strategy": "full component tree and material layers"
+    },
+    {
+      "tier": "far",
+      "distance": 30,
+      "strategy": "merge static components and reduce local feature geometry"
+    }
+  ],
+  "performanceBudget": {
+    "qualityPriority": "reference-fidelity",
+    "targetTriangles": 250000,
+    "maxDrawCalls": 160,
+    "textureSize": 2048,
+    "fpsTarget": 30,
+    "optimizationPolicy": "Reach accepted visual fidelity first, then optimize without removing reference-critical geometry or surface layers."
+  },
+  "lightingFromPhoto": [
+    {
+      "id": "key-light",
+      "type": "directional",
+      "role": "key light",
+      "color": "#fff1dc",
+      "intensity": 2.4,
+      "position": [
+        1.6,
+        2.4,
+        1.8
+      ],
+      "notes": "Warm studio overhead-right key light matching copper specular hotspots; ACESFilmic tone mapping, exposure 1.15, dark studio backdrop with soft contact shadow."
+    },
+    {
+      "id": "fill-light",
+      "type": "directional",
+      "role": "fill light",
+      "color": "#dce8ff",
+      "intensity": 0.85,
+      "position": [
+        -2.0,
+        1.1,
+        1.2
+      ],
+      "notes": "Soft cool fill light preserving hammered dimple shadow contrast."
+    },
+    {
+      "id": "rim-light",
+      "type": "directional",
+      "role": "rim or environment light",
+      "color": "#ffcf99",
+      "intensity": 1.5,
+      "position": [
+        -0.4,
+        1.8,
+        -2.2
+      ],
+      "notes": "Warm rim + PMREM RoomEnvironment reflection on copper rim and interior bowl."
+    }
+  ],
+  "proceduralStrategy": [
+    "Block out macro silhouette first.",
+    "Add component hierarchy and joints.",
+    "Create stable pivot groups, sockets, collider proxies, and destruction metadata before visual polish.",
+    "Refine forms with bevels, tapers, bends, and procedural noise.",
+    "Run reference PBR extraction for important source-image materials and stop when confidence is below the target threshold.",
+    "Add material variation before adding expensive micro-geometry."
+  ],
+  "animationAnchors": [
+    "root pivot node supports whole-object translation, rotation, scale, and visibility changes",
+    "component pivot groups support later local transforms without rebuilding geometry"
+  ],
+  "destructionAnchors": [
+    "actionProfile.destruction.fractureGroup marks detachable or breakable component sets",
+    "component seams and sockets define plausible break points instead of random explosions"
+  ],
+  "risks": [],
+  "localSpecSearch": {
+    "collection": "core_3d",
+    "query": "Hammered Copper Biryani Handi",
+    "index": {
+      "status": "rebuilt",
+      "reason": "missing",
+      "fingerprint": "06f0b2ece2935e441653f5c3533f91b3a4d6163f2aec4267559d7d8419bdd040"
+    },
+    "matches": []
+  }
+}

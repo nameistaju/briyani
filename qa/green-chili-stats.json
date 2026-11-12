@@ -1,0 +1,51 @@
+{
+  "slug": "green-chili",
+  "category": "ingredients",
+  "reference": "heroSection/Glossy Green Chili Pepper with Droplets.png",
+  "triangles": 8317,
+  "rawTriangles": 11964,
+  "vertices": 4942,
+  "rawBytes": 3032868,
+  "optBytes": 49152,
+  "budgetKB": 400,
+  "size": [
+    0.08510233461856842,
+    0.050723482854664326,
+    0.030767583288252354
+  ],
+  "center": [
+    -0.0065163858234882355,
+    0.014560205396264791,
+    -0.006051722448319197
+  ],
+  "materials": [
+    "glossy-green-chili-skin",
+    "chili-calyx-stem",
+    "dew-water-droplet"
+  ],
+  "channels": [
+    "map",
+    "normalMap",
+    "roughnessMap",
+    "metalnessMap",
+    "aoMap",
+    "clearcoat",
+    "sheen",
+    "transmission"
+  ],
+  "sheetPath": "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\green-chili.png",
+  "views": {
+    "teal": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\teal_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\teal_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\teal_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\teal_3.png"
+    ],
+    "maroon": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\maroon_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\maroon_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\maroon_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\green-chili\\maroon_3.png"
+    ]
+  }
+}

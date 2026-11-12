@@ -1,0 +1,270 @@
+[
+  {
+    "slug": "star-anise",
+    "title": "Cinematic Floating Star Anise",
+    "image": "heroSection/Cinematic Floating Star Anise.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (pod span ~0.045m, height ~0.015m)",
+    "silhouette": { "boundingShape": "8-pointed radiating wooden star pod with split seed pockets", "aspectRatios": ["diameter:thickness = 3.2:1"], "symmetry": "radial-8", "dominantCurves": ["boat-shaped carpels", "oval seeds"] },
+    "materials": [
+      { "id": "star-anise-husk", "name": "Dark Mahogany Star Anise Wood", "baseColor": "#6b2f14", "secondaryColor": "#2b1005", "roughness": 0.62, "dominantAlbedo": "rgba(107, 47, 20, 1)" },
+      { "id": "star-anise-seed", "name": "Glossy Star Anise Seeds", "baseColor": "#a8541c", "secondaryColor": "#532006", "roughness": 0.18, "clearcoat": 0.6, "dominantAlbedo": "rgba(168, 84, 28, 1)" }
+    ],
+    "components": [
+      { "id": "anise-carpels", "name": "Eight Radial Pod Carpels", "role": "body", "primitive": "curve-sweep", "material": "star-anise-husk" },
+      { "id": "anise-seeds", "name": "Glossy Pod Seeds", "role": "accent", "primitive": "sphere", "material": "star-anise-seed" }
+    ]
+  },
+  {
+    "slug": "cinnamon-sticks",
+    "title": "Cinnamon Sticks in Dramatic Light",
+    "image": "heroSection/Cinnamon Sticks in Dramatic Light.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (stick length ~0.11m, diameter ~0.018m)",
+    "silhouette": { "boundingShape": "two crossed double-curled Ceylon cassia bark quills with fibrous ends", "aspectRatios": ["length:diameter = 6.1:1"], "symmetry": "none", "dominantCurves": ["scroll-curled bark cross-section", "layered spiral rings"] },
+    "materials": [
+      { "id": "cinnamon-bark", "name": "Warm Terracotta Cinnamon Bark", "baseColor": "#8f4219", "secondaryColor": "#451b08", "roughness": 0.72, "dominantAlbedo": "rgba(143, 66, 25, 1)" },
+      { "id": "cinnamon-inner-scroll", "name": "Cinnamon Cross-Section Rings", "baseColor": "#b8632d", "secondaryColor": "#5c270b", "roughness": 0.65, "dominantAlbedo": "rgba(184, 99, 45, 1)" }
+    ],
+    "components": [
+      { "id": "cassia-quills", "name": "Crossed Curled Cinnamon Quills", "role": "body", "primitive": "extrude", "material": "cinnamon-bark" },
+      { "id": "bark-crumbs", "name": "Broken Cinnamon Shards", "role": "garnish", "primitive": "instanced-cluster", "material": "cinnamon-inner-scroll" }
+    ]
+  },
+  {
+    "slug": "fried-onion-spirals",
+    "title": "Crispy Fried Onion Spirals in Flight",
+    "image": "heroSection/Crispy Fried Onion Spirals in Flight.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (spiral span ~0.14m)",
+    "silhouette": { "boundingShape": "intertwined helical caramelized onion spirals", "aspectRatios": ["width:height = 1.3:1"], "symmetry": "none", "dominantCurves": ["3D corkscrew onion helices", "crispy tapered curls"] },
+    "materials": [
+      { "id": "onion-spiral-gold", "name": "Crispy Golden Onion Spiral", "baseColor": "#b45518", "secondaryColor": "#4c1a05", "roughness": 0.48, "dominantAlbedo": "rgba(180, 85, 24, 1)" }
+    ],
+    "components": [
+      { "id": "helical-onion-coils", "name": "Helical Onion Spirals", "role": "body", "primitive": "curve-sweep", "material": "onion-spiral-gold" },
+      { "id": "spiral-flakes", "name": "Crispy Spiral Shards", "role": "garnish", "primitive": "curve-sweep", "material": "onion-spiral-gold" }
+    ]
+  },
+  {
+    "slug": "crispy-chicken-drumstick",
+    "title": "Crispy Spiced Chicken Drumstick",
+    "image": "heroSection/Crispy Spiced Chicken Drumstick.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (length ~0.165m, diameter ~0.068m)",
+    "silhouette": { "boundingShape": "crispy blistered golden-spiced chicken drumstick with exposed bone", "aspectRatios": ["length:width = 2.4:1"], "symmetry": "none", "dominantCurves": ["crispy blistered thigh bulb", "curved ankle bone"] },
+    "materials": [
+      { "id": "crispy-spiced-skin", "name": "Golden Crispy Spiced Chicken Skin", "baseColor": "#bd5312", "secondaryColor": "#611b05", "roughness": 0.36, "clearcoat": 0.3, "dominantAlbedo": "rgba(189, 83, 18, 1)" },
+      { "id": "drumstick-bone-tip", "name": "Roasted Bone Tip", "baseColor": "#dec7a4", "secondaryColor": "#94623c", "roughness": 0.45, "dominantAlbedo": "rgba(222, 199, 164, 1)" }
+    ],
+    "components": [
+      { "id": "crispy-thigh-meat", "name": "Crispy Blistered Drumstick Body", "role": "body", "primitive": "tapered-sweep", "material": "crispy-spiced-skin" },
+      { "id": "bone-condyle", "name": "Exposed Tibia Bone", "role": "bone", "primitive": "tapered-sweep", "material": "drumstick-bone-tip" }
+    ]
+  },
+  {
+    "slug": "cilantro-sprig",
+    "title": "Dewy Cilantro Sprig on Black",
+    "image": "heroSection/Dewy Cilantro Sprig on Black.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (sprig height ~0.13m, width ~0.095m)",
+    "silhouette": { "boundingShape": "slender forked coriander stems bearing scalloped tri-lobed leaflets", "aspectRatios": ["height:width = 1.35:1"], "symmetry": "none", "dominantCurves": ["branching petioles", "deeply cleft fan leaflets"] },
+    "materials": [
+      { "id": "cilantro-leaf", "name": "Fresh Emerald Cilantro Leaf", "baseColor": "#337c24", "secondaryColor": "#5fa83a", "roughness": 0.32, "clearcoat": 0.38, "dominantAlbedo": "rgba(51, 124, 36, 1)" },
+      { "id": "cilantro-dew", "name": "Water Dew Droplets", "baseColor": "#eef9ff", "secondaryColor": "#ffffff", "roughness": 0.04, "dominantAlbedo": "rgba(238, 249, 255, 0.85)" }
+    ],
+    "components": [
+      { "id": "cilantro-stems", "name": "Forked Cylindrical Stems", "role": "stem", "primitive": "curve-sweep", "material": "cilantro-leaf" },
+      { "id": "cilantro-lobes", "name": "Scalloped Tri-Lobed Leaflets", "role": "body", "primitive": "extrude", "material": "cilantro-leaf" }
+    ]
+  },
+  {
+    "slug": "tomato-slices",
+    "title": "Dramatic Floating Tomato Slices",
+    "image": "heroSection/Dramatic Floating Tomato Slices.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (wedge length ~0.068m)",
+    "silhouette": { "boundingShape": "3D ripe tomato wedge with arched red skin, pithy inner flesh, recessed juicy locules, golden seeds, and green calyx star", "aspectRatios": ["length:width = 1.6:1"], "symmetry": "bilateral", "dominantCurves": ["crescent outer tomato skin", "radial internal seed septa"] },
+    "materials": [
+      { "id": "tomato-skin-flesh", "name": "Ripe Crimson Tomato Flesh", "baseColor": "#c92014", "secondaryColor": "#e64a32", "roughness": 0.22, "clearcoat": 0.65, "dominantAlbedo": "rgba(201, 32, 20, 1)" },
+      { "id": "tomato-seeds-gel", "name": "Golden Tomato Seeds & Gel", "baseColor": "#e8b44c", "secondaryColor": "#9e1c10", "roughness": 0.12, "clearcoat": 0.85, "dominantAlbedo": "rgba(232, 180, 76, 1)" }
+    ],
+    "components": [
+      { "id": "tomato-wedge-body", "name": "Crescent Tomato Wedge Body", "role": "body", "primitive": "extrude", "material": "tomato-skin-flesh" },
+      { "id": "tomato-seeds-calyx", "name": "Tomato Seeds & Top Calyx", "role": "accent", "primitive": "instanced-cluster", "material": "tomato-seeds-gel" }
+    ]
+  },
+  {
+    "slug": "basmati-rice-cluster",
+    "title": "Floating Basmati Rice Grain Cluster",
+    "image": "heroSection/Floating Basmati Rice Grain Cluster.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (cluster diameter ~0.075m)",
+    "silhouette": { "boundingShape": "curved tumbling cloud of extra-long slender cooked ivory basmati grains", "aspectRatios": ["width:height = 1.2:1"], "symmetry": "none", "dominantCurves": ["slender arched teardrop grains in swirling cluster"] },
+    "materials": [
+      { "id": "ivory-basmati", "name": "Steamed Ivory Basmati Grain", "baseColor": "#f4ecd8", "secondaryColor": "#d9ceb2", "roughness": 0.36, "clearcoat": 0.22, "dominantAlbedo": "rgba(244, 236, 216, 1)" }
+    ],
+    "components": [
+      { "id": "rice-grain-cloud", "name": "Swirling Basmati Rice Cluster", "role": "body", "primitive": "instanced-cluster", "material": "ivory-basmati" },
+      { "id": "hero-rice-grains", "name": "Detailed Foreground Rice Grains", "role": "accent", "primitive": "tapered-sweep", "material": "ivory-basmati" }
+    ]
+  },
+  {
+    "slug": "bay-leaves",
+    "title": "Floating Bay Leaves with Golden Veins",
+    "image": "heroSection/Floating Bay Leaves with Golden Veins.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (leaf length ~0.085m, pair span ~0.11m)",
+    "silhouette": { "boundingShape": "crossed lanceolate dried bay leaves with undulating margins and prominent golden midribs", "aspectRatios": ["length:width = 2.6:1"], "symmetry": "none", "dominantCurves": ["twisted elliptic leaf blades", "raised golden central vein"] },
+    "materials": [
+      { "id": "dried-bay-leaf", "name": "Sage Olive Dried Bay Leaf", "baseColor": "#636b3c", "secondaryColor": "#9a8238", "roughness": 0.54, "dominantAlbedo": "rgba(99, 107, 60, 1)" }
+    ],
+    "components": [
+      { "id": "primary-bay-leaf", "name": "Undulating Dried Bay Leaves", "role": "body", "primitive": "extrude", "material": "dried-bay-leaf" },
+      { "id": "bay-midrib-stem", "name": "Golden Midrib & Stem", "role": "accent", "primitive": "curve-sweep", "material": "dried-bay-leaf" }
+    ]
+  },
+  {
+    "slug": "cardamom-pods",
+    "title": "Floating Cardamom Pods and Seeds",
+    "image": "heroSection/Floating Cardamom Pods and Seeds.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (pod length ~0.022m; composition span ~0.065m)",
+    "silhouette": { "boundingShape": "one ribbed green cardamom capsule alongside one split open husk exposing dark wrinkled aromatic seeds", "aspectRatios": ["podLength:width = 1.9:1"], "symmetry": "trilateral", "dominantCurves": ["3-sided longitudinally striated husk", "pebble-faceted black seeds"] },
+    "materials": [
+      { "id": "cardamom-green-husk", "name": "Ribbed Green Cardamom Husk", "baseColor": "#6e8740", "secondaryColor": "#435224", "roughness": 0.62, "dominantAlbedo": "rgba(110, 135, 64, 1)" },
+      { "id": "cardamom-black-seed", "name": "Wrinkled Dark Brown Cardamom Seed", "baseColor": "#2e190e", "secondaryColor": "#543220", "roughness": 0.42, "dominantAlbedo": "rgba(46, 25, 14, 1)" }
+    ],
+    "components": [
+      { "id": "whole-cardamom-pod", "name": "Closed Ribbed Cardamom Capsule", "role": "body", "primitive": "tapered-sweep", "material": "cardamom-green-husk" },
+      { "id": "split-pod-seeds", "name": "Split Husk & Loose Seeds", "role": "accent", "primitive": "instanced-cluster", "material": "cardamom-black-seed" }
+    ]
+  },
+  {
+    "slug": "cloves",
+    "title": "Floating Cloves in Golden Light",
+    "image": "heroSection/Floating Cloves in Golden Light.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (single clove ~0.024m; cluster span ~0.06m)",
+    "silhouette": { "boundingShape": "trio of dried aromatic clove buds with tapered woody stems, four-pronged calyx crowns, and round fluted buds", "aspectRatios": ["length:headWidth = 3.6:1"], "symmetry": "radial-4", "dominantCurves": ["tapered grooved stem", "4 triangular calyx sepals", "spherical unopened flower bud"] },
+    "materials": [
+      { "id": "clove-wood", "name": "Deep Roasted Brown Clove", "baseColor": "#4d2612", "secondaryColor": "#7c421d", "roughness": 0.56, "dominantAlbedo": "rgba(77, 38, 18, 1)" }
+    ],
+    "components": [
+      { "id": "clove-stems-calyx", "name": "Tapered Clove Stems & Sepals", "role": "body", "primitive": "tapered-sweep", "material": "clove-wood" },
+      { "id": "clove-bud-heads", "name": "Round Fluted Flower Buds", "role": "accent", "primitive": "sphere", "material": "clove-wood" }
+    ]
+  },
+  {
+    "slug": "red-onion-rings",
+    "title": "Floating Red Onion Rings in Motion",
+    "image": "heroSection/Floating Red Onion Rings in Motion.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (largest ring diameter ~0.085m)",
+    "silhouette": { "boundingShape": "dynamic stack of concentric magenta-rimmed white red-onion slice rings tilting in space", "aspectRatios": ["outerDiameter:thickness = 12:1"], "symmetry": "radial", "dominantCurves": ["layered circular onion flesh bands", "deep purple outer skin rim"] },
+    "materials": [
+      { "id": "onion-flesh-purple", "name": "Crisp Purple-White Red Onion", "baseColor": "#d9b8cf", "secondaryColor": "#7a144c", "roughness": 0.24, "clearcoat": 0.5, "dominantAlbedo": "rgba(217, 184, 207, 1)" }
+    ],
+    "components": [
+      { "id": "onion-ring-tiers", "name": "Concentric Onion Ring Trio", "role": "body", "primitive": "lathe", "material": "onion-flesh-purple" },
+      { "id": "onion-moisture-dew", "name": "Surface Moisture Beads", "role": "garnish", "primitive": "instanced-cluster", "material": "onion-flesh-purple" }
+    ]
+  },
+  {
+    "slug": "mint-sprig",
+    "title": "Glistening Fresh Mint Sprig",
+    "image": "heroSection/Glistening Fresh Mint Sprig.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (sprig length ~0.14m)",
+    "silhouette": { "boundingShape": "sweeping horizontal fresh mint sprig densely clad in dewy serrated leaves", "aspectRatios": ["length:width = 1.65:1"], "symmetry": "none", "dominantCurves": ["horizontal arched stem", "broad vaulted serrated leaf pairs"] },
+    "materials": [
+      { "id": "mint-sprig-leaf", "name": "Lush Fresh Mint Leaf", "baseColor": "#286e20", "secondaryColor": "#53a33a", "roughness": 0.26, "clearcoat": 0.55, "dominantAlbedo": "rgba(40, 110, 32, 1)" },
+      { "id": "mint-sprig-dew", "name": "Glistening Water Drops", "baseColor": "#eef9ff", "secondaryColor": "#ffffff", "roughness": 0.04, "dominantAlbedo": "rgba(238, 249, 255, 0.85)" }
+    ],
+    "components": [
+      { "id": "mint-sprig-stem", "name": "Arched Mint Stalk", "role": "stem", "primitive": "curve-sweep", "material": "mint-sprig-leaf" },
+      { "id": "mint-sprig-foliage", "name": "Serrated Mint Rosette Blades", "role": "body", "primitive": "extrude", "material": "mint-sprig-leaf" }
+    ]
+  },
+  {
+    "slug": "chili-duo",
+    "title": "Glossy Floating Chili Duo",
+    "image": "heroSection/Glossy Floating Chili Duo.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (chili length ~0.11m)",
+    "silhouette": { "boundingShape": "crossed glossy green and red hot chillies with sliced chili rings and water droplets", "aspectRatios": ["length:diameter = 7:1"], "symmetry": "none", "dominantCurves": ["tapered sinuous chili pods", "curved green pedicel caps"] },
+    "materials": [
+      { "id": "red-chili-skin", "name": "Waxy Crimson Chili Skin", "baseColor": "#bd1610", "secondaryColor": "#630804", "roughness": 0.14, "clearcoat": 0.8, "dominantAlbedo": "rgba(189, 22, 16, 1)" },
+      { "id": "green-chili-skin", "name": "Waxy Emerald Chili Skin", "baseColor": "#246e1c", "secondaryColor": "#103a0a", "roughness": 0.16, "clearcoat": 0.78, "dominantAlbedo": "rgba(36, 110, 28, 1)" }
+    ],
+    "components": [
+      { "id": "red-chili-pod", "name": "Glossy Red Chili Pepper", "role": "body", "primitive": "tapered-sweep", "material": "red-chili-skin" },
+      { "id": "green-chili-pod", "name": "Glossy Green Chili & Slices", "role": "accent", "primitive": "tapered-sweep", "material": "green-chili-skin" }
+    ]
+  },
+  {
+    "slug": "green-chili",
+    "title": "Glossy Green Chili Pepper with Droplets",
+    "image": "heroSection/Glossy Green Chili Pepper with Droplets.png",
+    "finish": "glossy",
+    "whiteBg": true,
+    "scaleReference": "1 world unit = 1 meter (length ~0.115m)",
+    "silhouette": { "boundingShape": "single arched glossy green pepper tapering to point with curved calyx stem and crisp water droplets", "aspectRatios": ["length:width = 6.8:1"], "symmetry": "none", "dominantCurves": ["C-arched glossy pepper body", "5-lobed green calyx crown", "curved stem hook"] },
+    "materials": [
+      { "id": "waxy-green-pepper", "name": "Glossy Green Chili Skin", "baseColor": "#2d7c22", "secondaryColor": "#154610", "roughness": 0.14, "clearcoat": 0.85, "dominantAlbedo": "rgba(45, 124, 34, 1)" },
+      { "id": "pepper-dew", "name": "Chili Water Droplets", "baseColor": "#eef9ff", "secondaryColor": "#ffffff", "roughness": 0.03, "dominantAlbedo": "rgba(238, 249, 255, 0.9)" }
+    ],
+    "components": [
+      { "id": "chili-pepper-body", "name": "Tapered Curved Green Chili", "role": "body", "primitive": "tapered-sweep", "material": "waxy-green-pepper" },
+      { "id": "chili-calyx-stem", "name": "Calyx Crown & Curved Stem", "role": "stem", "primitive": "curve-sweep", "material": "waxy-green-pepper" }
+    ]
+  },
+  {
+    "slug": "lemon-wedge",
+    "title": "Hyper-Realistic Floating Lemon Wedge",
+    "image": "heroSection/Hyper-Realistic Floating Lemon Wedge.png",
+    "finish": "glossy",
+    "scaleReference": "1 world unit = 1 meter (length ~0.072m, depth ~0.042m)",
+    "silhouette": { "boundingShape": "60-degree 3D crescent lemon wedge showing dimpled yellow peel, crisp white pith collar, and recessed triangular juice vesicles", "aspectRatios": ["length:width = 1.7:1"], "symmetry": "bilateral", "dominantCurves": ["football-shaped citrus arc", "radial membrane septa"] },
+    "materials": [
+      { "id": "lemon-zest-peel", "name": "Dimpled Yellow Citrus Peel", "baseColor": "#edd224", "secondaryColor": "#c9a210", "roughness": 0.36, "clearcoat": 0.35, "dominantAlbedo": "rgba(237, 210, 36, 1)" },
+      { "id": "lemon-juicy-pulp", "name": "Translucent Citrus Juice Vesicles", "baseColor": "#f4df56", "secondaryColor": "#f7f3d4", "roughness": 0.12, "clearcoat": 0.85, "dominantAlbedo": "rgba(244, 223, 86, 1)" }
+    ],
+    "components": [
+      { "id": "lemon-peel-pith", "name": "Dimpled Lemon Peel & White Pith", "role": "body", "primitive": "extrude", "material": "lemon-zest-peel" },
+      { "id": "lemon-pulp-segments", "name": "Juicy Citrus Pulp Segments", "role": "accent", "primitive": "extrude", "material": "lemon-juicy-pulp" }
+    ]
+  },
+  {
+    "slug": "saffron-threads",
+    "title": "Vivid Saffron Threads on Dark Background",
+    "image": "heroSection/Vivid Saffron Threads on Dark Background.png",
+    "finish": "organic",
+    "scaleReference": "1 world unit = 1 meter (cluster span ~0.065m)",
+    "silhouette": { "boundingShape": "delicate interlaced bundle of long curved crimson-red saffron stigmas flaring into trumpet tips", "aspectRatios": ["span:height = 1.4:1"], "symmetry": "none", "dominantCurves": ["interlaced tapered crimson filaments", "flared trumpet tips shading amber"] },
+    "materials": [
+      { "id": "crimson-saffron-stigma", "name": "Velvety Crimson Saffron Thread", "baseColor": "#b8140c", "secondaryColor": "#ea6a18", "roughness": 0.65, "sheen": 0.45, "dominantAlbedo": "rgba(184, 20, 12, 1)" }
+    ],
+    "components": [
+      { "id": "saffron-strands", "name": "Interlaced Saffron Stigmas", "role": "body", "primitive": "curve-sweep", "material": "crimson-saffron-stigma" },
+      { "id": "saffron-trumpets", "name": "Flared Stigma Trumpet Tips", "role": "accent", "primitive": "tapered-sweep", "material": "crimson-saffron-stigma" }
+    ]
+  },
+  {
+    "slug": "steaming-biryani-handi",
+    "title": "Steaming Chicken Biryani in Copper Handi",
+    "image": "heroSection/Steaming Chicken Biryani in Copper Handi.png",
+    "finish": "metallic",
+    "whiteBg": true,
+    "scaleReference": "1 world unit = 1 meter (overall diameter 0.287m, height ~0.23m including steam)",
+    "silhouette": { "boundingShape": "hammered copper handi filled with aromatic basmati biryani rice mound, spiced drumstick, whole star anise, fresh mint sprigs, and rising aromatic steam curls", "aspectRatios": ["diameter:height = 1.25:1"], "symmetry": "none", "dominantCurves": ["bulbous hammered copper belly", "domed aromatic biryani rice mound", "organic rising steam plumes"] },
+    "materials": [
+      { "id": "assembled-copper", "name": "Hammered Copper Handi", "baseColor": "#c46b2c", "secondaryColor": "#4e2007", "metalness": 0.90, "roughness": 0.26, "dominantAlbedo": "rgba(196, 107, 44, 1)" },
+      { "id": "assembled-biryani", "name": "Aromatic Biryani Rice & Garnish", "baseColor": "#ebb038", "secondaryColor": "#9d2b0e", "roughness": 0.45, "dominantAlbedo": "rgba(235, 176, 56, 1)" }
+    ],
+    "components": [
+      { "id": "handi-vessel-base", "name": "Hammered Copper Vessel", "role": "body", "primitive": "lathe", "material": "assembled-copper" },
+      { "id": "biryani-fill-garnish", "name": "Biryani Rice, Drumstick, Spices & Steam", "role": "accent", "primitive": "instanced-cluster", "material": "assembled-biryani" }
+    ]
+  }
+]

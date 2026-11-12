@@ -1,0 +1,1603 @@
+{
+  "project": "DUMBAAZ Biryani 3D Asset Pack",
+  "pipeline": "photoreal-threejs-procedural-pbr-draco-webp",
+  "unitScale": "1 world unit = 1 meter (metric assembly scale shared across hero models)",
+  "totalAssets": 22,
+  "heroCount": 5,
+  "ingredientCount": 17,
+  "assets": [
+    {
+      "slug": "copper-handi",
+      "category": "hero",
+      "sourceImage": "briyani/Hammered Copper Biryani Handi Pot.png",
+      "glb": "public/3d-assets/hero/copper-handi.glb",
+      "glbBytes": 21917820,
+      "glbSizeKB": 21404.1,
+      "previewSheet": "public/3d-assets/previews/copper-handi.png",
+      "heroRender": "public/3d-assets/previews/copper-handi-hero.png",
+      "sourceFactory": "public/3d-assets/source/copper-handi/createCopperHandiModel.ts",
+      "exportName": "createHammeredCopperBiryaniHandiModel",
+      "sculptSpec": "public/3d-assets/source/copper-handi/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/copper-handi/hammered-copper_albedo.png",
+        "public/3d-assets/textures/copper-handi/hammered-copper_ao.png",
+        "public/3d-assets/textures/copper-handi/hammered-copper_height.png",
+        "public/3d-assets/textures/copper-handi/hammered-copper_normal.png",
+        "public/3d-assets/textures/copper-handi/hammered-copper_roughness.png"
+      ],
+      "triangleCount": 56179,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.288,
+        0.1623,
+        0.2883
+      ],
+      "boundingBox": {
+        "min": [
+          -0.144,
+          0.001,
+          -0.144
+        ],
+        "max": [
+          0.1439,
+          0.1633,
+          0.1443
+        ],
+        "size": [
+          0.288,
+          0.1623,
+          0.2883
+        ],
+        "center": [
+          0,
+          0.0822,
+          0.0001
+        ]
+      },
+      "materials": [
+        "hammered-copper",
+        "tinned-brass-interior"
+      ],
+      "sockets": {
+        "rice-cavity": {
+          "position": [
+            0,
+            0.075,
+            0
+          ],
+          "socket": {
+            "id": "rice-cavity",
+            "innerBellyRadius": 0.134,
+            "neckInnerRadius": 0.106,
+            "floorY": 0.012,
+            "rimY": 0.16
+          }
+        },
+        "rim-top": {
+          "position": [
+            0,
+            0.16,
+            0
+          ],
+          "socket": {
+            "id": "rim-top",
+            "outerRadius": 0.141,
+            "innerRadius": 0.127
+          }
+        }
+      },
+      "optimizedGlb": "public/3d-assets/optimized/hero/copper-handi.glb",
+      "optimizedBytes": 698812,
+      "optimizedSizeKB": 682.4,
+      "rawTriangleCount": 90112,
+      "vertexCount": 28432,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/copper-handi.png"
+    },
+    {
+      "slug": "biryani-rice-mound",
+      "category": "hero",
+      "sourceImage": "briyani/Floating Basmati Biryani Rice Mound.png",
+      "glb": "public/3d-assets/hero/biryani-rice-mound.glb",
+      "glbBytes": 42789308,
+      "glbSizeKB": 41786.4,
+      "previewSheet": "public/3d-assets/previews/biryani-rice-mound.png",
+      "heroRender": "public/3d-assets/previews/biryani-rice-mound-hero.png",
+      "sourceFactory": "public/3d-assets/source/biryani-rice-mound/createBiryaniRiceMoundModel.ts",
+      "exportName": "createBiryaniRiceMoundModel",
+      "sculptSpec": "public/3d-assets/source/biryani-rice-mound/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/biryani-rice-mound/basmati-rice-mound_albedo.png",
+        "public/3d-assets/textures/biryani-rice-mound/basmati-rice-mound_ao.png",
+        "public/3d-assets/textures/biryani-rice-mound/basmati-rice-mound_height.png",
+        "public/3d-assets/textures/biryani-rice-mound/basmati-rice-mound_normal.png",
+        "public/3d-assets/textures/biryani-rice-mound/basmati-rice-mound_roughness.png",
+        "public/3d-assets/textures/biryani-rice-mound/pbr-evidence.json"
+      ],
+      "triangleCount": 122596,
+      "meshCount": 4,
+      "dimensionsMeters": [
+        0.2181,
+        0.1417,
+        0.2178
+      ],
+      "boundingBox": {
+        "min": [
+          -0.109,
+          -0.0014,
+          -0.1096
+        ],
+        "max": [
+          0.1091,
+          0.1403,
+          0.1082
+        ],
+        "size": [
+          0.2181,
+          0.1417,
+          0.2178
+        ],
+        "center": [
+          0.0001,
+          0.0695,
+          -0.0007
+        ]
+      },
+      "materials": [
+        "biryani-rice-bed-core",
+        "cooked-basmati-grains",
+        "mound-birista-threads",
+        "mound-cilantro-flecks"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/hero/biryani-rice-mound.glb",
+      "optimizedBytes": 1396612,
+      "optimizedSizeKB": 1363.9,
+      "rawTriangleCount": 126592,
+      "vertexCount": 100442,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "sheen"
+      ],
+      "qaSheet": "qa/biryani-rice-mound.png"
+    },
+    {
+      "slug": "chicken-drumstick",
+      "category": "hero",
+      "sourceImage": "briyani/Spicy Masala Chicken Drumstick.png",
+      "glb": "public/3d-assets/hero/chicken-drumstick.glb",
+      "glbBytes": 19859012,
+      "glbSizeKB": 19393.6,
+      "previewSheet": "public/3d-assets/previews/chicken-drumstick.png",
+      "heroRender": "public/3d-assets/previews/chicken-drumstick-hero.png",
+      "sourceFactory": "public/3d-assets/source/chicken-drumstick/createChickenDrumstickModel.ts",
+      "exportName": "createChickenDrumstickModel",
+      "sculptSpec": "public/3d-assets/source/chicken-drumstick/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/chicken-drumstick/masala-drumstick_albedo.png",
+        "public/3d-assets/textures/chicken-drumstick/masala-drumstick_ao.png",
+        "public/3d-assets/textures/chicken-drumstick/masala-drumstick_height.png",
+        "public/3d-assets/textures/chicken-drumstick/masala-drumstick_normal.png",
+        "public/3d-assets/textures/chicken-drumstick/masala-drumstick_roughness.png",
+        "public/3d-assets/textures/chicken-drumstick/pbr-evidence.json"
+      ],
+      "triangleCount": 54405,
+      "meshCount": 4,
+      "dimensionsMeters": [
+        0.183,
+        0.132,
+        0.1432
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0944,
+          -0.0619,
+          -0.0683
+        ],
+        "max": [
+          0.0886,
+          0.0701,
+          0.0749
+        ],
+        "size": [
+          0.183,
+          0.132,
+          0.1432
+        ],
+        "center": [
+          -0.0029,
+          0.0041,
+          0.0033
+        ]
+      },
+      "materials": [
+        "tandoori-masala-skin",
+        "roasted-knuckle-bone",
+        "clinging-herb-garnish",
+        "MeshStandardMaterial",
+        "wrapped-birista"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/hero/chicken-drumstick.glb",
+      "optimizedBytes": 752040,
+      "optimizedSizeKB": 734.4,
+      "rawTriangleCount": 59664,
+      "vertexCount": 69903,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "sheen"
+      ],
+      "qaSheet": "qa/chicken-drumstick.png"
+    },
+    {
+      "slug": "fried-onions",
+      "category": "hero",
+      "sourceImage": "briyani/Crispy Floating Fried Onions.png",
+      "glb": "public/3d-assets/hero/fried-onions.glb",
+      "glbBytes": 21565908,
+      "glbSizeKB": 21060.5,
+      "previewSheet": "public/3d-assets/previews/fried-onions.png",
+      "heroRender": "public/3d-assets/previews/fried-onions-hero.png",
+      "sourceFactory": "public/3d-assets/source/fried-onions/createFriedOnionsModel.ts",
+      "exportName": "createFriedOnionsModel",
+      "sculptSpec": "public/3d-assets/source/fried-onions/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/fried-onions/crispy-fried-onions_albedo.png",
+        "public/3d-assets/textures/fried-onions/crispy-fried-onions_ao.png",
+        "public/3d-assets/textures/fried-onions/crispy-fried-onions_height.png",
+        "public/3d-assets/textures/fried-onions/crispy-fried-onions_normal.png",
+        "public/3d-assets/textures/fried-onions/crispy-fried-onions_roughness.png",
+        "public/3d-assets/textures/fried-onions/pbr-evidence.json"
+      ],
+      "triangleCount": 52200,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.1368,
+        0.1066,
+        0.1445
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0632,
+          -0.0387,
+          -0.0742
+        ],
+        "max": [
+          0.0736,
+          0.0679,
+          0.0703
+        ],
+        "size": [
+          0.1368,
+          0.1066,
+          0.1445
+        ],
+        "center": [
+          0.0052,
+          0.0146,
+          -0.0019
+        ]
+      },
+      "materials": [
+        "crispy-caramelized-birista"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/hero/fried-onions.glb",
+      "optimizedBytes": 485684,
+      "optimizedSizeKB": 474.3,
+      "rawTriangleCount": 52704,
+      "vertexCount": 27380,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/fried-onions.png"
+    },
+    {
+      "slug": "mint-leaves",
+      "category": "hero",
+      "sourceImage": "briyani/Dewy Mint Leaves in Motion.png",
+      "glb": "public/3d-assets/hero/mint-leaves.glb",
+      "glbBytes": 25107672,
+      "glbSizeKB": 24519.2,
+      "previewSheet": "public/3d-assets/previews/mint-leaves.png",
+      "heroRender": "public/3d-assets/previews/mint-leaves-hero.png",
+      "sourceFactory": "public/3d-assets/source/mint-leaves/createMintLeavesModel.ts",
+      "exportName": "createMintLeavesModel",
+      "sculptSpec": "public/3d-assets/source/mint-leaves/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/mint-leaves/dewy-mint-leaves_albedo.png",
+        "public/3d-assets/textures/mint-leaves/dewy-mint-leaves_ao.png",
+        "public/3d-assets/textures/mint-leaves/dewy-mint-leaves_height.png",
+        "public/3d-assets/textures/mint-leaves/dewy-mint-leaves_normal.png",
+        "public/3d-assets/textures/mint-leaves/dewy-mint-leaves_roughness.png",
+        "public/3d-assets/textures/mint-leaves/pbr-evidence.json"
+      ],
+      "triangleCount": 47451,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.0939,
+        0.0766,
+        0.1112
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0461,
+          -0.0338,
+          -0.0518
+        ],
+        "max": [
+          0.0477,
+          0.0428,
+          0.0594
+        ],
+        "size": [
+          0.0939,
+          0.0766,
+          0.1112
+        ],
+        "center": [
+          0.0008,
+          0.0045,
+          0.0038
+        ]
+      },
+      "materials": [
+        "mint-herb-stem",
+        "mint-leaf-top-cuticle",
+        "mint-leaf-underside",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/hero/mint-leaves.glb",
+      "optimizedBytes": 504800,
+      "optimizedSizeKB": 493,
+      "rawTriangleCount": 49808,
+      "vertexCount": 25699,
+      "channels": [
+        "sheen",
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "transmission"
+      ],
+      "qaSheet": "qa/mint-leaves.png"
+    },
+    {
+      "slug": "star-anise",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Cinematic Floating Star Anise.png",
+      "glb": "public/3d-assets/ingredients/star-anise.glb",
+      "glbBytes": 6548792,
+      "glbSizeKB": 6395.3,
+      "previewSheet": "public/3d-assets/previews/star-anise.png",
+      "heroRender": "public/3d-assets/previews/star-anise-hero.png",
+      "sourceFactory": "public/3d-assets/source/star-anise/createStarAniseModel.ts",
+      "exportName": "createStarAniseModel",
+      "sculptSpec": "public/3d-assets/source/star-anise/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/star-anise/pbr-evidence.json",
+        "public/3d-assets/textures/star-anise/star-anise_albedo.png",
+        "public/3d-assets/textures/star-anise/star-anise_ao.png",
+        "public/3d-assets/textures/star-anise/star-anise_height.png",
+        "public/3d-assets/textures/star-anise/star-anise_normal.png",
+        "public/3d-assets/textures/star-anise/star-anise_roughness.png"
+      ],
+      "triangleCount": 27486,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.0543,
+        0.0313,
+        0.0444
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0204,
+          -0.0224,
+          -0.0259
+        ],
+        "max": [
+          0.0339,
+          0.0089,
+          0.0185
+        ],
+        "size": [
+          0.0543,
+          0.0313,
+          0.0444
+        ],
+        "center": [
+          0.0067,
+          -0.0067,
+          -0.0037
+        ]
+      },
+      "materials": [
+        "star-anise-woody-husk",
+        "star-anise-seed-gloss"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/star-anise.glb",
+      "optimizedBytes": 128656,
+      "optimizedSizeKB": 125.6,
+      "rawTriangleCount": 28104,
+      "vertexCount": 15813,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/star-anise.png"
+    },
+    {
+      "slug": "cinnamon-sticks",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Cinnamon Sticks in Dramatic Light.png",
+      "glb": "public/3d-assets/ingredients/cinnamon-sticks.glb",
+      "glbBytes": 8098868,
+      "glbSizeKB": 7909.1,
+      "previewSheet": "public/3d-assets/previews/cinnamon-sticks.png",
+      "heroRender": "public/3d-assets/previews/cinnamon-sticks-hero.png",
+      "sourceFactory": "public/3d-assets/source/cinnamon-sticks/createCinnamonSticksModel.ts",
+      "exportName": "createCinnamonSticksModel",
+      "sculptSpec": "public/3d-assets/source/cinnamon-sticks/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/cinnamon-sticks/cinnamon-sticks_albedo.png",
+        "public/3d-assets/textures/cinnamon-sticks/cinnamon-sticks_ao.png",
+        "public/3d-assets/textures/cinnamon-sticks/cinnamon-sticks_height.png",
+        "public/3d-assets/textures/cinnamon-sticks/cinnamon-sticks_normal.png",
+        "public/3d-assets/textures/cinnamon-sticks/cinnamon-sticks_roughness.png",
+        "public/3d-assets/textures/cinnamon-sticks/pbr-evidence.json"
+      ],
+      "triangleCount": 35997,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.083,
+        0.0579,
+        0.0847
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0426,
+          -0.0259,
+          -0.0404
+        ],
+        "max": [
+          0.0403,
+          0.032,
+          0.0443
+        ],
+        "size": [
+          0.083,
+          0.0579,
+          0.0847
+        ],
+        "center": [
+          -0.0011,
+          0.0031,
+          0.002
+        ]
+      },
+      "materials": [
+        "ceylon-cassia-bark"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/cinnamon-sticks.glb",
+      "optimizedBytes": 164004,
+      "optimizedSizeKB": 160.2,
+      "rawTriangleCount": 36648,
+      "vertexCount": 18295,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap"
+      ],
+      "qaSheet": "qa/cinnamon-sticks.png"
+    },
+    {
+      "slug": "fried-onion-spirals",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Crispy Fried Onion Spirals in Flight.png",
+      "glb": "public/3d-assets/ingredients/fried-onion-spirals.glb",
+      "glbBytes": 6193256,
+      "glbSizeKB": 6048.1,
+      "previewSheet": "public/3d-assets/previews/fried-onion-spirals.png",
+      "heroRender": "public/3d-assets/previews/fried-onion-spirals-hero.png",
+      "sourceFactory": "public/3d-assets/source/fried-onion-spirals/createFriedOnionSpiralsModel.ts",
+      "exportName": "createFriedOnionSpiralsModel",
+      "sculptSpec": "public/3d-assets/source/fried-onion-spirals/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/fried-onion-spirals/fried-onion-spirals_albedo.png",
+        "public/3d-assets/textures/fried-onion-spirals/fried-onion-spirals_ao.png",
+        "public/3d-assets/textures/fried-onion-spirals/fried-onion-spirals_height.png",
+        "public/3d-assets/textures/fried-onion-spirals/fried-onion-spirals_normal.png",
+        "public/3d-assets/textures/fried-onion-spirals/fried-onion-spirals_roughness.png",
+        "public/3d-assets/textures/fried-onion-spirals/pbr-evidence.json"
+      ],
+      "triangleCount": 14672,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.0984,
+        0.0795,
+        0.0916
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0499,
+          -0.0405,
+          -0.0442
+        ],
+        "max": [
+          0.0486,
+          0.0391,
+          0.0473
+        ],
+        "size": [
+          0.0984,
+          0.0795,
+          0.0916
+        ],
+        "center": [
+          -0.0007,
+          -0.0007,
+          0.0016
+        ]
+      },
+      "materials": [
+        "onion-spiral-gold"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/fried-onion-spirals.glb",
+      "optimizedBytes": 125772,
+      "optimizedSizeKB": 122.8,
+      "rawTriangleCount": 14800,
+      "vertexCount": 10852,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/fried-onion-spirals.png"
+    },
+    {
+      "slug": "crispy-chicken-drumstick",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Crispy Spiced Chicken Drumstick.png",
+      "glb": "public/3d-assets/ingredients/crispy-chicken-drumstick.glb",
+      "glbBytes": 6638612,
+      "glbSizeKB": 6483,
+      "previewSheet": "public/3d-assets/previews/crispy-chicken-drumstick.png",
+      "heroRender": "public/3d-assets/previews/crispy-chicken-drumstick-hero.png",
+      "sourceFactory": "public/3d-assets/source/crispy-chicken-drumstick/createCrispyChickenDrumstickModel.ts",
+      "exportName": "createCrispyChickenDrumstickModel",
+      "sculptSpec": "public/3d-assets/source/crispy-chicken-drumstick/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/crispy-chicken-drumstick/crispy-chicken-drumstick_albedo.png",
+        "public/3d-assets/textures/crispy-chicken-drumstick/crispy-chicken-drumstick_ao.png",
+        "public/3d-assets/textures/crispy-chicken-drumstick/crispy-chicken-drumstick_height.png",
+        "public/3d-assets/textures/crispy-chicken-drumstick/crispy-chicken-drumstick_normal.png",
+        "public/3d-assets/textures/crispy-chicken-drumstick/crispy-chicken-drumstick_roughness.png",
+        "public/3d-assets/textures/crispy-chicken-drumstick/pbr-evidence.json"
+      ],
+      "triangleCount": 15420,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.1635,
+        0.1759,
+        0.1281
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0674,
+          -0.0813,
+          -0.0612
+        ],
+        "max": [
+          0.0961,
+          0.0946,
+          0.0669
+        ],
+        "size": [
+          0.1635,
+          0.1759,
+          0.1281
+        ],
+        "center": [
+          0.0144,
+          0.0066,
+          0.0029
+        ]
+      },
+      "materials": [
+        "crispy-spiced-skin",
+        "drumstick-bone-tip",
+        "crispy-drumstick-herbs"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/crispy-chicken-drumstick.glb",
+      "optimizedBytes": 224152,
+      "optimizedSizeKB": 218.9,
+      "rawTriangleCount": 17064,
+      "vertexCount": 8190,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/crispy-chicken-drumstick.png"
+    },
+    {
+      "slug": "cilantro-sprig",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Dewy Cilantro Sprig on Black.png",
+      "glb": "public/3d-assets/ingredients/cilantro-sprig.glb",
+      "glbBytes": 7784728,
+      "glbSizeKB": 7602.3,
+      "previewSheet": "public/3d-assets/previews/cilantro-sprig.png",
+      "heroRender": "public/3d-assets/previews/cilantro-sprig-hero.png",
+      "sourceFactory": "public/3d-assets/source/cilantro-sprig/createCilantroSprigModel.ts",
+      "exportName": "createCilantroSprigModel",
+      "sculptSpec": "public/3d-assets/source/cilantro-sprig/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/cilantro-sprig/cilantro-sprig_albedo.png",
+        "public/3d-assets/textures/cilantro-sprig/cilantro-sprig_ao.png",
+        "public/3d-assets/textures/cilantro-sprig/cilantro-sprig_height.png",
+        "public/3d-assets/textures/cilantro-sprig/cilantro-sprig_normal.png",
+        "public/3d-assets/textures/cilantro-sprig/cilantro-sprig_roughness.png",
+        "public/3d-assets/textures/cilantro-sprig/pbr-evidence.json"
+      ],
+      "triangleCount": 32316,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.1393,
+        0.1206,
+        0.0469
+      ],
+      "boundingBox": {
+        "min": [
+          -0.07,
+          -0.0616,
+          -0.0146
+        ],
+        "max": [
+          0.0692,
+          0.059,
+          0.0324
+        ],
+        "size": [
+          0.1393,
+          0.1206,
+          0.0469
+        ],
+        "center": [
+          -0.0004,
+          -0.0013,
+          0.0089
+        ]
+      },
+      "materials": [
+        "cilantro-stem",
+        "cilantro-leaf-top",
+        "cilantro-leaf-underside",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/cilantro-sprig.glb",
+      "optimizedBytes": 176888,
+      "optimizedSizeKB": 172.7,
+      "rawTriangleCount": 32752,
+      "vertexCount": 18190,
+      "channels": [
+        "sheen",
+        "clearcoat",
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "transmission"
+      ],
+      "qaSheet": "qa/cilantro-sprig.png"
+    },
+    {
+      "slug": "tomato-slices",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Dramatic Floating Tomato Slices.png",
+      "glb": "public/3d-assets/ingredients/tomato-slices.glb",
+      "glbBytes": 5157112,
+      "glbSizeKB": 5036.2,
+      "previewSheet": "public/3d-assets/previews/tomato-slices.png",
+      "heroRender": "public/3d-assets/previews/tomato-slices-hero.png",
+      "sourceFactory": "public/3d-assets/source/tomato-slices/createTomatoSlicesModel.ts",
+      "exportName": "createTomatoSlicesModel",
+      "sculptSpec": "public/3d-assets/source/tomato-slices/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/tomato-slices/pbr-evidence.json",
+        "public/3d-assets/textures/tomato-slices/tomato-slices_albedo.png",
+        "public/3d-assets/textures/tomato-slices/tomato-slices_ao.png",
+        "public/3d-assets/textures/tomato-slices/tomato-slices_height.png",
+        "public/3d-assets/textures/tomato-slices/tomato-slices_normal.png",
+        "public/3d-assets/textures/tomato-slices/tomato-slices_roughness.png"
+      ],
+      "triangleCount": 20142,
+      "meshCount": 4,
+      "dimensionsMeters": [
+        0.1098,
+        0.1062,
+        0.0794
+      ],
+      "boundingBox": {
+        "min": [
+          -0.053,
+          -0.0532,
+          -0.0396
+        ],
+        "max": [
+          0.0568,
+          0.0531,
+          0.0398
+        ],
+        "size": [
+          0.1098,
+          0.1062,
+          0.0794
+        ],
+        "center": [
+          0.0019,
+          -0.0001,
+          0.0001
+        ]
+      },
+      "materials": [
+        "tomato-scarlet-skin",
+        "juicy-tomato-flesh",
+        "tomato-gel-seeds",
+        "tomato-green-calyx",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/tomato-slices.glb",
+      "optimizedBytes": 102332,
+      "optimizedSizeKB": 99.9,
+      "rawTriangleCount": 30172,
+      "vertexCount": 11538,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "clearcoat",
+        "aoMap",
+        "sheen",
+        "transmission"
+      ],
+      "qaSheet": "qa/tomato-slices.png"
+    },
+    {
+      "slug": "basmati-rice-cluster",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Floating Basmati Rice Grain Cluster.png",
+      "glb": "public/3d-assets/ingredients/basmati-rice-cluster.glb",
+      "glbBytes": 6056668,
+      "glbSizeKB": 5914.7,
+      "previewSheet": "public/3d-assets/previews/basmati-rice-cluster.png",
+      "heroRender": "public/3d-assets/previews/basmati-rice-cluster-hero.png",
+      "sourceFactory": "public/3d-assets/source/basmati-rice-cluster/createBasmatiRiceClusterModel.ts",
+      "exportName": "createBasmatiRiceClusterModel",
+      "sculptSpec": "public/3d-assets/source/basmati-rice-cluster/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/basmati-rice-cluster/basmati-rice-cluster_albedo.png",
+        "public/3d-assets/textures/basmati-rice-cluster/basmati-rice-cluster_ao.png",
+        "public/3d-assets/textures/basmati-rice-cluster/basmati-rice-cluster_height.png",
+        "public/3d-assets/textures/basmati-rice-cluster/basmati-rice-cluster_normal.png",
+        "public/3d-assets/textures/basmati-rice-cluster/basmati-rice-cluster_roughness.png",
+        "public/3d-assets/textures/basmati-rice-cluster/pbr-evidence.json"
+      ],
+      "triangleCount": 22437,
+      "meshCount": 1,
+      "dimensionsMeters": [
+        0.0928,
+        0.0675,
+        0.091
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0449,
+          -0.0306,
+          -0.0424
+        ],
+        "max": [
+          0.0479,
+          0.037,
+          0.0485
+        ],
+        "size": [
+          0.0928,
+          0.0675,
+          0.091
+        ],
+        "center": [
+          0.0015,
+          0.0032,
+          0.0031
+        ]
+      },
+      "materials": [
+        "ivory-basmati"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/basmati-rice-cluster.glb",
+      "optimizedBytes": 118988,
+      "optimizedSizeKB": 116.2,
+      "rawTriangleCount": 22680,
+      "vertexCount": 14578,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/basmati-rice-cluster.png"
+    },
+    {
+      "slug": "bay-leaves",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Floating Bay Leaves with Golden Veins.png",
+      "glb": "public/3d-assets/ingredients/bay-leaves.glb",
+      "glbBytes": 5128792,
+      "glbSizeKB": 5008.6,
+      "previewSheet": "public/3d-assets/previews/bay-leaves.png",
+      "heroRender": "public/3d-assets/previews/bay-leaves-hero.png",
+      "sourceFactory": "public/3d-assets/source/bay-leaves/createBayLeavesModel.ts",
+      "exportName": "createBayLeavesModel",
+      "sculptSpec": "public/3d-assets/source/bay-leaves/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/bay-leaves/bay-leaves_albedo.png",
+        "public/3d-assets/textures/bay-leaves/bay-leaves_ao.png",
+        "public/3d-assets/textures/bay-leaves/bay-leaves_height.png",
+        "public/3d-assets/textures/bay-leaves/bay-leaves_normal.png",
+        "public/3d-assets/textures/bay-leaves/bay-leaves_roughness.png",
+        "public/3d-assets/textures/bay-leaves/pbr-evidence.json"
+      ],
+      "triangleCount": 12876,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.0961,
+        0.0764,
+        0.0952
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0486,
+          -0.0645,
+          -0.0406
+        ],
+        "max": [
+          0.0475,
+          0.0119,
+          0.0546
+        ],
+        "size": [
+          0.0961,
+          0.0764,
+          0.0952
+        ],
+        "center": [
+          -0.0005,
+          -0.0263,
+          0.007
+        ]
+      },
+      "materials": [
+        "dried-bay-leaf-top",
+        "dried-bay-leaf-underside"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/bay-leaves.glb",
+      "optimizedBytes": 110964,
+      "optimizedSizeKB": 108.4,
+      "rawTriangleCount": 12984,
+      "vertexCount": 6905,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/bay-leaves.png"
+    },
+    {
+      "slug": "cardamom-pods",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Floating Cardamom Pods and Seeds.png",
+      "glb": "public/3d-assets/ingredients/cardamom-pods.glb",
+      "glbBytes": 6618624,
+      "glbSizeKB": 6463.5,
+      "previewSheet": "public/3d-assets/previews/cardamom-pods.png",
+      "heroRender": "public/3d-assets/previews/cardamom-pods-hero.png",
+      "sourceFactory": "public/3d-assets/source/cardamom-pods/createCardamomPodsModel.ts",
+      "exportName": "createCardamomPodsModel",
+      "sculptSpec": "public/3d-assets/source/cardamom-pods/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/cardamom-pods/cardamom-pods_albedo.png",
+        "public/3d-assets/textures/cardamom-pods/cardamom-pods_ao.png",
+        "public/3d-assets/textures/cardamom-pods/cardamom-pods_height.png",
+        "public/3d-assets/textures/cardamom-pods/cardamom-pods_normal.png",
+        "public/3d-assets/textures/cardamom-pods/cardamom-pods_roughness.png",
+        "public/3d-assets/textures/cardamom-pods/pbr-evidence.json"
+      ],
+      "triangleCount": 19033,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.05,
+        0.0362,
+        0.0462
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0264,
+          -0.0226,
+          -0.0255
+        ],
+        "max": [
+          0.0236,
+          0.0136,
+          0.0207
+        ],
+        "size": [
+          0.05,
+          0.0362,
+          0.0462
+        ],
+        "center": [
+          -0.0014,
+          -0.0045,
+          -0.0024
+        ]
+      },
+      "materials": [
+        "cardamom-fibrous-husk",
+        "cardamom-aromatic-seeds"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/cardamom-pods.glb",
+      "optimizedBytes": 231892,
+      "optimizedSizeKB": 226.5,
+      "rawTriangleCount": 19856,
+      "vertexCount": 22085,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat"
+      ],
+      "qaSheet": "qa/cardamom-pods.png"
+    },
+    {
+      "slug": "cloves",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Floating Cloves in Golden Light.png",
+      "glb": "public/3d-assets/ingredients/cloves.glb",
+      "glbBytes": 8483224,
+      "glbSizeKB": 8284.4,
+      "previewSheet": "public/3d-assets/previews/cloves.png",
+      "heroRender": "public/3d-assets/previews/cloves-hero.png",
+      "sourceFactory": "public/3d-assets/source/cloves/createClovesModel.ts",
+      "exportName": "createClovesModel",
+      "sculptSpec": "public/3d-assets/source/cloves/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/cloves/cloves_albedo.png",
+        "public/3d-assets/textures/cloves/cloves_ao.png",
+        "public/3d-assets/textures/cloves/cloves_height.png",
+        "public/3d-assets/textures/cloves/cloves_normal.png",
+        "public/3d-assets/textures/cloves/cloves_roughness.png",
+        "public/3d-assets/textures/cloves/pbr-evidence.json"
+      ],
+      "triangleCount": 18597,
+      "meshCount": 1,
+      "dimensionsMeters": [
+        0.0435,
+        0.038,
+        0.0444
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0236,
+          -0.0181,
+          -0.0223
+        ],
+        "max": [
+          0.0199,
+          0.0199,
+          0.0221
+        ],
+        "size": [
+          0.0435,
+          0.038,
+          0.0444
+        ],
+        "center": [
+          -0.0019,
+          0.0009,
+          -0.0001
+        ]
+      },
+      "materials": [
+        "clove-woody-stalk",
+        "clove-flower-bud"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/cloves.glb",
+      "optimizedBytes": 231772,
+      "optimizedSizeKB": 226.3,
+      "rawTriangleCount": 20880,
+      "vertexCount": 18132,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "sheen"
+      ],
+      "qaSheet": "qa/cloves.png"
+    },
+    {
+      "slug": "red-onion-rings",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Floating Red Onion Rings in Motion.png",
+      "glb": "public/3d-assets/ingredients/red-onion-rings.glb",
+      "glbBytes": 3643584,
+      "glbSizeKB": 3558.2,
+      "previewSheet": "public/3d-assets/previews/red-onion-rings.png",
+      "heroRender": "public/3d-assets/previews/red-onion-rings-hero.png",
+      "sourceFactory": "public/3d-assets/source/red-onion-rings/createRedOnionRingsModel.ts",
+      "exportName": "createRedOnionRingsModel",
+      "sculptSpec": "public/3d-assets/source/red-onion-rings/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/red-onion-rings/pbr-evidence.json",
+        "public/3d-assets/textures/red-onion-rings/red-onion-rings_albedo.png",
+        "public/3d-assets/textures/red-onion-rings/red-onion-rings_ao.png",
+        "public/3d-assets/textures/red-onion-rings/red-onion-rings_height.png",
+        "public/3d-assets/textures/red-onion-rings/red-onion-rings_normal.png",
+        "public/3d-assets/textures/red-onion-rings/red-onion-rings_roughness.png"
+      ],
+      "triangleCount": 12444,
+      "meshCount": 2,
+      "dimensionsMeters": [
+        0.0998,
+        0.0875,
+        0.0829
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0501,
+          -0.0403,
+          -0.038
+        ],
+        "max": [
+          0.0497,
+          0.0472,
+          0.0449
+        ],
+        "size": [
+          0.0998,
+          0.0875,
+          0.0829
+        ],
+        "center": [
+          -0.0002,
+          0.0034,
+          0.0035
+        ]
+      },
+      "materials": [
+        "red-onion-magenta-skin",
+        "red-onion-white-layers",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/red-onion-rings.glb",
+      "optimizedBytes": 84940,
+      "optimizedSizeKB": 82.9,
+      "rawTriangleCount": 12444,
+      "vertexCount": 22678,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat",
+        "transmission"
+      ],
+      "qaSheet": "qa/red-onion-rings.png"
+    },
+    {
+      "slug": "mint-sprig",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Glistening Fresh Mint Sprig.png",
+      "glb": "public/3d-assets/ingredients/mint-sprig.glb",
+      "glbBytes": 7997456,
+      "glbSizeKB": 7810,
+      "previewSheet": "public/3d-assets/previews/mint-sprig.png",
+      "heroRender": "public/3d-assets/previews/mint-sprig-hero.png",
+      "sourceFactory": "public/3d-assets/source/mint-sprig/createMintSprigModel.ts",
+      "exportName": "createMintSprigModel",
+      "sculptSpec": "public/3d-assets/source/mint-sprig/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/mint-sprig/mint-sprig_albedo.png",
+        "public/3d-assets/textures/mint-sprig/mint-sprig_ao.png",
+        "public/3d-assets/textures/mint-sprig/mint-sprig_height.png",
+        "public/3d-assets/textures/mint-sprig/mint-sprig_normal.png",
+        "public/3d-assets/textures/mint-sprig/mint-sprig_roughness.png",
+        "public/3d-assets/textures/mint-sprig/pbr-evidence.json"
+      ],
+      "triangleCount": 30818,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.1752,
+        0.1105,
+        0.1186
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0839,
+          -0.0534,
+          -0.0537
+        ],
+        "max": [
+          0.0913,
+          0.0571,
+          0.0649
+        ],
+        "size": [
+          0.1752,
+          0.1105,
+          0.1186
+        ],
+        "center": [
+          0.0037,
+          0.0018,
+          0.0056
+        ]
+      },
+      "materials": [
+        "mint-sprig-stem",
+        "mint-sprig-top",
+        "mint-sprig-underside",
+        "mint-apical-bud",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/mint-sprig.glb",
+      "optimizedBytes": 188952,
+      "optimizedSizeKB": 184.5,
+      "rawTriangleCount": 31040,
+      "vertexCount": 17225,
+      "channels": [
+        "sheen",
+        "clearcoat",
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "transmission"
+      ],
+      "qaSheet": "qa/mint-sprig.png"
+    },
+    {
+      "slug": "chili-duo",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Glossy Floating Chili Duo.png",
+      "glb": "public/3d-assets/ingredients/chili-duo.glb",
+      "glbBytes": 5419136,
+      "glbSizeKB": 5292.1,
+      "previewSheet": "public/3d-assets/previews/chili-duo.png",
+      "heroRender": "public/3d-assets/previews/chili-duo-hero.png",
+      "sourceFactory": "public/3d-assets/source/chili-duo/createChiliDuoModel.ts",
+      "exportName": "createChiliDuoModel",
+      "sculptSpec": "public/3d-assets/source/chili-duo/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/chili-duo/chili-duo_albedo.png",
+        "public/3d-assets/textures/chili-duo/chili-duo_ao.png",
+        "public/3d-assets/textures/chili-duo/chili-duo_height.png",
+        "public/3d-assets/textures/chili-duo/chili-duo_normal.png",
+        "public/3d-assets/textures/chili-duo/chili-duo_roughness.png",
+        "public/3d-assets/textures/chili-duo/pbr-evidence.json"
+      ],
+      "triangleCount": 14585,
+      "meshCount": 5,
+      "dimensionsMeters": [
+        0.0939,
+        0.0736,
+        0.0428
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0579,
+          -0.0279,
+          -0.0212
+        ],
+        "max": [
+          0.0361,
+          0.0458,
+          0.0216
+        ],
+        "size": [
+          0.0939,
+          0.0736,
+          0.0428
+        ],
+        "center": [
+          -0.0109,
+          0.009,
+          0.0002
+        ]
+      },
+      "materials": [
+        "duo-green-chili",
+        "duo-crimson-chili",
+        "MeshPhysicalMaterial",
+        "duo-chili-calyx",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/chili-duo.glb",
+      "optimizedBytes": 91340,
+      "optimizedSizeKB": 89.2,
+      "rawTriangleCount": 15544,
+      "vertexCount": 8977,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "transmission"
+      ],
+      "qaSheet": "qa/chili-duo.png"
+    },
+    {
+      "slug": "green-chili",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Glossy Green Chili Pepper with Droplets.png",
+      "glb": "public/3d-assets/ingredients/green-chili.glb",
+      "glbBytes": 3032868,
+      "glbSizeKB": 2961.8,
+      "previewSheet": "public/3d-assets/previews/green-chili.png",
+      "heroRender": "public/3d-assets/previews/green-chili-hero.png",
+      "sourceFactory": "public/3d-assets/source/green-chili/createGreenChiliModel.ts",
+      "exportName": "createGreenChiliModel",
+      "sculptSpec": "public/3d-assets/source/green-chili/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/green-chili/green-chili_albedo.png",
+        "public/3d-assets/textures/green-chili/green-chili_ao.png",
+        "public/3d-assets/textures/green-chili/green-chili_height.png",
+        "public/3d-assets/textures/green-chili/green-chili_normal.png",
+        "public/3d-assets/textures/green-chili/green-chili_roughness.png",
+        "public/3d-assets/textures/green-chili/pbr-evidence.json"
+      ],
+      "triangleCount": 8317,
+      "meshCount": 3,
+      "dimensionsMeters": [
+        0.0851,
+        0.0507,
+        0.0308
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0491,
+          -0.0108,
+          -0.0214
+        ],
+        "max": [
+          0.036,
+          0.0399,
+          0.0093
+        ],
+        "size": [
+          0.0851,
+          0.0507,
+          0.0308
+        ],
+        "center": [
+          -0.0065,
+          0.0146,
+          -0.0061
+        ]
+      },
+      "materials": [
+        "glossy-green-chili-skin",
+        "chili-calyx-stem",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/green-chili.glb",
+      "optimizedBytes": 49152,
+      "optimizedSizeKB": 48,
+      "rawTriangleCount": 11964,
+      "vertexCount": 4942,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "sheen",
+        "transmission"
+      ],
+      "qaSheet": "qa/green-chili.png"
+    },
+    {
+      "slug": "lemon-wedge",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Hyper-Realistic Floating Lemon Wedge.png",
+      "glb": "public/3d-assets/ingredients/lemon-wedge.glb",
+      "glbBytes": 8128624,
+      "glbSizeKB": 7938.1,
+      "previewSheet": "public/3d-assets/previews/lemon-wedge.png",
+      "heroRender": "public/3d-assets/previews/lemon-wedge-hero.png",
+      "sourceFactory": "public/3d-assets/source/lemon-wedge/createLemonWedgeModel.ts",
+      "exportName": "createLemonWedgeModel",
+      "sculptSpec": "public/3d-assets/source/lemon-wedge/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/lemon-wedge/lemon-wedge_albedo.png",
+        "public/3d-assets/textures/lemon-wedge/lemon-wedge_ao.png",
+        "public/3d-assets/textures/lemon-wedge/lemon-wedge_height.png",
+        "public/3d-assets/textures/lemon-wedge/lemon-wedge_normal.png",
+        "public/3d-assets/textures/lemon-wedge/lemon-wedge_roughness.png",
+        "public/3d-assets/textures/lemon-wedge/pbr-evidence.json"
+      ],
+      "triangleCount": 6591,
+      "meshCount": 4,
+      "dimensionsMeters": [
+        0.0924,
+        0.0626,
+        0.074
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0401,
+          -0.0443,
+          -0.0382
+        ],
+        "max": [
+          0.0523,
+          0.0183,
+          0.0358
+        ],
+        "size": [
+          0.0924,
+          0.0626,
+          0.074
+        ],
+        "center": [
+          0.0061,
+          -0.013,
+          -0.0012
+        ]
+      },
+      "materials": [
+        "glistening-citrus-pulp",
+        "lemon-zest-rind",
+        "MeshPhysicalMaterial",
+        "dew-water-droplet"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/lemon-wedge.glb",
+      "optimizedBytes": 291660,
+      "optimizedSizeKB": 284.8,
+      "rawTriangleCount": 14896,
+      "vertexCount": 3646,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen",
+        "clearcoat",
+        "transmission"
+      ],
+      "qaSheet": "qa/lemon-wedge.png"
+    },
+    {
+      "slug": "saffron-threads",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Vivid Saffron Threads on Dark Background.png",
+      "glb": "public/3d-assets/ingredients/saffron-threads.glb",
+      "glbBytes": 8141392,
+      "glbSizeKB": 7950.6,
+      "previewSheet": "public/3d-assets/previews/saffron-threads.png",
+      "heroRender": "public/3d-assets/previews/saffron-threads-hero.png",
+      "sourceFactory": "public/3d-assets/source/saffron-threads/createSaffronThreadsModel.ts",
+      "exportName": "createSaffronThreadsModel",
+      "sculptSpec": "public/3d-assets/source/saffron-threads/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/saffron-threads/pbr-evidence.json",
+        "public/3d-assets/textures/saffron-threads/saffron-threads_albedo.png",
+        "public/3d-assets/textures/saffron-threads/saffron-threads_ao.png",
+        "public/3d-assets/textures/saffron-threads/saffron-threads_height.png",
+        "public/3d-assets/textures/saffron-threads/saffron-threads_normal.png",
+        "public/3d-assets/textures/saffron-threads/saffron-threads_roughness.png"
+      ],
+      "triangleCount": 23592,
+      "meshCount": 1,
+      "dimensionsMeters": [
+        0.0565,
+        0.0478,
+        0.0624
+      ],
+      "boundingBox": {
+        "min": [
+          -0.0275,
+          -0.0235,
+          -0.0327
+        ],
+        "max": [
+          0.029,
+          0.0244,
+          0.0297
+        ],
+        "size": [
+          0.0565,
+          0.0478,
+          0.0624
+        ],
+        "center": [
+          0.0008,
+          0.0005,
+          -0.0015
+        ]
+      },
+      "materials": [
+        "crimson-saffron-stigma"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/saffron-threads.glb",
+      "optimizedBytes": 142144,
+      "optimizedSizeKB": 138.8,
+      "rawTriangleCount": 26208,
+      "vertexCount": 13215,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "sheen"
+      ],
+      "qaSheet": "qa/saffron-threads.png"
+    },
+    {
+      "slug": "steaming-biryani-handi",
+      "category": "ingredient",
+      "sourceImage": "heroSection/Steaming Chicken Biryani in Copper Handi.png",
+      "glb": "public/3d-assets/ingredients/steaming-biryani-handi.glb",
+      "glbBytes": 11647408,
+      "glbSizeKB": 11374.4,
+      "previewSheet": "public/3d-assets/previews/steaming-biryani-handi.png",
+      "heroRender": "public/3d-assets/previews/steaming-biryani-handi-hero.png",
+      "sourceFactory": "public/3d-assets/source/steaming-biryani-handi/createSteamingBiryaniHandiModel.ts",
+      "exportName": "createSteamingBiryaniHandiModel",
+      "sculptSpec": "public/3d-assets/source/steaming-biryani-handi/object-sculpt-spec.json",
+      "extractedTextures": [
+        "public/3d-assets/textures/steaming-biryani-handi/pbr-evidence.json",
+        "public/3d-assets/textures/steaming-biryani-handi/steaming-biryani-handi_albedo.png",
+        "public/3d-assets/textures/steaming-biryani-handi/steaming-biryani-handi_ao.png",
+        "public/3d-assets/textures/steaming-biryani-handi/steaming-biryani-handi_height.png",
+        "public/3d-assets/textures/steaming-biryani-handi/steaming-biryani-handi_normal.png",
+        "public/3d-assets/textures/steaming-biryani-handi/steaming-biryani-handi_roughness.png"
+      ],
+      "triangleCount": 53971,
+      "meshCount": 19,
+      "dimensionsMeters": [
+        0.2853,
+        0.335,
+        0.2869
+      ],
+      "boundingBox": {
+        "min": [
+          -0.1427,
+          0,
+          -0.1435
+        ],
+        "max": [
+          0.1426,
+          0.335,
+          0.1435
+        ],
+        "size": [
+          0.2853,
+          0.335,
+          0.2869
+        ],
+        "center": [
+          -0.0001,
+          0.1675,
+          0
+        ]
+      },
+      "materials": [
+        "steaming-handi-copper",
+        "PaletteMaterial001",
+        "biryani-rice-bed",
+        "PaletteMaterial002",
+        "PaletteMaterial003",
+        "PaletteMaterial004",
+        "PaletteMaterial005",
+        "PaletteMaterial006"
+      ],
+      "sockets": {},
+      "optimizedGlb": "public/3d-assets/optimized/ingredients/steaming-biryani-handi.glb",
+      "optimizedBytes": 306064,
+      "optimizedSizeKB": 298.9,
+      "rawTriangleCount": 55492,
+      "vertexCount": 35798,
+      "channels": [
+        "map",
+        "normalMap",
+        "roughnessMap",
+        "metalnessMap",
+        "aoMap",
+        "clearcoat",
+        "sheen"
+      ],
+      "qaSheet": "qa/steaming-biryani-handi.png"
+    }
+  ],
+  "generatedAt": "2026-11-12T15:35:12.731Z"
+}

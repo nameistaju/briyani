@@ -1,0 +1,28 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+tools/.venv
+tools/**/node_modules
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.env
+.env*.local
+tsconfig.tsbuildinfo
+
+# large archive & temporary tool repos
+/public/3d-assets.zip
+/tools/img2threejs/
+/tools/plugin-img2glb/
+/tools/_verify_screenshots/
+/tools/tmp_test_3d/
+/tools/_test_handi/

@@ -1,0 +1,48 @@
+{
+  "slug": "star-anise",
+  "category": "ingredients",
+  "reference": "heroSection/Cinematic Floating Star Anise.png",
+  "triangles": 27486,
+  "rawTriangles": 28104,
+  "vertices": 15813,
+  "rawBytes": 6548792,
+  "optBytes": 128656,
+  "budgetKB": 400,
+  "size": [
+    0.054301561787724495,
+    0.03129661735147238,
+    0.044394440948963165
+  ],
+  "center": [
+    0.006748049519956112,
+    -0.00670654745772481,
+    -0.003696044906973839
+  ],
+  "materials": [
+    "star-anise-woody-husk",
+    "star-anise-seed-gloss"
+  ],
+  "channels": [
+    "map",
+    "normalMap",
+    "roughnessMap",
+    "metalnessMap",
+    "aoMap",
+    "clearcoat"
+  ],
+  "sheetPath": "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\star-anise.png",
+  "views": {
+    "teal": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\teal_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\teal_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\teal_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\teal_3.png"
+    ],
+    "maroon": [
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\maroon_0.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\maroon_1.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\maroon_2.png",
+      "C:\\Users\\bantu\\Desktop\\Briyani\\qa\\.tmp\\star-anise\\maroon_3.png"
+    ]
+  }
+}
