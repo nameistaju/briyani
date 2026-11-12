@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "@/components/ui/Navbar";
 import { HeroSection } from "@/components/hero/HeroSection";
-import { TurmericMarquee } from "@/components/ui/TurmericMarquee";
+import { RickshawDeliveryBar } from "@/components/ui/RickshawDeliveryBar";
 import { ScallopDivider } from "@/components/brand/ScallopDivider";
 import { EditorialIntroSection } from "@/components/sections/EditorialIntroSection";
 import { AssemblySection } from "@/components/assembly/AssemblySection";
@@ -16,7 +16,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <HeroSection />
-        <TurmericMarquee />
+        <RickshawDeliveryBar />
         <EditorialIntroSection />
         <ScallopDivider topColor="#F5EFE0" bottomColor="#0E7D78" />
         <AssemblySection />

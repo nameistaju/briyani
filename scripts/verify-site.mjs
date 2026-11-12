@@ -108,11 +108,24 @@ async function run() {
     console.log("Captured desktop-hero.png");
 
     await page.evaluate(() => {
+      const el = document.querySelector('[aria-label="DUMBAAZ Delivery Rickshaw Express Bar"]');
+      if (el) el.scrollIntoView({ behavior: "instant", block: "center" });
+    });
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-rickshaw.png") });
+
+    await page.evaluate(() => {
       const el = document.getElementById("dum-craft");
       if (el) el.scrollIntoView({ behavior: "instant" });
     });
-    await page.waitForTimeout(500);
+    await page.waitForTimeout(600);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-editorial.png") });
+
+    await page.evaluate(() => {
+      window.scrollBy(0, 280);
+    });
+    await page.waitForTimeout(600);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-editorial-scrolled.png") });
 
     const assemblyStartTop = await page.evaluate(() => {
       const el = document.getElementById("assembly");
