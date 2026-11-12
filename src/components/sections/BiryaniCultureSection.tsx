@@ -147,49 +147,8 @@ export function BiryaniCultureSection() {
         </div>
       </div>
 
-      {/* 3. SPLIT SECTION: "BIRYANI, ON POINT." (image-6 on cream) */}
-      <div id="on-point" className="bg-cream px-5 py-20 text-burgundy sm:px-10 sm:py-28">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
-          {/* Left Column: Feast overhead image-6 */}
-          <div className="relative aspect-square w-full overflow-hidden rounded-[36px] shadow-2xl lg:col-span-7">
-            <Image
-              src="/images/community/image-6.webp"
-              alt="Complete overhead DUMBAAZ feast with chicken dum biryani, kebabs, gulab jamun, chutney, and spicy raita"
-              fill
-              sizes="(max-width: 1024px) 100vw, 58vw"
-              className="object-cover"
-            />
-          </div>
-
-          {/* Right Column: Bold Typography */}
-          <div className="flex flex-col justify-center lg:col-span-5">
-            <p className="text-xs font-bold tracking-[0.24em] text-saffron uppercase sm:text-sm">
-              THE COMPLETE SPREAD
-            </p>
-            <h3 className="mt-3 font-display text-6xl leading-[0.88] tracking-[-0.01em] text-[#C48400] uppercase sm:text-7xl lg:text-[84px]">
-              BIRYANI,
-              <br />
-              ON POINT.
-            </h3>
-            <p className="mt-6 text-base leading-relaxed font-semibold text-burgundy/85 sm:text-lg">
-              Long aged basmati grains parboiled with whole cardamom and clove, layered over rich
-              charcoal-roasted chicken, finished with golden birista, and served alongside cold whipped
-              raita and warm gulab jamuns.
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <a
-                href="#menu"
-                className="inline-flex items-center gap-2 rounded-full bg-burgundy px-7 py-3.5 text-xs font-bold tracking-[0.18em] text-cream uppercase transition-colors hover:bg-turmeric hover:text-ink"
-              >
-                EXPLORE MENU &#8599;
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 4. THE DUMBAAZ TRIBE (Community Reviews: image-7, image-8, image-9) */}
-      <div id="tribe" className="bg-burgundy px-5 py-20 text-cream sm:px-10 sm:py-28">
+      {/* 3. THE DUMBAAZ TRIBE (Community Reviews: image-7, image-8, image-9) */}
+      <div id="tribe" className="border-t border-cream/15 bg-burgundy-deep px-5 py-20 text-cream sm:px-10 sm:py-28">
         <div className="mx-auto max-w-[1440px]">
           <div className="text-center">
             <p className="text-[11px] font-bold tracking-[0.24em] text-turmeric uppercase sm:text-xs">

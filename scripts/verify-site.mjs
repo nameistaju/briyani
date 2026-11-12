@@ -161,12 +161,6 @@ async function run() {
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-top.png") });
 
     await page.evaluate(() => {
-      document.getElementById("on-point")?.scrollIntoView({ behavior: "instant" });
-    });
-    await page.waitForTimeout(800);
-    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-point.png") });
-
-    await page.evaluate(() => {
       document.getElementById("tribe")?.scrollIntoView({ behavior: "instant" });
     });
     await page.waitForTimeout(800);
