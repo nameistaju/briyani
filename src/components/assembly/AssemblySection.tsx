@@ -4,7 +4,6 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ASSEMBLY_STEPS } from "@/data/brand";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useWebGLSupport } from "@/hooks/useWebGLSupport";
 import { WebGLFallback } from "@/components/three/WebGLFallback";
@@ -29,6 +28,34 @@ const AssemblyScene3D = dynamic(
     ),
   }
 );
+
+const STEPS = [
+  {
+    num: "01",
+    name: "THE HANDI",
+    desc: "Heavy copper, charcoal hearth.",
+  },
+  {
+    num: "02",
+    name: "THE RICE",
+    desc: "Aged basmati, saffron kissed.",
+  },
+  {
+    num: "03",
+    name: "THE CHICKEN",
+    desc: "Tandoori spiced, succulent.",
+  },
+  {
+    num: "04",
+    name: "THE ONIONS",
+    desc: "Golden birista, crispy.",
+  },
+  {
+    num: "05",
+    name: "THE DUM!",
+    desc: "Aromatic herbs and steam.",
+  },
+];
 
 export function AssemblySection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -107,7 +134,7 @@ export function AssemblySection() {
         1.0
       );
 
-      // Stage 3 (2–3): Spicy roasted chicken drumstick falls & tilts onto rice mound
+      // Stage 3 (2–3): Spicy roasted chicken drumstick falls & settles
       tl.to(
         state,
         {
@@ -131,7 +158,7 @@ export function AssemblySection() {
         3.0
       );
 
-      // Stage 5 (4–5): Mint leaves crown the dish + final steaming dum reveal
+      // Stage 5 (4–5): Mint leaves crown the dish + steaming dum reveal
       tl.to(
         state,
         {
@@ -155,74 +182,36 @@ export function AssemblySection() {
     return () => ctx.revert();
   }, [reducedMotion]);
 
-  const currentStep = ASSEMBLY_STEPS[activeStepIndex] ?? ASSEMBLY_STEPS[0];
-
   return (
     <section
       ref={sectionRef}
       id="assembly"
       aria-label="Scroll-Controlled Dum Biryani Assembly"
-      className="relative flex min-h-screen w-full flex-col justify-between overflow-hidden bg-teal pt-20 pb-8 text-cream sm:pt-24 sm:pb-10"
+      className="relative flex min-h-screen w-full flex-col justify-between overflow-hidden bg-teal px-6 py-10 sm:px-12 sm:py-14 text-cream"
     >
-      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-1 flex-col justify-between px-5 sm:px-10">
-        {/* Main 2-column stage matching unboxed editorial sequence */}
-        <div className="my-auto grid grid-cols-1 items-center gap-6 py-4 lg:grid-cols-12">
-          {/* Left editorial headline + unboxed numbered rail */}
-          <div className="lg:col-span-5">
-            <p className="text-[11px] font-bold tracking-[0.2em] text-turmeric uppercase sm:text-xs">
-              COPPER HANDI &bull; DUM SEQUENCE &bull; STAGE {currentStep.step} / 05
-              {reducedMotion ? " · REDUCED MOTION" : ""}
-            </p>
+      {/* Semantic step & accessibility tracking */}
+      <span className="sr-only">
+        STAGE {String(activeStepIndex + 1).padStart(2, "0")} / 05
+        {reducedMotion ? " · REDUCED MOTION" : ""}
+      </span>
 
-            <h2 className="mt-3 font-display text-5xl leading-[0.86] tracking-[-0.01em] text-cream uppercase sm:text-6xl lg:text-[68px]">
-              DUM BIRYANI,
-              <br />
-              BUILT LAYER
-              <br />
-              BY LAYER.
-            </h2>
+      <div className="relative z-10 mx-auto flex h-full min-h-[calc(100vh-6rem)] w-full max-w-[1440px] flex-col justify-between">
+        {/* Top-left: Clean kicker & headline matching "A PINCHO IS SIMPLE." */}
+        <div className="max-w-xl pt-10 sm:pt-14">
+          <p className="font-sans text-xs sm:text-sm font-bold tracking-[0.2em] text-turmeric uppercase">
+            DUM BIRYANI &bull; DUMBAAZ
+          </p>
 
-            <ol
-              aria-label="Biryani assembly sequence"
-              className="mt-7 space-y-2.5 sm:mt-9 sm:space-y-3"
-            >
-              {ASSEMBLY_STEPS.map((item, index) => {
-                const isActive = reducedMotion
-                  ? index === ASSEMBLY_STEPS.length - 1
-                  : index === activeStepIndex;
+          <h2 className="mt-3 font-sans text-5xl sm:text-7xl lg:text-[84px] font-black uppercase tracking-tight leading-[0.92] text-cream">
+            A BIRYANI
+            <br />
+            IS SIMPLE.
+          </h2>
+        </div>
 
-                return (
-                  <li key={item.step} className="flex items-start gap-4">
-                    <span
-                      className={`mt-1 w-6 shrink-0 text-xs font-bold tracking-[0.12em] uppercase transition-colors duration-200 ${
-                        isActive ? "text-turmeric" : "text-turmeric/40"
-                      }`}
-                    >
-                      {item.step}
-                    </span>
-
-                    <div>
-                      <p
-                        className={`font-display text-2xl leading-[0.95] uppercase transition-colors duration-200 sm:text-[32px] ${
-                          isActive ? "text-cream" : "text-cream/35"
-                        }`}
-                      >
-                        {item.ingredientLabel}
-                      </p>
-                      {isActive && (
-                        <p className="mt-1 max-w-md text-xs leading-relaxed text-cream/85 sm:text-sm">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
-                  </li>
-                );
-              })}
-            </ol>
-          </div>
-
-          {/* Right/Center real 3D assembly viewport (no artificial oval rings) */}
-          <div className="relative h-[400px] w-full sm:h-[500px] lg:col-span-7 lg:h-[580px]">
+        {/* Right side: 3D assembly canvas with generous breathing room */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex w-full items-center justify-center lg:w-[60%]">
+          <div className="pointer-events-auto relative h-[380px] w-full sm:h-[480px] lg:h-[620px]">
             <AssemblyScene3D
               motionRef={motionRef}
               webglSupported={webglSupported}
@@ -232,12 +221,48 @@ export function AssemblySection() {
           </div>
         </div>
 
-        {/* Minimal horizontal scroll progress track */}
-        <div className="pt-4">
-          <div className="h-[2px] w-full overflow-hidden bg-cream/20">
+        {/* Bottom-left: Minimal 5-step rail & yellow progress bar */}
+        <div className="relative z-20 mt-auto pb-4 sm:pb-6">
+          <ol
+            aria-label="Biryani assembly sequence"
+            className="space-y-2 sm:space-y-3"
+          >
+            {STEPS.map((step, idx) => {
+              const isActive = reducedMotion
+                ? idx === STEPS.length - 1
+                : idx === activeStepIndex;
+
+              return (
+                <li
+                  key={step.num}
+                  className={`flex flex-col transition-all duration-300 ${
+                    isActive ? "opacity-100 translate-x-2" : "opacity-35"
+                  }`}
+                >
+                  <div className="flex items-baseline gap-3 sm:gap-5">
+                    <span className="font-sans text-sm sm:text-base font-extrabold text-turmeric tracking-wider w-6 shrink-0">
+                      {step.num}
+                    </span>
+                    <span className="font-sans text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase leading-none tracking-tight text-cream">
+                      {step.name}
+                    </span>
+                  </div>
+
+                  {isActive && (
+                    <p className="ml-9 sm:ml-11 mt-1 text-xs sm:text-sm text-cream/80 font-medium tracking-wide">
+                      {step.desc}
+                    </p>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Yellow progress line matching reference */}
+          <div className="mt-6 sm:mt-8 h-1 w-64 sm:w-80 rounded-full bg-cream/20 overflow-hidden">
             <div
               ref={progressBarRef}
-              className="h-full w-full origin-left bg-turmeric transition-transform duration-100"
+              className="h-full bg-turmeric rounded-full origin-left transition-transform duration-100"
               style={{ transform: reducedMotion ? "scaleX(1)" : "scaleX(0.06)" }}
             />
           </div>

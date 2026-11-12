@@ -137,7 +137,7 @@ async function run() {
     for (const offset of [150, 960, 1600, 2240, 3120]) {
       await page.evaluate((y) => window.scrollTo(0, y), assemblyStartTop + offset);
       await page.waitForTimeout(750);
-      const stepText = await page.locator("#assembly").innerText();
+      const stepText = (await page.locator("#assembly").textContent()) || "";
       const match = stepText.match(/STAGE\s+(\d+)\s+\/\s+05/);
       stepSnapshots.push({ offset, stage: match ? match[1] : "unknown" });
       if (offset === 1600) {
@@ -226,7 +226,7 @@ async function run() {
     await reducedPage.goto(`${BASE_URL}#assembly`, { waitUntil: "domcontentloaded", timeout: 25000 });
     await reducedPage.waitForSelector("#assembly", { timeout: 10000 });
     await reducedPage.waitForTimeout(1600);
-    const reducedLabel = await reducedPage.locator("#assembly").innerText();
+    const reducedLabel = (await reducedPage.locator("#assembly").textContent()) || "";
     const reducedMotionObserved = reducedLabel.includes("REDUCED MOTION");
     await reducedCtx.close();
 
