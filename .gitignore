@@ -26,3 +26,4 @@ tsconfig.tsbuildinfo
 /tools/_verify_screenshots/
 /tools/tmp_test_3d/
 /tools/_test_handi/
+/.agents/

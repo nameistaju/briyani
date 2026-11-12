@@ -2,7 +2,7 @@
 
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, OrbitControls, useGLTF } from "@react-three/drei";
+import { Float, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import { HERO_FLOATING_SPICES, HERO_MODELS } from "@/data/assets";
 import { GLBModel, SceneErrorBoundary } from "@/components/three/GLBModel";
@@ -10,34 +10,52 @@ import { StudioLighting } from "@/components/three/StudioLighting";
 import { SteamParticles } from "@/components/three/SteamParticles";
 import { WebGLFallback } from "@/components/three/WebGLFallback";
 
-interface HeroSceneContentProps {
+interface HeroHandiRigProps {
   reducedMotion: boolean;
   isCompactViewport: boolean;
+  spinVelocityRef: React.MutableRefObject<number>;
 }
 
+/**
+ * The Biryani Pot — completely independent object that rotates on its own
+ * vertical axis with continuous slow turntable rotation and interactive
+ * drag-spin momentum. It is NOT connected to the floating ingredients.
+ */
 function HeroHandiRig({
   reducedMotion,
   isCompactViewport,
-}: {
-  reducedMotion: boolean;
-  isCompactViewport: boolean;
-}) {
+  spinVelocityRef,
+}: HeroHandiRigProps) {
   const rigRef = useRef<THREE.Group>(null);
-  const elapsedRef = useRef(0);
+  const potAngleY = useRef(0.25);
 
   useFrame((state, delta) => {
-    if (!rigRef.current || reducedMotion) return;
-    elapsedRef.current += Math.min(delta, 0.1);
-    const t = elapsedRef.current;
-    const targetY = Math.sin(t * 0.45) * 0.22 + state.pointer.x * 0.24;
-    const targetX = 0.14 - state.pointer.y * 0.08;
-    rigRef.current.rotation.y = THREE.MathUtils.lerp(rigRef.current.rotation.y, targetY, 0.05);
-    rigRef.current.rotation.x = THREE.MathUtils.lerp(rigRef.current.rotation.x, targetX, 0.05);
+    if (!rigRef.current) return;
+
+    if (!reducedMotion) {
+      // Continuous slow appetizing turntable rotation
+      potAngleY.current += delta * 0.28;
+
+      // Add user drag-spin momentum with smooth inertia decay
+      potAngleY.current += spinVelocityRef.current;
+      spinVelocityRef.current *= 0.92;
+
+      // Apply independent pot rotation
+      rigRef.current.rotation.y = potAngleY.current;
+
+      // Subtle vertical tilt responding to pointer
+      const targetX = 0.14 - state.pointer.y * 0.08;
+      rigRef.current.rotation.x = THREE.MathUtils.lerp(
+        rigRef.current.rotation.x,
+        targetX,
+        0.05
+      );
+    }
   });
 
   return (
     <group ref={rigRef} position={[0, -1.05, 0]} rotation={[0.14, 0.25, 0]}>
-      {/* Metric assembly group matching calibrated copper-handi sockets */}
+      {/* Metric assembly group containing ONLY the pot and its contents */}
       <group scale={isCompactViewport ? 9.0 : 10.8}>
         <Suspense fallback={null}>
           <GLBModel
@@ -59,7 +77,7 @@ function HeroHandiRig({
             name="hero-chicken-drumstick"
             url={HERO_MODELS.chickenDrumstick.url}
             position={[0.008, 0.168, 0.016]}
-            rotation={[0.20, -0.22, 0.34]}
+            rotation={[0.2, -0.22, 0.34]}
             scale={HERO_MODELS.chickenDrumstick.assembled.scale}
           />
         </Suspense>
@@ -93,7 +111,73 @@ function HeroHandiRig({
   );
 }
 
-function FloatingSpicesCluster({
+/**
+ * Individual Floating Ingredient with its own independent floating oscillation,
+ * mouse parallax tracking, and rotation wobble.
+ */
+function SingleFloatingIngredient({
+  spice,
+  isCompactViewport,
+  reducedMotion,
+}: {
+  spice: (typeof HERO_FLOATING_SPICES)[number];
+  isCompactViewport: boolean;
+  reducedMotion: boolean;
+}) {
+  const groupRef = useRef<THREE.Group>(null);
+  const basePos = isCompactViewport
+    ? ([spice.position[0] * 0.68, spice.position[1] * 0.88, spice.position[2]] as [
+        number,
+        number,
+        number
+      ])
+    : spice.position;
+
+  useFrame((state, delta) => {
+    if (!groupRef.current || reducedMotion) return;
+
+    // Independent depth-based parallax responding to mouse pointer
+    const depth = (basePos[2] + 2) * 0.16;
+    const targetX = basePos[0] + state.pointer.x * depth;
+    const targetY = basePos[1] + state.pointer.y * depth * 0.75;
+
+    groupRef.current.position.x = THREE.MathUtils.lerp(
+      groupRef.current.position.x,
+      targetX,
+      0.05
+    );
+    groupRef.current.position.y = THREE.MathUtils.lerp(
+      groupRef.current.position.y,
+      targetY,
+      0.05
+    );
+
+    // Subtle individual tumble/rotation drift
+    groupRef.current.rotation.y += delta * 0.12;
+    groupRef.current.rotation.z += delta * 0.06;
+  });
+
+  return (
+    <group ref={groupRef} position={basePos} rotation={spice.rotation}>
+      <Float
+        speed={reducedMotion ? 0 : spice.floatSpeed}
+        rotationIntensity={reducedMotion ? 0 : spice.rotationIntensity}
+        floatIntensity={reducedMotion ? 0 : spice.floatIntensity}
+        floatingRange={[-0.14, 0.14]}
+      >
+        <GLBModel
+          name={`hero-ingredient-${spice.id}`}
+          url={spice.glbPath}
+          scale={isCompactViewport ? spice.scale * 0.78 : spice.scale}
+          castShadow={false}
+          receiveShadow={false}
+        />
+      </Float>
+    </group>
+  );
+}
+
+function FloatingIngredientsCluster({
   reducedMotion,
   isCompactViewport,
   visibleCount,
@@ -103,60 +187,68 @@ function FloatingSpicesCluster({
   visibleCount: number;
 }) {
   const spices = (
-    isCompactViewport ? HERO_FLOATING_SPICES.slice(0, 4) : HERO_FLOATING_SPICES
+    isCompactViewport ? HERO_FLOATING_SPICES.slice(0, 6) : HERO_FLOATING_SPICES
   ).slice(0, visibleCount);
 
   return (
     <group>
-      {spices.map((spice) => {
-        const pos: [number, number, number] = isCompactViewport
-          ? [spice.position[0] * 0.52, spice.position[1] * 0.82, spice.position[2]]
-          : spice.position;
-
-        return (
-          <Float
-            key={spice.id}
-            speed={reducedMotion ? 0 : spice.floatSpeed}
-            rotationIntensity={reducedMotion ? 0 : spice.rotationIntensity}
-            floatIntensity={reducedMotion ? 0 : spice.floatIntensity}
-            floatingRange={[-0.14, 0.14]}
-          >
-            <GLBModel
-              name={`hero-spice-${spice.id}`}
-              url={spice.glbPath}
-              position={pos}
-              rotation={spice.rotation}
-              scale={isCompactViewport ? spice.scale * 0.72 : spice.scale}
-              castShadow={false}
-              receiveShadow={false}
-            />
-          </Float>
-        );
-      })}
+      {spices.map((spice) => (
+        <SingleFloatingIngredient
+          key={spice.id}
+          spice={spice}
+          isCompactViewport={isCompactViewport}
+          reducedMotion={reducedMotion}
+        />
+      ))}
     </group>
   );
 }
 
-function HeroSceneContent({ reducedMotion, isCompactViewport }: HeroSceneContentProps) {
-  const totalSpices = isCompactViewport ? 4 : HERO_FLOATING_SPICES.length;
+/**
+ * Camera controller that applies subtle mouse parallax across the whole scene.
+ */
+function CameraParallax({ reducedMotion }: { reducedMotion: boolean }) {
+  useFrame((state) => {
+    if (reducedMotion) return;
+    const targetX = state.pointer.x * 0.32;
+    const targetY = 1.35 + state.pointer.y * 0.22;
+    state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, targetX, 0.04);
+    state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, targetY, 0.04);
+    state.camera.lookAt(0, -0.15, 0);
+  });
+
+  return null;
+}
+
+interface HeroSceneContentProps {
+  reducedMotion: boolean;
+  isCompactViewport: boolean;
+  spinVelocityRef: React.MutableRefObject<number>;
+}
+
+function HeroSceneContent({
+  reducedMotion,
+  isCompactViewport,
+  spinVelocityRef,
+}: HeroSceneContentProps) {
+  const totalSpices = isCompactViewport ? 6 : HERO_FLOATING_SPICES.length;
   const [visibleSpiceCount, setVisibleSpiceCount] = useState(0);
 
-  // Stagger secondary floating spice GLBs in small batches after initial hero paint
-  // so main-thread Draco decoding & WebGL texture uploads never spike all at once.
+  // Stagger secondary floating ingredients in small batches so texture uploads never block
   useEffect(() => {
     let intervalId: number | undefined;
     const startTimer = window.setTimeout(() => {
-      setVisibleSpiceCount(2);
+      setVisibleSpiceCount(3);
       intervalId = window.setInterval(() => {
         setVisibleSpiceCount((prev) => {
           if (prev >= totalSpices) {
             if (intervalId !== undefined) window.clearInterval(intervalId);
             return prev;
           }
-          return Math.min(totalSpices, prev + 2);
+          return Math.min(totalSpices, prev + 3);
         });
-      }, 220);
-    }, 350);
+      }, 180);
+    }, 250);
 
     return () => {
       window.clearTimeout(startTimer);
@@ -166,34 +258,29 @@ function HeroSceneContent({ reducedMotion, isCompactViewport }: HeroSceneContent
 
   return (
     <>
+      <CameraParallax reducedMotion={reducedMotion} />
+
       <StudioLighting shadowY={-1.18} shadowOpacity={0.62} envIntensity={0.78} />
 
+      {/* Central Biryani Pot — rotates independently */}
       <Suspense fallback={null}>
         <HeroHandiRig
           reducedMotion={reducedMotion}
           isCompactViewport={isCompactViewport}
+          spinVelocityRef={spinVelocityRef}
         />
       </Suspense>
 
+      {/* Floating ingredients — move and float independently around the pot */}
       {visibleSpiceCount > 0 && (
         <Suspense fallback={null}>
-          <FloatingSpicesCluster
+          <FloatingIngredientsCluster
             reducedMotion={reducedMotion}
             isCompactViewport={isCompactViewport}
             visibleCount={visibleSpiceCount}
           />
         </Suspense>
       )}
-
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        minPolarAngle={Math.PI * 0.34}
-        maxPolarAngle={Math.PI * 0.56}
-        rotateSpeed={0.55}
-        dampingFactor={0.07}
-        enableDamping
-      />
     </>
   );
 }
@@ -212,6 +299,11 @@ export function HeroScene3D({
   const containerRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(true);
 
+  // Interactive spin gesture state
+  const spinVelocityRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const lastPointerXRef = useRef(0);
+
   useEffect(() => {
     const el = containerRef.current;
     if (!el || typeof IntersectionObserver === "undefined") return;
@@ -222,6 +314,28 @@ export function HeroScene3D({
     io.observe(el);
     return () => io.disconnect();
   }, []);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    isDraggingRef.current = true;
+    lastPointerXRef.current = e.clientX;
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    if (!isDraggingRef.current) return;
+    const deltaX = e.clientX - lastPointerXRef.current;
+    lastPointerXRef.current = e.clientX;
+    spinVelocityRef.current += deltaX * 0.007;
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    isDraggingRef.current = false;
+    try {
+      (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+    } catch {
+      // ignore
+    }
+  };
 
   const fallback = (
     <WebGLFallback
@@ -236,12 +350,23 @@ export function HeroScene3D({
 
   return (
     <SceneErrorBoundary fallback={fallback}>
-      <div ref={containerRef} className="relative h-full w-full" data-testid="hero-3d-canvas">
+      <div
+        ref={containerRef}
+        className="relative h-full w-full cursor-grab active:cursor-grabbing select-none touch-none"
+        data-testid="hero-3d-canvas"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+      >
         <Canvas
           shadows="percentage"
           frameloop={inView ? "always" : "demand"}
           dpr={[1, 1.5]}
-          camera={{ position: [0, 1.35, isCompactViewport ? 6.9 : 5.45], fov: 37 }}
+          camera={{
+            position: [0, 1.35, isCompactViewport ? 6.9 : 5.45],
+            fov: 37,
+          }}
           gl={{
             antialias: true,
             alpha: true,
@@ -253,6 +378,7 @@ export function HeroScene3D({
           <HeroSceneContent
             reducedMotion={reducedMotion}
             isCompactViewport={isCompactViewport}
+            spinVelocityRef={spinVelocityRef}
           />
         </Canvas>
       </div>

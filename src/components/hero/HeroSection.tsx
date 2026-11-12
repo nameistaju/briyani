@@ -81,7 +81,7 @@ export function HeroSection() {
         {/* Live 3D handi + floating spices sitting in front of center letters */}
         <div
           aria-label="Interactive 3D copper biryani handi — drag to rotate"
-          className="absolute inset-x-0 bottom-0 top-6 z-20 mx-auto flex h-[360px] w-full max-w-[780px] self-center sm:inset-0 sm:h-[450px] lg:h-[490px]"
+          className="absolute inset-x-0 bottom-0 top-6 z-20 mx-auto flex h-[380px] w-full max-w-[1360px] self-center sm:inset-0 sm:h-[480px] lg:h-[560px]"
         >
           <HeroScene3D
             webglSupported={webglSupported}
