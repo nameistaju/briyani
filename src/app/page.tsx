@@ -7,6 +7,7 @@ import { EditorialIntroSection } from "@/components/sections/EditorialIntroSecti
 import { AssemblySection } from "@/components/assembly/AssemblySection";
 import { SignatureMenuSection } from "@/components/sections/SignatureMenuSection";
 import { KitchenStorySection } from "@/components/sections/KitchenStorySection";
+import { BiryaniCultureSection } from "@/components/sections/BiryaniCultureSection";
 import { VisitBannerFooter } from "@/components/sections/VisitBannerFooter";
 
 export default function HomePage() {
@@ -23,7 +24,9 @@ export default function HomePage() {
         <SignatureMenuSection />
         <ScallopDivider topColor="#F5EFE0" bottomColor="#9E1228" />
         <KitchenStorySection />
-        <ScallopDivider topColor="#F5EFE0" bottomColor="#F8B612" />
+        <ScallopDivider topColor="#F5EFE0" bottomColor="#6E091A" />
+        <BiryaniCultureSection />
+        <ScallopDivider topColor="#9E1228" bottomColor="#F8B612" />
       </main>
       <VisitBannerFooter />
     </div>

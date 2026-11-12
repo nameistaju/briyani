@@ -155,6 +155,36 @@ async function run() {
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-story.png") });
 
     await page.evaluate(() => {
+      document.getElementById("community")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-top.png") });
+
+    await page.evaluate(() => {
+      document.getElementById("on-point")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-point.png") });
+
+    await page.evaluate(() => {
+      document.getElementById("tribe")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-tribe.png") });
+
+    await page.evaluate(() => {
+      document.getElementById("occasions")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(1400);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-occasions.png") });
+
+    await page.evaluate(() => {
+      document.getElementById("welcome")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(1400);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-welcome.png") });
+
+    await page.evaluate(() => {
       document.getElementById("hours")?.scrollIntoView({ behavior: "instant" });
     });
     await page.waitForTimeout(450);
@@ -188,7 +218,7 @@ async function run() {
     const reducedPage = await reducedCtx.newPage();
     await reducedPage.goto(`${BASE_URL}#assembly`, { waitUntil: "domcontentloaded", timeout: 25000 });
     await reducedPage.waitForSelector("#assembly", { timeout: 10000 });
-    await reducedPage.waitForTimeout(800);
+    await reducedPage.waitForTimeout(1600);
     const reducedLabel = await reducedPage.locator("#assembly").innerText();
     const reducedMotionObserved = reducedLabel.includes("REDUCED MOTION");
     await reducedCtx.close();
