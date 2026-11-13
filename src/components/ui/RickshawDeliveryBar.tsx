@@ -104,12 +104,18 @@ export function RickshawDeliveryBar() {
                   <span className="mx-6 font-display text-5xl tracking-[0.02em] text-chilli uppercase sm:mx-10 sm:text-7xl">
                     {text}
                   </span>
-                  <span
+                  <div
                     aria-hidden="true"
-                    className="font-display text-3xl text-saffron sm:text-4xl"
+                    className="mx-4 flex items-center justify-center sm:mx-8"
                   >
-                    &#10038;
-                  </span>
+                    <Image
+                      src="/images/briyanii.svg"
+                      alt=""
+                      width={100}
+                      height={66}
+                      className="h-10 w-auto object-contain drop-shadow-[0_4px_10px_rgba(43,7,14,0.18)] sm:h-16"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -127,7 +133,7 @@ export function RickshawDeliveryBar() {
             className="pointer-events-none absolute -left-10 bottom-3 z-0 h-14 w-20 transition-opacity duration-75 sm:-left-14 sm:bottom-4 sm:h-20 sm:w-28"
           >
             <Image
-              src="/images/cloud.png"
+              src="/images/cloud.webp"
               alt=""
               fill
               sizes="112px"
@@ -141,7 +147,7 @@ export function RickshawDeliveryBar() {
             className="pointer-events-none absolute -left-16 bottom-8 z-0 h-10 w-16 opacity-30 transition-opacity duration-75 sm:-left-24 sm:bottom-10 sm:h-16 sm:w-24"
           >
             <Image
-              src="/images/cloud.png"
+              src="/images/cloud.webp"
               alt=""
               fill
               sizes="96px"
@@ -158,7 +164,7 @@ export function RickshawDeliveryBar() {
             }}
           >
             <Image
-              src="/images/DUMBAAZ Biryani Delivery Rickshaw.png"
+              src="/images/DUMBAAZ Biryani Delivery Rickshaw.webp"
               alt="DUMBAAZ Biryani Delivery Auto-Rickshaw popping a wheelie on scroll"
               width={576}
               height={384}

@@ -81,27 +81,29 @@ export function KitchenStorySection() {
             </h2>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-8">
-            <figure className="relative overflow-hidden rounded-3xl shadow-xl md:col-span-5 md:-rotate-[2deg]">
+          <div className="mt-12 grid grid-cols-1 items-center gap-6 md:grid-cols-3 md:gap-8">
+            {/* Card 1: Chef Unveils Steaming Biryani Cauldron */}
+            <figure className="relative overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-[1.02] md:-rotate-[2deg]">
               <div className="relative h-72 w-full sm:h-96">
                 <Image
-                  src="/images/chef-tasting.webp"
-                  alt="Chefs tasting herbs and warm handi spice stock in the DUMBAAZ kitchen"
+                  src="/images/Chef Unveils Steaming Biryani Cauldron.webp"
+                  alt="DUMBAAZ master chef unveiling steaming biryani cauldron in the kitchen"
                   fill
-                  sizes="(max-width: 768px) 100vw, 42vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>
               <figcaption className="bg-burgundy px-5 py-3 text-xs font-bold tracking-[0.14em] text-cream uppercase">
-                01 &middot; Whole-spice tempering &amp; small-batch tasting before dinner service
+                01 &middot; Whole-spice dum cooking &amp; small-batch craftsmanship
               </figcaption>
             </figure>
 
-            <figure className="relative overflow-hidden rounded-3xl shadow-xl md:col-span-4 md:translate-y-6 md:rotate-[1.8deg]">
-              <div className="relative h-72 w-full sm:h-88">
+            {/* Card 2: Joyful Friends Sharing a Feast */}
+            <figure className="relative overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-[1.02] md:translate-y-6 md:rotate-[1.8deg]">
+              <div className="relative h-72 w-full sm:h-96">
                 <Image
-                  src="/images/dining-table.webp"
-                  alt="Friends gathering around steaming brass platters and saffron rice at DUMBAAZ"
+                  src="/images/Joyful Friends Sharing a Feast.webp"
+                  alt="Joyful friends gathering around steaming biryani feast at DUMBAAZ"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
@@ -112,22 +114,20 @@ export function KitchenStorySection() {
               </figcaption>
             </figure>
 
-            <figure className="relative overflow-hidden rounded-3xl bg-cream-muted p-6 text-center shadow-xl md:col-span-3 md:-rotate-[1.5deg]">
-              <div className="relative mx-auto h-52 w-52 sm:h-60 sm:w-60">
+            {/* Card 3: Steaming Copper Bowl Biryani */}
+            <figure className="relative overflow-hidden rounded-3xl shadow-xl transition-transform duration-300 hover:rotate-0 hover:scale-[1.02] md:-rotate-[1.5deg]">
+              <div className="relative h-72 w-full sm:h-96">
                 <Image
-                  src="/3d-assets/previews/steaming-biryani-handi-hero.png"
-                  alt="DUMBAAZ signature copper dum biryani handi"
+                  src="/images/Steaming Copper Bowl Biryani.webp"
+                  alt="Steaming copper bowl of DUMBAAZ signature dum biryani"
                   fill
-                  sizes="240px"
-                  className="object-contain drop-shadow-[0_14px_20px_rgba(43,7,14,0.2)]"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
-              <figcaption className="mt-3 font-display text-2xl leading-none text-burgundy uppercase">
-                CHARCOAL SEALED
+              <figcaption className="bg-[#B47A50] px-5 py-3 text-xs font-bold tracking-[0.14em] text-cream uppercase">
+                03 &middot; Charcoal-sealed copper handi rested on dying embers
               </figcaption>
-              <p className="mt-1.5 text-xs font-medium text-burgundy/75">
-                Every pot rests 35 minutes on dying embers so steam finishes the grains naturally.
-              </p>
             </figure>
           </div>
         </div>

@@ -1,23 +1,29 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 
 const QUERY = "(prefers-reduced-motion: reduce)";
 
-function subscribe(callback: () => void): () => void {
-  const mediaQuery = window.matchMedia(QUERY);
-  mediaQuery.addEventListener("change", callback);
-  return () => mediaQuery.removeEventListener("change", callback);
-}
-
-function getSnapshot(): boolean {
-  return window.matchMedia(QUERY).matches;
-}
-
-function getServerSnapshot(): boolean {
-  return false;
-}
-
 export function usePrefersReducedMotion(): boolean {
-  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia(QUERY);
+    if (mediaQuery.matches) {
+      queueMicrotask(() => {
+        setReducedMotion(true);
+      });
+    }
+
+    const handler = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  return reducedMotion;
 }
+

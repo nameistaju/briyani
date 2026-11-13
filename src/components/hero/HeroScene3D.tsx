@@ -232,29 +232,6 @@ function HeroSceneContent({
   spinVelocityRef,
 }: HeroSceneContentProps) {
   const totalSpices = isCompactViewport ? 6 : HERO_FLOATING_SPICES.length;
-  const [visibleSpiceCount, setVisibleSpiceCount] = useState(0);
-
-  // Stagger secondary floating ingredients in small batches so texture uploads never block
-  useEffect(() => {
-    let intervalId: number | undefined;
-    const startTimer = window.setTimeout(() => {
-      setVisibleSpiceCount(3);
-      intervalId = window.setInterval(() => {
-        setVisibleSpiceCount((prev) => {
-          if (prev >= totalSpices) {
-            if (intervalId !== undefined) window.clearInterval(intervalId);
-            return prev;
-          }
-          return Math.min(totalSpices, prev + 3);
-        });
-      }, 180);
-    }, 250);
-
-    return () => {
-      window.clearTimeout(startTimer);
-      if (intervalId !== undefined) window.clearInterval(intervalId);
-    };
-  }, [totalSpices]);
 
   return (
     <>
@@ -272,15 +249,13 @@ function HeroSceneContent({
       </Suspense>
 
       {/* Floating ingredients — move and float independently around the pot */}
-      {visibleSpiceCount > 0 && (
-        <Suspense fallback={null}>
-          <FloatingIngredientsCluster
-            reducedMotion={reducedMotion}
-            isCompactViewport={isCompactViewport}
-            visibleCount={visibleSpiceCount}
-          />
-        </Suspense>
-      )}
+      <Suspense fallback={null}>
+        <FloatingIngredientsCluster
+          reducedMotion={reducedMotion}
+          isCompactViewport={isCompactViewport}
+          visibleCount={totalSpices}
+        />
+      </Suspense>
     </>
   );
 }
@@ -373,6 +348,16 @@ export function HeroScene3D({
             powerPreference: "high-performance",
             toneMapping: THREE.ACESFilmicToneMapping,
             toneMappingExposure: 1.08,
+          }}
+          onCreated={({ gl, scene, camera }) => {
+            try {
+              gl.compile(scene, camera);
+            } catch {
+              // ignore
+            }
+            if (typeof window !== "undefined") {
+              window.dispatchEvent(new CustomEvent("dumbaaz:hero-ready"));
+            }
           }}
         >
           <HeroSceneContent

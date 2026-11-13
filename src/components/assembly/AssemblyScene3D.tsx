@@ -238,7 +238,7 @@ export function AssemblyScene3D({
           nearObserver.disconnect();
         }
       },
-      { rootMargin: "900px 0px" }
+      { rootMargin: "350px 0px" }
     );
     nearObserver.observe(el);
 

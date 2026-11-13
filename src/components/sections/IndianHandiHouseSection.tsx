@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BRAND } from "@/data/brand";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
-gsap.registerPlugin(ScrollTrigger);
 
 // 36 geometric sunburst rays radiating from the center
 const SUNBURST_RAYS = Array.from({ length: 36 }, (_, idx) => idx * 10);
@@ -16,172 +13,122 @@ interface ZoomItemConfig {
   id: string;
   name: string;
   src: string;
-  // Starting position near center (px relative to center)
-  startX: number;
-  startY: number;
-  startScale: number;
-  startRotate: number;
-  // Target position at full zoom (vw / vh relative to center, scale, rotation)
-  endXvw: number;
-  endYvh: number;
-  endScale: number;
-  endRotate: number;
-  // Visual layer ordering and custom drop shadow
-  zIndex: number;
 }
 
 const ZOOM_ITEMS: ZoomItemConfig[] = [
-  // 1. Left Foreground Hero (like the giant Chai cup in Gourou)
   {
-    id: "hero-biryani-copper",
+    id: "mixed-biryani",
     name: "Hammered Copper Bowl of Mixed Biryani",
-    src: "/images/zoom/Hammered Copper Bowl of Mixed Biryani.png",
-    startX: -42,
-    startY: 8,
-    startScale: 0.17,
-    startRotate: -6,
-    endXvw: -40,
-    endYvh: 6,
-    endScale: 3.5,
-    endRotate: -34,
-    zIndex: 25,
+    src: "/images/zoom/Hammered Copper Bowl of Mixed Biryani.webp",
   },
-  // 2. Right Foreground Hero (like the giant Samosa in Gourou)
   {
-    id: "hero-drumstick",
+    id: "drumstick",
     name: "Glossy Grilled Chicken Drumstick",
-    src: "/images/zoom/Glossy Grilled Chicken Drumstick.png",
-    startX: 40,
-    startY: -16,
-    startScale: 0.16,
-    startRotate: 12,
-    endXvw: 39,
-    endYvh: -8,
-    endScale: 3.3,
-    endRotate: 58,
-    zIndex: 25,
+    src: "/images/zoom/Glossy Grilled Chicken Drumstick.webp",
   },
-  // 3. Top-Left: Smoky Tandoori Skewers
   {
     id: "tandoori-skewers",
     name: "Grilled Tandoori Chicken Skewers",
-    src: "/images/zoom/Grilled Tandoori Chicken Skewers.png",
-    startX: -28,
-    startY: -34,
-    startScale: 0.14,
-    startRotate: -16,
-    endXvw: -34,
-    endYvh: -33,
-    endScale: 3.0,
-    endRotate: -72,
-    zIndex: 22,
+    src: "/images/zoom/Grilled Tandoori Chicken Skewers.webp",
   },
-  // 4. Top-Right: Spicy Masala Prawns
   {
     id: "masala-prawns",
     name: "Spicy Masala Prawns with Lime and Herbs",
-    src: "/images/zoom/Spicy Masala Prawns with Lime and Herbs.png",
-    startX: 32,
-    startY: -32,
-    startScale: 0.15,
-    startRotate: 18,
-    endXvw: 35,
-    endYvh: -30,
-    endScale: 3.1,
-    endRotate: 78,
-    zIndex: 22,
+    src: "/images/zoom/Spicy Masala Prawns with Lime and Herbs.webp",
   },
-  // 5. Bottom-Left: Rustic Nalli Gosht Shank
   {
     id: "nalli-gosht",
     name: "Rustic Copper Bowl of Nalli Gosht",
-    src: "/images/zoom/Rustic Copper Bowl of Nalli Gosht.png",
-    startX: -32,
-    startY: 38,
-    startScale: 0.15,
-    startRotate: -10,
-    endXvw: -32,
-    endYvh: 34,
-    endScale: 3.0,
-    endRotate: -46,
-    zIndex: 24,
+    src: "/images/zoom/Rustic Copper Bowl of Nalli Gosht.webp",
   },
-  // 6. Bottom-Right: Spiced Crispy Fish
   {
     id: "crispy-fish",
     name: "Crispy Spiced Fish on Banana Leaf",
-    src: "/images/zoom/Crispy Spiced Fish on Banana Leaf.png",
-    startX: 32,
-    startY: 36,
-    startScale: 0.15,
-    startRotate: 14,
-    endXvw: 34,
-    endYvh: 32,
-    endScale: 2.9,
-    endRotate: 52,
-    zIndex: 24,
+    src: "/images/zoom/Crispy Spiced Fish on Banana Leaf.webp",
   },
-  // 7. Top Center: Steaming Clay Bowl Biryani
   {
     id: "clay-bowl-biryani",
     name: "Steaming Chicken Biryani in Clay Bowl",
-    src: "/images/zoom/Steaming Chicken Biryani in Clay Bowl.png",
-    startX: -8,
-    startY: -48,
-    startScale: 0.14,
-    startRotate: -8,
-    endXvw: -10,
-    endYvh: -38,
-    endScale: 2.7,
-    endRotate: -24,
-    zIndex: 21,
+    src: "/images/zoom/Steaming Chicken Biryani in Clay Bowl.webp",
   },
-  // 8. Bottom Center: Rich Mutton Biryani
   {
     id: "mutton-biryani",
     name: "Copper Bowl of Mutton Biryani",
-    src: "/images/zoom/Copper Bowl of Mutton Biryani.png",
-    startX: 8,
-    startY: 50,
-    startScale: 0.14,
-    startRotate: 8,
-    endXvw: 8,
-    endYvh: 38,
-    endScale: 2.8,
-    endRotate: 32,
-    zIndex: 21,
+    src: "/images/zoom/Copper Bowl of Mutton Biryani.webp",
   },
-  // 9. Floating Mid-Right Accent: Pepper Skewer
   {
     id: "pepper-skewer",
     name: "Grilled Chicken and Colorful Pepper Skewer",
-    src: "/images/zoom/Grilled Chicken and Colorful Pepper Skewer.png",
-    startX: 16,
-    startY: 12,
-    startScale: 0.16,
-    startRotate: 10,
-    endXvw: 19,
-    endYvh: 16,
-    endScale: 2.2,
-    endRotate: -38,
-    zIndex: 23,
+    src: "/images/zoom/Grilled Chicken and Colorful Pepper Skewer.webp",
   },
-  // 10. Floating Mid-Left Accent: Herb Glazed Chicken
   {
     id: "glazed-chicken",
     name: "Glazed Grilled Chicken with Herbs and Salsa",
-    src: "/images/zoom/Glazed Grilled Chicken with Herbs and Salsa.png",
-    startX: -18,
-    startY: -12,
-    startScale: 0.15,
-    startRotate: -12,
-    endXvw: -21,
-    endYvh: -16,
-    endScale: 2.3,
-    endRotate: 42,
-    zIndex: 23,
+    src: "/images/zoom/Glazed Grilled Chicken with Herbs and Salsa.webp",
+  },
+  {
+    id: "chicken-curry",
+    name: "Overhead Chicken Curry in Wooden Bowl",
+    src: "/images/zoom/Overhead Chicken Curry in Wooden Bowl.webp",
   },
 ];
+
+interface DirectionZone {
+  name: string;
+  targetXvw: [number, number]; // vw range relative to center
+  targetYvh: [number, number]; // vh range relative to center
+  rotationDelta: [number, number]; // degrees spin
+}
+
+// 6 distinct radial trajectory zones so simultaneous items disperse evenly towards the face
+const ZONES: DirectionZone[] = [
+  // Upper-Left
+  {
+    name: "top-left",
+    targetXvw: [-48, -34],
+    targetYvh: [-42, -26],
+    rotationDelta: [-75, -35],
+  },
+  // Upper-Right
+  {
+    name: "top-right",
+    targetXvw: [34, 48],
+    targetYvh: [-42, -26],
+    rotationDelta: [35, 75],
+  },
+  // Mid-Left
+  {
+    name: "mid-left",
+    targetXvw: [-54, -40],
+    targetYvh: [-12, 14],
+    rotationDelta: [-60, -25],
+  },
+  // Mid-Right
+  {
+    name: "mid-right",
+    targetXvw: [40, 54],
+    targetYvh: [-12, 14],
+    rotationDelta: [25, 60],
+  },
+  // Lower-Left
+  {
+    name: "bottom-left",
+    targetXvw: [-46, -32],
+    targetYvh: [24, 40],
+    rotationDelta: [-80, -40],
+  },
+  // Lower-Right
+  {
+    name: "bottom-right",
+    targetXvw: [32, 46],
+    targetYvh: [24, 40],
+    rotationDelta: [40, 80],
+  },
+];
+
+function randomBetween(min: number, max: number): number {
+  return min + Math.random() * (max - min);
+}
 
 export function IndianHandiHouseSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -192,101 +139,204 @@ export function IndianHandiHouseSection() {
   // Mouse parallax state for interactive floating tilt
   const [mouseParallax, setMouseParallax] = useState({ x: 0, y: 0 });
 
+  // Track active animating items to avoid duplicate launches
+  const activeIdsRef = useRef<Set<string>>(new Set());
+  const isVisibleRef = useRef(false);
+  const spawnTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Subtle mouse parallax tilt across the section
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
-      // Only compute when section is active in viewport
       if (rect.bottom < 0 || rect.top > window.innerHeight) return;
 
       const normX = (e.clientX - rect.left) / rect.width - 0.5;
       const normY = (e.clientY - rect.top) / rect.height - 0.5;
-      setMouseParallax({ x: normX * 24, y: normY * 24 });
+      setMouseParallax({ x: normX * 22, y: normY * 22 });
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  useLayoutEffect(() => {
-    if (!sectionRef.current || reducedMotion) return;
+  // Ambient slow sunburst rotation
+  useEffect(() => {
+    if (!sunburstRef.current || reducedMotion) return;
 
-    const ctx = gsap.context(() => {
-      const items = itemsContainerRef.current?.querySelectorAll<HTMLDivElement>(".zoom-food-item");
-      if (!items || items.length === 0) return;
+    const tween = gsap.to(sunburstRef.current, {
+      rotation: 360,
+      duration: 80,
+      repeat: -1,
+      ease: "none",
+    });
 
-      // Master scroll-scrubbed timeline pinned for 1.8 screen heights
+    return () => {
+      tween.kill();
+    };
+  }, [reducedMotion]);
+
+  // Autonomous food zoom animation: 1, 2, or 3 random items fly towards face & disappear
+  useEffect(() => {
+    const container = itemsContainerRef.current;
+    const activeIds = activeIdsRef.current;
+    const section = sectionRef.current;
+    if (!section || reducedMotion) return;
+
+    const animateItem = (el: HTMLElement, item: ZoomItemConfig, zone: DirectionZone) => {
+      const endX = randomBetween(zone.targetXvw[0], zone.targetXvw[1]);
+      const endY = randomBetween(zone.targetYvh[0], zone.targetYvh[1]);
+      const startRot = randomBetween(-16, 16);
+      const rotDelta = randomBetween(zone.rotationDelta[0], zone.rotationDelta[1]);
+      const endRot = startRot + rotDelta;
+      const duration = randomBetween(2.6, 3.4);
+      const endScale = randomBetween(3.0, 3.8);
+      const startX = randomBetween(-15, 15);
+      const startY = randomBetween(-15, 15);
+
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=180%",
-          pin: true,
-          pinSpacing: true,
-          scrub: 0.6,
-          anticipatePin: 1,
+        onComplete: () => {
+          activeIdsRef.current.delete(item.id);
+          gsap.set(el, { opacity: 0, scale: 0.15, x: 0, y: 0, rotation: 0 });
         },
       });
 
-      // 1. Subtle centrifugal rotation of the sunburst rays
-      if (sunburstRef.current) {
-        tl.to(
-          sunburstRef.current,
-          {
-            rotation: 24,
-            ease: "none",
-            duration: 1,
-          },
-          0
-        );
-      }
-
-      // 2. Animate each food element from tiny center position to dramatic foreground zoom
-      items.forEach((el, index) => {
-        const config = ZOOM_ITEMS[index];
-        if (!config) return;
-
-        // Initial state: small scale near center, distinct offset so elements are clearly visible
-        gsap.set(el, {
-          x: config.startX,
-          y: config.startY,
-          scale: config.startScale,
-          rotation: config.startRotate,
-          opacity: 0.85,
-          transformPerspective: 1000,
-          transformOrigin: "center center",
-        });
-
-        // Scrub animation: elements fly radially outward towards user's face, rotating and scaling up
-        tl.to(
-          el,
-          {
-            x: `${config.endXvw}vw`,
-            y: `${config.endYvh}vh`,
-            scale: config.endScale,
-            rotation: config.endRotate,
-            opacity: 1,
-            ease: "power1.inOut",
-            duration: 0.85,
-          },
-          0
-        );
-
-        // Near the end of scroll, elements pass by the camera edges with a gentle fade
-        tl.to(
-          el,
-          {
-            opacity: 0.15,
-            scale: config.endScale * 1.15,
-            ease: "power2.in",
-            duration: 0.15,
-          },
-          0.85
-        );
+      // 1. Initial spawn: small near center, invisible
+      tl.set(el, {
+        x: startX,
+        y: startY,
+        xPercent: -50,
+        yPercent: -50,
+        scale: 0.14,
+        rotation: startRot,
+        opacity: 0,
+        zIndex: Math.floor(Math.random() * 6) + 32,
       });
-    }, sectionRef);
 
-    return () => ctx.revert();
+      // 2. Quick fade in as item emerges
+      tl.to(
+        el,
+        {
+          opacity: 1,
+          duration: 0.38,
+          ease: "power1.out",
+        },
+        0
+      );
+
+      // 3. Zoom towards the user's face (scale up, travel outwards, rotate)
+      tl.to(
+        el,
+        {
+          x: `${endX}vw`,
+          y: `${endY}vh`,
+          scale: endScale,
+          rotation: endRot,
+          duration: duration,
+          ease: "power2.inOut",
+        },
+        0
+      );
+
+      // 4. Disappear as it passes the user's face (fade out in final 32% of zoom)
+      tl.to(
+        el,
+        {
+          opacity: 0,
+          scale: endScale * 1.22,
+          duration: duration * 0.32,
+          ease: "power2.in",
+        },
+        duration * 0.68
+      );
+    };
+
+    const launchBatch = () => {
+      if (!isVisibleRef.current || !itemsContainerRef.current) return;
+
+      const available = ZOOM_ITEMS.filter((item) => !activeIdsRef.current.has(item.id));
+      if (available.length === 0) return;
+
+      // Random count: 1, 2, or 3 items at once
+      const count = Math.min(
+        available.length,
+        Math.random() < 0.4 ? 1 : Math.random() < 0.78 ? 2 : 3
+      );
+
+      // Random selection without replacement
+      const shuffledItems = [...available].sort(() => Math.random() - 0.5);
+      const pickedItems = shuffledItems.slice(0, count);
+
+      // Distinct directional zones for each picked item
+      const shuffledZones = [...ZONES].sort(() => Math.random() - 0.5);
+
+      pickedItems.forEach((item, idx) => {
+        activeIdsRef.current.add(item.id);
+        const zone = shuffledZones[idx % shuffledZones.length];
+        const stagger = idx * randomBetween(90, 200);
+
+        setTimeout(() => {
+          if (!isVisibleRef.current || !itemsContainerRef.current) {
+            activeIdsRef.current.delete(item.id);
+            return;
+          }
+          const el = itemsContainerRef.current.querySelector<HTMLElement>(
+            `[data-zoom-id="${item.id}"]`
+          );
+          if (el) {
+            animateItem(el, item, zone);
+          } else {
+            activeIdsRef.current.delete(item.id);
+          }
+        }, stagger);
+      });
+    };
+
+    const scheduleNext = () => {
+      if (!isVisibleRef.current) return;
+      const nextDelay = randomBetween(1300, 2400);
+      spawnTimerRef.current = setTimeout(() => {
+        launchBatch();
+        scheduleNext();
+      }, nextDelay);
+    };
+
+    // Intersection observer: only animate when in or near viewport
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const wasVisible = isVisibleRef.current;
+        isVisibleRef.current = entry.isIntersecting;
+
+        if (entry.isIntersecting && !wasVisible) {
+          launchBatch();
+          scheduleNext();
+        } else if (!entry.isIntersecting && wasVisible) {
+          if (spawnTimerRef.current) {
+            clearTimeout(spawnTimerRef.current);
+            spawnTimerRef.current = null;
+          }
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+      if (spawnTimerRef.current) {
+        clearTimeout(spawnTimerRef.current);
+      }
+      activeIds.clear();
+      // Reset all elements
+      const items = container?.querySelectorAll<HTMLElement>(".zoom-food-item");
+      if (items) {
+        items.forEach((el) => {
+          gsap.killTweensOf(el);
+          gsap.set(el, { opacity: 0, scale: 0.15, x: 0, y: 0, rotation: 0 });
+        });
+      }
+    };
   }, [reducedMotion]);
 
   return (
@@ -294,7 +344,7 @@ export function IndianHandiHouseSection() {
       ref={sectionRef}
       id="handi-house"
       aria-label="DUMBAAZ Indian Handi House — Interactive Food Experience"
-      className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-cream px-5 py-12 text-center text-burgundy sm:px-10"
+      className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-cream px-5 py-20 text-center text-burgundy sm:px-10 lg:min-h-screen lg:py-28"
     >
       {/* Dynamic Sunburst Rays Background */}
       <svg
@@ -314,28 +364,28 @@ export function IndianHandiHouseSection() {
         ))}
       </svg>
 
-      {/* Zooming Food Elements Stage (Preserves 3D perspective) */}
+      {/* Autonomous Zooming Food Elements Stage (Preserves 3D perspective towards user) */}
       <div
         ref={itemsContainerRef}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center overflow-hidden"
+        className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center overflow-hidden"
         style={{
-          perspective: "1000px",
+          perspective: "1200px",
           transformStyle: "preserve-3d",
           transform: `translate3d(${mouseParallax.x}px, ${mouseParallax.y}px, 0)`,
-          transition: "transform 0.18s ease-out",
+          transition: "transform 0.2s ease-out",
         }}
       >
-        {ZOOM_ITEMS.map((item) => (
+        {ZOOM_ITEMS.map((item, idx) => (
           <div
             key={item.id}
-            className="zoom-food-item absolute h-80 w-80 will-change-transform select-none sm:h-96 sm:w-96"
+            data-zoom-id={item.id}
+            className="zoom-food-item pointer-events-none absolute top-1/2 left-1/2 h-72 w-72 will-change-transform select-none sm:h-88 sm:w-88"
             style={{
-              zIndex: item.zIndex,
-              // Fallback position for reduced-motion users
+              opacity: reducedMotion ? (idx < 3 ? 0.35 : 0) : 0,
               transform: reducedMotion
-                ? `translate(${item.startX * 4}px, ${item.startY * 4}px) scale(0.65)`
-                : undefined,
+                ? `translate(-50%, -50%) translate(${((idx % 3) - 1) * 36}vw, ${(idx - 1) * 20}vh) scale(0.7)`
+                : "translate(-50%, -50%) scale(0.15)",
             }}
           >
             <div className="relative h-full w-full">
@@ -343,28 +393,19 @@ export function IndianHandiHouseSection() {
                 src={item.src}
                 alt={item.name}
                 fill
-                sizes="(max-width: 768px) 320px, 420px"
-                className="object-contain drop-shadow-[0_20px_35px_rgba(43,7,14,0.35)]"
-                priority
+                sizes="(max-width: 768px) 280px, 360px"
+                className="object-contain drop-shadow-[0_24px_42px_rgba(43,7,14,0.4)]"
+                loading="lazy"
               />
             </div>
           </div>
         ))}
       </div>
 
-      {/* Central Content Card & Information (Always crisp and interactive) */}
-      <div className="relative z-30 mx-auto flex max-w-2xl flex-col items-center">
-        {/* Open Status Indicator Pill matching Bar-Topas & Gourou */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-burgundy/20 bg-burgundy px-4 py-1.5 text-[11px] font-bold tracking-[0.18em] text-cream uppercase shadow-md sm:text-xs">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-turmeric opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-turmeric" />
-          </span>
-          <span>THIS EVENING FROM 18:30</span>
-        </div>
-
+      {/* Central Content Card & Information (Always crisp, clear and uncluttered) */}
+      <div className="relative z-20 mx-auto flex max-w-2xl flex-col items-center">
         {/* DUMBAAZ Handi Lid Crest */}
-        <div className="mt-5 flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <Image
             src="/images/dumbaaz-crest.png"
             alt="DUMBAAZ lifting handi lid crest"
@@ -406,12 +447,6 @@ export function IndianHandiHouseSection() {
           <span className="font-bold text-chilli uppercase">Hours:</span>{" "}
           {BRAND.location.hoursDinner} &middot; {BRAND.location.hoursWeekend}
         </p>
-
-        {/* Subtle Scroll Hint */}
-        <div className="mt-6 flex items-center gap-2 text-[10px] font-bold tracking-[0.22em] text-chilli/70 uppercase">
-          <span>SCROLL TO EXPLORE DISHES</span>
-          <span className="animate-bounce">&#8595;</span>
-        </div>
       </div>
     </section>
   );

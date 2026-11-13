@@ -67,11 +67,11 @@ export function BiryaniCultureSection() {
         </div>
       </div>
 
-      {/* 2. THREE VERTICAL STADIUM PILL CARDS (Pure Photos on Electric Blue) */}
-      <div className="bg-[#183EF5] px-5 py-12 sm:px-10 sm:py-20">
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-6 md:grid-cols-3 sm:gap-8">
+      {/* 2. THREE VERTICAL STADIUM PILL CARDS (Pure Photos on Electric Blue with Deep Stadium Corner Radius) */}
+      <div id="moments" className="bg-[#183EF5] px-5 py-10 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-6 sm:gap-7 md:grid-cols-3 lg:gap-8">
           {/* Card 1: image-3 (Girls sharing biryani on floor by fairy lights) */}
-          <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-[50px] shadow-2xl transition-transform duration-300 hover:-translate-y-2 sm:rounded-[70px]">
+          <div className="group relative aspect-[3/4.2] w-full overflow-hidden rounded-[56px] shadow-[0_16px_40px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-2 sm:rounded-[80px] lg:rounded-[96px] xl:rounded-[112px]">
             <Image
               src="/images/community/image-3.webp"
               alt="Friends enjoying biryani together on the floor surrounded by fairy lights"
@@ -82,7 +82,7 @@ export function BiryaniCultureSection() {
           </div>
 
           {/* Card 2: image-5 (Girl savoring biryani with fork) */}
-          <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-[50px] shadow-2xl transition-transform duration-300 hover:-translate-y-2 sm:rounded-[70px]">
+          <div className="group relative aspect-[3/4.2] w-full overflow-hidden rounded-[56px] shadow-[0_16px_40px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-2 sm:rounded-[80px] lg:rounded-[96px] xl:rounded-[112px]">
             <Image
               src="/images/community/image-5.webp"
               alt="Savoring tender basmati grains and juicy chicken piece with fork"
@@ -93,7 +93,7 @@ export function BiryaniCultureSection() {
           </div>
 
           {/* Card 3: image-4 (Girl enjoying late-night car biryani) */}
-          <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-[50px] shadow-2xl transition-transform duration-300 hover:-translate-y-2 sm:rounded-[70px]">
+          <div className="group relative aspect-[3/4.2] w-full overflow-hidden rounded-[56px] shadow-[0_16px_40px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-2 sm:rounded-[80px] lg:rounded-[96px] xl:rounded-[112px]">
             <Image
               src="/images/community/image-4.webp"
               alt="Late night drive-through biryani takeout in car"
@@ -214,7 +214,7 @@ export function BiryaniCultureSection() {
 
           <div className="mt-8 flex justify-center">
             <a
-              href="#visit"
+              href="#menu"
               className="inline-flex items-center justify-center rounded-full bg-[#FDB913] px-12 py-3.5 font-display text-xl tracking-wider text-[#183EF5] uppercase shadow-xl transition-all duration-200 hover:scale-105 hover:bg-white active:scale-95 sm:px-16 sm:py-4 sm:text-2xl"
             >
               ORDER NOW
@@ -277,10 +277,10 @@ export function BiryaniCultureSection() {
               <div className="mt-4 space-y-2 text-sm font-semibold text-white/90 sm:text-base">
                 <p className="font-bold text-white">Order Direct</p>
                 <p className="text-sm font-normal text-white/80">(FLAT 25%)</p>
-                <a href="#visit" className="block transition-colors hover:text-[#FDB913]">
+                <a href="#menu" className="block transition-colors hover:text-[#FDB913]">
                   Zomato
                 </a>
-                <a href="#visit" className="block transition-colors hover:text-[#FDB913]">
+                <a href="#menu" className="block transition-colors hover:text-[#FDB913]">
                   Swiggy
                 </a>
               </div>

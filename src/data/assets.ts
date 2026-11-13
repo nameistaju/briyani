@@ -16,7 +16,6 @@ export const HERO_MODELS = {
     slug: "copper-handi",
     label: "Hammered Copper Handi",
     url: "/3d-assets/optimized/hero/copper-handi.glb",
-    originalUrl: "/3d-assets/hero/copper-handi.glb",
     previewUrl: "/3d-assets/previews/copper-handi-hero.png",
     assembled: {
       position: [0, 0, 0],
@@ -28,7 +27,6 @@ export const HERO_MODELS = {
     slug: "biryani-rice-mound",
     label: "Basmati Biryani Rice Mound",
     url: "/3d-assets/optimized/hero/biryani-rice-mound.glb",
-    originalUrl: "/3d-assets/hero/biryani-rice-mound.glb",
     previewUrl: "/3d-assets/previews/biryani-rice-mound-hero.png",
     assembled: {
       position: [0, 0.068, 0],
@@ -40,7 +38,6 @@ export const HERO_MODELS = {
     slug: "chicken-drumstick",
     label: "Spicy Masala Chicken Drumstick",
     url: "/3d-assets/optimized/hero/chicken-drumstick.glb",
-    originalUrl: "/3d-assets/hero/chicken-drumstick.glb",
     previewUrl: "/3d-assets/previews/chicken-drumstick-hero.png",
     assembled: {
       position: [0.012, 0.175, 0.016],
@@ -52,7 +49,6 @@ export const HERO_MODELS = {
     slug: "fried-onions",
     label: "Crispy Fried Onions",
     url: "/3d-assets/optimized/hero/fried-onions.glb",
-    originalUrl: "/3d-assets/hero/fried-onions.glb",
     previewUrl: "/3d-assets/previews/fried-onions-hero.png",
     assembled: {
       position: [-0.022, 0.176, -0.01],
@@ -64,7 +60,6 @@ export const HERO_MODELS = {
     slug: "mint-leaves",
     label: "Dewy Mint Leaves",
     url: "/3d-assets/optimized/hero/mint-leaves.glb",
-    originalUrl: "/3d-assets/hero/mint-leaves.glb",
     previewUrl: "/3d-assets/previews/mint-leaves-hero.png",
     assembled: {
       position: [-0.015, 0.208, 0.018],

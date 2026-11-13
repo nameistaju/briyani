@@ -93,8 +93,12 @@ async function run() {
     });
 
     await page.goto(BASE_URL, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(400);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-preloader.png") });
+    console.log("Captured desktop-preloader.png");
+
     await page.waitForSelector('[data-testid="hero-3d-canvas"] canvas', { timeout: 20000 });
-    await page.waitForTimeout(2600);
+    await page.waitForTimeout(2800);
 
     const desktopMetrics = await page.evaluate(() => ({
       scrollWidth: document.documentElement.scrollWidth,
@@ -158,27 +162,53 @@ async function run() {
     await page.evaluate(() => {
       document.getElementById("menu")?.scrollIntoView({ behavior: "instant" });
     });
-    await page.waitForTimeout(450);
-    await page.screenshot({ path: path.join(OUT_DIR, "desktop-menu.png") });
+    await page.waitForTimeout(600);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-menu-cover.png") });
+    console.log("Captured desktop-menu-cover.png");
+
+    // Click NEXT PAGE to open the book to Foreword & Index
+    const nextBtn = page.locator('button:has-text("NEXT PAGE")').first();
+    if (await nextBtn.isVisible()) {
+      await nextBtn.click();
+      await page.waitForTimeout(900);
+      await page.screenshot({ path: path.join(OUT_DIR, "desktop-menu-spread1.png") });
+      console.log("Captured desktop-menu-spread1.png");
+    }
+
+    // Click STARTERS chapter jump pill
+    const startersPill = page.locator('button:has-text("STARTERS")').first();
+    if (await startersPill.isVisible()) {
+      await startersPill.click();
+      await page.waitForTimeout(900);
+      await page.screenshot({ path: path.join(OUT_DIR, "desktop-menu-starters.png") });
+      console.log("Captured desktop-menu-starters.png");
+    }
+
+    // Click CHICKEN chapter jump pill
+    const chickenPill = page.locator('button:has-text("CHICKEN")').first();
+    if (await chickenPill.isVisible()) {
+      await chickenPill.click();
+      await page.waitForTimeout(900);
+      await page.screenshot({ path: path.join(OUT_DIR, "desktop-menu-chicken.png") });
+      console.log("Captured desktop-menu-chicken.png");
+    }
 
     await page.evaluate(() => {
-      document.getElementById("philosophy")?.scrollIntoView({ behavior: "instant" });
+      document.getElementById("story")?.scrollIntoView({ behavior: "instant" });
     });
-    await page.waitForTimeout(450);
+    await page.waitForTimeout(600);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-story.png") });
+    console.log("Captured desktop-story.png");
 
-    // Verify Indian Handi House Zoom section (initial vs scrubbed zoom)
+    // Verify Indian Handi House Autonomous Zoom section
     await page.evaluate(() => {
       document.getElementById("handi-house")?.scrollIntoView({ behavior: "instant" });
     });
-    await page.waitForTimeout(600);
+    await page.waitForTimeout(1000);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-handi-house-initial.png") });
     console.log("Captured desktop-handi-house-initial.png");
 
-    await page.evaluate(() => {
-      window.scrollBy(0, 700);
-    });
-    await page.waitForTimeout(800);
+    await page.waitForTimeout(1600);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-handi-house-zoomed.png") });
     console.log("Captured desktop-handi-house-zoomed.png");
 
@@ -187,6 +217,13 @@ async function run() {
     });
     await page.waitForTimeout(800);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-top.png") });
+
+    await page.evaluate(() => {
+      document.getElementById("moments")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(600);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-community-moments.png") });
+    console.log("Captured desktop-community-moments.png");
 
     await page.evaluate(() => {
       document.getElementById("tribe")?.scrollIntoView({ behavior: "instant" });
@@ -238,9 +275,13 @@ async function run() {
       reducedMotion: "reduce",
     });
     const reducedPage = await reducedCtx.newPage();
-    await reducedPage.goto(`${BASE_URL}#assembly`, { waitUntil: "domcontentloaded", timeout: 25000 });
+    await reducedPage.emulateMedia({ reducedMotion: "reduce" });
+    await reducedPage.goto(BASE_URL, { waitUntil: "domcontentloaded", timeout: 25000 });
     await reducedPage.waitForSelector("#assembly", { timeout: 10000 });
-    await reducedPage.waitForTimeout(1600);
+    await reducedPage.waitForFunction(
+      () => document.querySelector("#assembly")?.textContent?.includes("REDUCED MOTION"),
+      { timeout: 6000 }
+    ).catch(() => {});
     const reducedLabel = (await reducedPage.locator("#assembly").textContent()) || "";
     const reducedMotionObserved = reducedLabel.includes("REDUCED MOTION");
     await reducedCtx.close();
