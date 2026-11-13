@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { DumbaazWordmark } from "@/components/brand/DumbaazWordmark";
+import Image from "next/image";
 
 export function Navbar() {
   return (
@@ -13,9 +13,17 @@ export function Navbar() {
         <a
           href="#hero"
           aria-label="DUMBAAZ home"
-          className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-cream px-5 py-2 text-burgundy shadow-sm transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turmeric"
+          className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-cream/90 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turmeric"
+          style={{ padding: "2px" }}
         >
-          <DumbaazWordmark size="nav" color="#9E1228" accentColor="#E2341D" />
+          <Image
+            src="/images/dumbaaz-crest.png"
+            alt="DUMBAAZ"
+            width={52}
+            height={52}
+            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            priority
+          />
         </a>
 
         <a

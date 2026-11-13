@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { Volume2, VolumeX, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
+import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
 
 // Dynamically import the browser-only Grabfold flipbook with a luxury fallback skeleton
 const MenuBookFlipbook = dynamic(
@@ -50,7 +50,7 @@ const CHAPTER_JUMPS = [
 
 export function MenuBookSection() {
   const [position, setPosition] = useState(-2);
-  const [soundEnabled, setSoundEnabled] = useState(true);
+  const soundEnabled = true;
 
   const canPrev = position > -2;
   const canNext = position < 6;
@@ -67,7 +67,7 @@ export function MenuBookSection() {
     <section
       id="menu"
       aria-label="DUMBAAZ Interactive Menu Book"
-      className="relative overflow-hidden bg-[#292421] px-4 py-16 text-[#F5EBDD] sm:px-8 sm:py-24 lg:py-28 select-none"
+      className="relative overflow-hidden bg-[#292421] px-4 pb-40 pt-16 text-[#F5EBDD] sm:px-8 sm:pb-64 sm:pt-24 lg:pb-80 lg:pt-28 select-none"
     >
       {/* Background radial warmth lighting */}
       <div
@@ -77,48 +77,14 @@ export function MenuBookSection() {
 
       <div className="relative z-10 mx-auto max-w-[1440px]">
         {/* Section Header */}
-        <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:items-end md:text-left">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#B47A50]/35 bg-[#33231D]/80 px-4 py-1.5 text-[10px] font-bold tracking-[0.24em] text-[#B47A50] uppercase backdrop-blur-sm sm:text-[11px]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B47A50]" />
-              <span>THE PHYSICAL MENU BOOK &bull; FLIP TO BROWSE</span>
-            </div>
-
-            <h2 className="mt-3 font-display text-4xl leading-[0.88] tracking-tight text-[#F5EBDD] uppercase sm:text-6xl lg:text-7xl">
-              THE DUMBAAZ
-              <br />
-              COLLECTION.
-            </h2>
-          </div>
-
-          <div className="flex flex-col items-center gap-3 md:items-end">
-            <p className="max-w-md text-xs leading-relaxed font-serif text-[#F5EBDD]/75 italic sm:text-sm">
-              Hover over either page to activate the cursor. Click or grab anywhere along the edge to turn.
-            </p>
-
-            {/* Audio Toggle Pill */}
-            <button
-              onClick={() => setSoundEnabled((prev) => !prev)}
-              className="inline-flex items-center gap-2 rounded-full border border-[#B47A50]/40 bg-[#33231D] px-4 py-2 text-[11px] font-semibold tracking-wider text-[#B47A50] uppercase transition-colors hover:border-[#F5EBDD] hover:text-[#F5EBDD]"
-              title={soundEnabled ? "Mute page-turning sounds" : "Enable page-turning sounds"}
-            >
-              {soundEnabled ? (
-                <>
-                  <Volume2 className="h-3.5 w-3.5" />
-                  <span>PAGE SOUNDS ON</span>
-                </>
-              ) : (
-                <>
-                  <VolumeX className="h-3.5 w-3.5 opacity-60" />
-                  <span>PAGE SOUNDS MUTED</span>
-                </>
-              )}
-            </button>
-          </div>
+        <div className="mb-10 sm:mb-14">
+          <h2 className="font-display text-4xl leading-[0.88] tracking-tight text-[#F5EBDD] uppercase sm:text-6xl lg:text-7xl">
+            OUR MENU
+          </h2>
         </div>
 
         {/* The Interactive Menu Flipbook */}
-        <div className="mt-10 sm:mt-14">
+        <div>
           <MenuBookFlipbook
             position={position}
             onPositionChange={setPosition}

@@ -113,7 +113,8 @@ export function RickshawDeliveryBar() {
                       alt=""
                       width={100}
                       height={66}
-                      className="h-10 w-auto object-contain drop-shadow-[0_4px_10px_rgba(43,7,14,0.18)] sm:h-16"
+                      className="h-10 w-auto object-contain sm:h-16"
+                      style={{ filter: "brightness(0) saturate(100%) invert(14%) sepia(42%) saturate(1200%) hue-rotate(330deg) brightness(60%)" }}
                     />
                   </div>
                 </div>

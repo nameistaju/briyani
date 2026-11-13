@@ -189,7 +189,7 @@ export function IndianHandiHouseSection() {
       const startRot = randomBetween(-16, 16);
       const rotDelta = randomBetween(zone.rotationDelta[0], zone.rotationDelta[1]);
       const endRot = startRot + rotDelta;
-      const duration = randomBetween(2.6, 3.4);
+      const duration = randomBetween(5.5, 7.5);
       const endScale = randomBetween(3.0, 3.8);
       const startX = randomBetween(-15, 15);
       const startY = randomBetween(-15, 15);
@@ -218,7 +218,7 @@ export function IndianHandiHouseSection() {
         el,
         {
           opacity: 1,
-          duration: 0.38,
+          duration: 0.9,
           ease: "power1.out",
         },
         0
@@ -273,7 +273,7 @@ export function IndianHandiHouseSection() {
       pickedItems.forEach((item, idx) => {
         activeIdsRef.current.add(item.id);
         const zone = shuffledZones[idx % shuffledZones.length];
-        const stagger = idx * randomBetween(90, 200);
+        const stagger = idx * randomBetween(600, 1400);
 
         setTimeout(() => {
           if (!isVisibleRef.current || !itemsContainerRef.current) {
@@ -294,7 +294,7 @@ export function IndianHandiHouseSection() {
 
     const scheduleNext = () => {
       if (!isVisibleRef.current) return;
-      const nextDelay = randomBetween(1300, 2400);
+      const nextDelay = randomBetween(3800, 6500);
       spawnTimerRef.current = setTimeout(() => {
         launchBatch();
         scheduleNext();
