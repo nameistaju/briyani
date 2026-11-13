@@ -24,9 +24,9 @@ export default function HomePage() {
         <SignatureMenuSection />
         <ScallopDivider topColor="#F5EFE0" bottomColor="#9E1228" />
         <KitchenStorySection />
-        <ScallopDivider topColor="#F5EFE0" bottomColor="#6E091A" />
+        <ScallopDivider topColor="#F5EFE0" bottomColor="#183EF5" />
         <BiryaniCultureSection />
-        <ScallopDivider topColor="#9E1228" bottomColor="#F8B612" />
+        <ScallopDivider topColor="#183EF5" bottomColor="#F8B612" />
       </main>
       <VisitBannerFooter />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { BRAND } from "@/data/brand";
+import { IndianHandiHouseSection } from "./IndianHandiHouseSection";
 
 const FLAVOR_CALLOUTS = [
   "AGED BASMATI",
@@ -11,8 +11,6 @@ const FLAVOR_CALLOUTS = [
   "FRESH PUDINA",
 ];
 
-// Deterministic radial sunburst spokes inspired by gourouindianfood.fr without third-party text
-const SUNBURST_RAYS = Array.from({ length: 36 }, (_, idx) => idx * 10);
 
 export function KitchenStorySection() {
   return (
@@ -64,67 +62,8 @@ export function KitchenStorySection() {
         </div>
       </section>
 
-      {/* Sunburst Heritage Interlude (inspired by Screenshot 6 gourouindianfood.fr) */}
-      <section
-        aria-label="DUMBAAZ Indian Handi House Emblem"
-        className="relative overflow-hidden bg-cream px-5 py-20 text-center text-burgundy sm:px-10 sm:py-28"
-      >
-        {/* Pure geometric conic sunburst spokes behind center lockup */}
-        <svg
-          aria-hidden="true"
-          viewBox="-200 -200 400 400"
-          preserveAspectRatio="xMidYMid slice"
-          className="pointer-events-none absolute inset-0 h-full w-full opacity-55"
-        >
-          {SUNBURST_RAYS.map((angle) => (
-            <polygon
-              key={angle}
-              points="0,0 -10,-280 10,-280"
-              fill="#FFFFFF"
-              transform={`rotate(${angle})`}
-            />
-          ))}
-        </svg>
-
-        <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center">
-          <Image
-            src="/images/dumbaaz-crest.png"
-            alt="DUMBAAZ lifting handi lid crest"
-            width={160}
-            height={160}
-            className="h-28 w-28 object-contain drop-shadow-[0_10px_20px_rgba(43,7,14,0.16)] sm:h-36 sm:w-36"
-          />
-
-          <h2 className="mt-5 font-display text-5xl leading-[0.88] tracking-[0.01em] text-chilli uppercase sm:text-7xl">
-            INDIAN HANDI
-            <br />
-            HOUSE
-          </h2>
-
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#hours"
-              className="border border-chilli bg-cream/90 px-6 py-2.5 text-xs font-bold tracking-[0.18em] text-chilli uppercase transition-colors hover:bg-chilli hover:text-cream"
-            >
-              BOOK A TABLE
-            </a>
-            <a
-              href="#menu"
-              className="border border-chilli bg-cream/90 px-6 py-2.5 text-xs font-bold tracking-[0.18em] text-chilli uppercase transition-colors hover:bg-chilli hover:text-cream"
-            >
-              SEE THE PLATES
-            </a>
-          </div>
-
-          <p className="mt-7 text-xs leading-relaxed font-semibold text-burgundy/80 sm:text-sm">
-            <span className="font-bold text-chilli">Address:</span> {BRAND.location.addressLine1} &middot;{" "}
-            {BRAND.location.city}
-            <br />
-            <span className="font-bold text-chilli">Hours:</span> {BRAND.location.hoursDinner} &middot;{" "}
-            {BRAND.location.hoursWeekend}
-          </p>
-        </div>
-      </section>
+      {/* Sunburst Heritage Interlude with Rotating Food Zoom Explosion */}
+      <IndianHandiHouseSection />
 
       {/* Editorial Kitchen & Table Collage */}
       <section

@@ -167,6 +167,21 @@ async function run() {
     await page.waitForTimeout(450);
     await page.screenshot({ path: path.join(OUT_DIR, "desktop-story.png") });
 
+    // Verify Indian Handi House Zoom section (initial vs scrubbed zoom)
+    await page.evaluate(() => {
+      document.getElementById("handi-house")?.scrollIntoView({ behavior: "instant" });
+    });
+    await page.waitForTimeout(600);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-handi-house-initial.png") });
+    console.log("Captured desktop-handi-house-initial.png");
+
+    await page.evaluate(() => {
+      window.scrollBy(0, 700);
+    });
+    await page.waitForTimeout(800);
+    await page.screenshot({ path: path.join(OUT_DIR, "desktop-handi-house-zoomed.png") });
+    console.log("Captured desktop-handi-house-zoomed.png");
+
     await page.evaluate(() => {
       document.getElementById("community")?.scrollIntoView({ behavior: "instant" });
     });
