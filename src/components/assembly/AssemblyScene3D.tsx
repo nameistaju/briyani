@@ -8,6 +8,8 @@ import { GLBModel, SceneErrorBoundary } from "@/components/three/GLBModel";
 import { StudioLighting } from "@/components/three/StudioLighting";
 import { SteamParticles } from "@/components/three/SteamParticles";
 import { WebGLFallback } from "@/components/three/WebGLFallback";
+import { RimDetail } from "./RimDetail";
+import { FallingBits } from "./FallingBits";
 
 export interface AssemblyMotionState {
   handiY: number;
@@ -51,9 +53,11 @@ export const COMPLETED_ASSEMBLY_STATE: AssemblyMotionState = {
 function AssemblyRig({
   motionRef,
   reducedMotion,
+  isCompactViewport,
 }: {
   motionRef: React.MutableRefObject<AssemblyMotionState>;
   reducedMotion: boolean;
+  isCompactViewport: boolean;
 }) {
   const turntableRef = useRef<THREE.Group>(null);
   const handiRef = useRef<THREE.Group>(null);
@@ -78,52 +82,58 @@ function AssemblyRig({
 
     if (riceRef.current) {
       const p = s.riceProgress;
-      riceRef.current.visible = p > 0.015;
+      const m = THREE.MathUtils.smoothstep(p, 0.55, 1);
       const target = HERO_MODELS.biryaniRiceMound.assembled;
+      riceRef.current.visible = m > 0.01;
       riceRef.current.position.set(
         target.position[0],
-        THREE.MathUtils.lerp(0.26, target.position[1], p),
+        THREE.MathUtils.lerp(target.position[1] - 0.03, target.position[1], m),
         target.position[2]
       );
-      riceRef.current.rotation.set(0, (1 - p) * -0.75, 0);
-      const scale = p < 0.08 ? p / 0.08 : 1;
-      riceRef.current.scale.setScalar(scale * target.scale);
+      riceRef.current.rotation.set(0, (1 - m) * -0.4, 0);
+      riceRef.current.scale.setScalar(target.scale * (0.75 + 0.25 * m) * Math.min(1, m * 6));
     }
 
     if (drumstickRef.current) {
       const p = s.drumstickProgress;
+      const drop = Math.min(p / 0.7, 1);
+      const fall = drop * drop;
+      const settle = p > 0.7 ? Math.sin(((p - 0.7) / 0.3) * Math.PI) * 0.012 : 0;
+      const rock =
+        p > 0.7
+          ? Math.sin(((p - 0.7) / 0.3) * Math.PI * 2) * 0.05 * (1 - (p - 0.7) / 0.3)
+          : 0;
       drumstickRef.current.visible = p > 0.015;
-      const target = HERO_MODELS.chickenDrumstick.assembled;
       drumstickRef.current.position.set(
-        THREE.MathUtils.lerp(0.09, 0.008, p),
-        THREE.MathUtils.lerp(0.28, 0.168, p),
-        THREE.MathUtils.lerp(0.05, 0.016, p)
+        THREE.MathUtils.lerp(0.06, 0.014, drop),
+        THREE.MathUtils.lerp(0.46, 0.208, fall) + settle,
+        THREE.MathUtils.lerp(0.04, 0.024, drop)
       );
       drumstickRef.current.rotation.set(
-        THREE.MathUtils.lerp(-0.25, 0.20, p),
-        THREE.MathUtils.lerp(0.85, -0.22, p),
-        THREE.MathUtils.lerp(1.15, 0.34, p)
+        THREE.MathUtils.lerp(-0.25, 0.30, drop) + rock,
+        THREE.MathUtils.lerp(0.85, -0.16, drop),
+        THREE.MathUtils.lerp(1.15, 0.26, drop)
       );
       const scale = p < 0.08 ? p / 0.08 : 1;
-      drumstickRef.current.scale.setScalar(scale * target.scale);
+      drumstickRef.current.scale.setScalar(scale * 1.14);
     }
 
     if (onionsRef.current) {
       const p = s.onionsProgress;
-      onionsRef.current.visible = p > 0.015;
-      const target = HERO_MODELS.friedOnions.assembled;
+      const m = THREE.MathUtils.smoothstep(p, 0.55, 1);
+      onionsRef.current.visible = m > 0.01;
       onionsRef.current.position.set(
-        THREE.MathUtils.lerp(-0.05, target.position[0], p),
-        THREE.MathUtils.lerp(0.31, target.position[1], p),
-        THREE.MathUtils.lerp(-0.03, target.position[2], p)
+        -0.012,
+        THREE.MathUtils.lerp(0.18, 0.204, m),
+        0.008
       );
       onionsRef.current.rotation.set(
-        THREE.MathUtils.lerp(0.45, target.rotation[0], p),
-        THREE.MathUtils.lerp(-1.3, target.rotation[1], p),
-        THREE.MathUtils.lerp(0.3, target.rotation[2], p)
+        0.12,
+        0.35 + (1 - m) * -0.2,
+        -0.08
       );
       const scale = p < 0.1 ? p / 0.1 : 1;
-      onionsRef.current.scale.setScalar(scale * target.scale);
+      onionsRef.current.scale.setScalar(scale * 0.85);
     }
 
     if (mintRef.current) {
@@ -131,14 +141,14 @@ function AssemblyRig({
       mintRef.current.visible = p > 0.015;
       const target = HERO_MODELS.mintLeaves.assembled;
       mintRef.current.position.set(
-        THREE.MathUtils.lerp(0.03, target.position[0], p),
-        THREE.MathUtils.lerp(0.32, target.position[1], p),
-        THREE.MathUtils.lerp(0.04, target.position[2], p)
+        THREE.MathUtils.lerp(0.02, -0.035, p),
+        THREE.MathUtils.lerp(0.36, 0.218, p),
+        THREE.MathUtils.lerp(0.03, 0.002, p)
       );
       mintRef.current.rotation.set(
-        THREE.MathUtils.lerp(-0.35, target.rotation[0], p),
-        THREE.MathUtils.lerp(1.1, target.rotation[1], p),
-        THREE.MathUtils.lerp(-0.28, target.rotation[2], p)
+        THREE.MathUtils.lerp(-0.35, -0.25, p),
+        THREE.MathUtils.lerp(1.1, 0.95, p),
+        THREE.MathUtils.lerp(-0.28, -0.22, p)
       );
       const scale = p < 0.1 ? p / 0.1 : 1;
       mintRef.current.scale.setScalar(scale * target.scale);
@@ -155,7 +165,59 @@ function AssemblyRig({
             name="assembly-copper-handi"
             url={HERO_MODELS.copperHandi.url}
           />
+          <RimDetail />
         </group>
+
+        {/* Instanced falling grains & saffron bits */}
+        <FallingBits
+          motionRef={motionRef}
+          progressKey="riceProgress"
+          count={isCompactViewport ? 450 : 900}
+          radius={0.1}
+          startY={0.55}
+          landY={0.085}
+          seed={1}
+        >
+          <capsuleGeometry args={[0.0014, 0.007, 3, 6]} />
+          <meshStandardMaterial color="#f3e6c4" roughness={0.6} />
+        </FallingBits>
+
+        <FallingBits
+          motionRef={motionRef}
+          progressKey="riceProgress"
+          count={isCompactViewport ? 35 : 70}
+          radius={0.09}
+          startY={0.6}
+          landY={0.09}
+          delaySpread={0.7}
+          seed={2}
+        >
+          <capsuleGeometry args={[0.0016, 0.009, 3, 6]} />
+          <meshStandardMaterial color="#e8731a" roughness={0.5} />
+        </FallingBits>
+
+        {/* Instanced falling fried onion ribbons (curly caramelized birista) */}
+        <FallingBits
+          motionRef={motionRef}
+          progressKey="onionsProgress"
+          count={isCompactViewport ? 175 : 350}
+          radius={0.095}
+          startY={0.52}
+          landY={0.198}
+          landJitter={0.024}
+          flutter={0.028}
+          spin={15}
+          seed={3}
+          palette={["#f0a430", "#d67c1c", "#a84f0f", "#782e07", "#4a1903"]}
+        >
+          <torusGeometry args={[0.007, 0.0009, 5, 12, Math.PI * 0.8]} />
+          <meshStandardMaterial
+            color="#ffffff"
+            roughness={0.34}
+            metalness={0.06}
+            envMapIntensity={1.2}
+          />
+        </FallingBits>
 
         <group ref={riceRef} visible={false}>
           <GLBModel
@@ -283,7 +345,11 @@ export function AssemblyScene3D({
               accentTone="teal"
             />
             <Suspense fallback={null}>
-              <AssemblyRig motionRef={motionRef} reducedMotion={reducedMotion} />
+              <AssemblyRig
+                motionRef={motionRef}
+                reducedMotion={reducedMotion}
+                isCompactViewport={isCompactViewport}
+              />
             </Suspense>
           </Canvas>
         ) : (

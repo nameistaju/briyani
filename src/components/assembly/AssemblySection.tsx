@@ -141,7 +141,7 @@ export function AssemblySection() {
           drumstickProgress: 1,
           turntableY: 0.3,
           duration: 1.0,
-          ease: "back.out(1.15)",
+          ease: "none",
         },
         2.0
       );

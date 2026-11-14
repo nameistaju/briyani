@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   title: "DUMBAAZ — Slow-Fired Copper Handi Biryani",
   description:
     "Interactive 3D dum biryani experience crafted around charcoal-fired copper handis, single-estate spices, and crispy saffron birista.",
+  icons: {
+    icon: "/images/dumbaaz-crest.png",
+    shortcut: "/images/dumbaaz-crest.png",
+    apple: "/images/dumbaaz-crest.png",
+  },
 };
 
 export default function RootLayout({

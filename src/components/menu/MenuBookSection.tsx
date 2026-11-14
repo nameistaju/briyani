@@ -67,7 +67,7 @@ export function MenuBookSection() {
     <section
       id="menu"
       aria-label="DUMBAAZ Interactive Menu Book"
-      className="relative overflow-hidden bg-[#292421] px-4 pb-40 pt-16 text-[#F5EBDD] sm:px-8 sm:pb-64 sm:pt-24 lg:pb-80 lg:pt-28 select-none"
+      className="relative overflow-hidden bg-[#292421] px-4 pt-16 pb-20 text-[#F5EBDD] sm:px-8 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36 select-none"
     >
       {/* Background radial warmth lighting */}
       <div
@@ -84,7 +84,7 @@ export function MenuBookSection() {
         </div>
 
         {/* The Interactive Menu Flipbook */}
-        <div>
+        <div className="py-2 sm:py-4">
           <MenuBookFlipbook
             position={position}
             onPositionChange={setPosition}
@@ -93,7 +93,7 @@ export function MenuBookSection() {
         </div>
 
         {/* Discreet Bottom Controls Bar */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-5 border-t border-[#B47A50]/20 pt-6 sm:mt-10 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-5 border-t border-[#B47A50]/20 pt-6 sm:mt-14 sm:pt-8 md:flex-row">
           {/* Previous Button */}
           <button
             onClick={handlePrev}

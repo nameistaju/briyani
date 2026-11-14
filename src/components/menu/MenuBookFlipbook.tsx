@@ -201,7 +201,7 @@ export function MenuBookFlipbook({
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onClick={handleBookClick}
-      className="relative mx-auto flex h-[580px] w-full max-w-[960px] items-center justify-center overflow-visible sm:h-[680px] lg:h-[720px] select-none [cursor:none]"
+      className="relative mx-auto flex h-[580px] w-full max-w-[960px] items-center justify-center overflow-visible sm:h-[680px] md:h-[720px] lg:h-[760px] xl:h-[780px] lg:max-w-[1020px] xl:max-w-[1060px] select-none [cursor:none]"
     >
       {/* Signature Custom Circular Cursor */}
       <CustomCircularCursor
@@ -215,7 +215,7 @@ export function MenuBookFlipbook({
       {/* Realistic Deep Drop Shadow Underneath Book */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-4 h-12 w-[90%] rounded-full bg-black/45 blur-2xl"
+        className="pointer-events-none absolute bottom-2 sm:bottom-4 h-10 sm:h-14 w-[88%] rounded-full bg-black/50 blur-2xl"
       />
 
       {/* Grabfold Flipbook Instance */}
@@ -234,6 +234,7 @@ export function MenuBookFlipbook({
         renderPage={renderMenuPage}
         sound={turnSound}
         className="h-full w-full"
+        style={{ "--grabfold-paper": "#F5EBDD" } as React.CSSProperties}
       />
     </div>
   );

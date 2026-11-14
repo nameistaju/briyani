@@ -17,10 +17,10 @@ function PageFrame({
 }) {
   return (
     <div
-      className={`relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#F5EBDD] p-6 text-[#33231D] sm:p-9 lg:p-10 select-none ${
+      className={`relative flex h-full w-full flex-col justify-between overflow-hidden bg-[#F5EBDD] px-5 py-4 text-[#33231D] sm:px-7 sm:py-5 lg:px-8 lg:py-5 select-none border-b-2 border-[#33231D]/25 shadow-[0_6px_20px_rgba(0,0,0,0.18)] ${
         side === "left"
-          ? "border-r border-[#33231D]/15 shadow-[inset_-18px_0_30px_rgba(51,35,29,0.06)]"
-          : "border-l border-[#33231D]/15 shadow-[inset_18px_0_30px_rgba(51,35,29,0.06)]"
+          ? "rounded-l-lg border-r border-[#33231D]/15 shadow-[inset_-18px_0_30px_rgba(51,35,29,0.06),0_6px_20px_rgba(0,0,0,0.18)]"
+          : "rounded-r-lg border-l border-[#33231D]/15 shadow-[inset_18px_0_30px_rgba(51,35,29,0.06),0_6px_20px_rgba(0,0,0,0.18)]"
       } ${className}`}
     >
       {/* Subtle paper grain overlay */}
@@ -30,7 +30,7 @@ function PageFrame({
       />
 
       {/* Editorial Folio Header */}
-      <header className="relative z-10 flex items-center justify-between border-b border-[#762D35]/20 pb-3 text-[10px] font-bold tracking-[0.2em] text-[#762D35] uppercase sm:text-[11px]">
+      <header className="relative z-10 shrink-0 flex items-center justify-between border-b border-[#762D35]/20 pb-2 text-[10px] font-bold tracking-[0.2em] text-[#762D35] uppercase sm:text-[11px]">
         {side === "left" ? (
           <>
             <span>{pageNumber || "DUMBAAZ"}</span>
@@ -45,12 +45,12 @@ function PageFrame({
       </header>
 
       {/* Main Content Area */}
-      <div className="relative z-10 flex flex-1 flex-col justify-between py-4 sm:py-5">
+      <div className="relative z-10 flex flex-1 flex-col justify-between min-h-0 py-2 sm:py-2.5 overflow-hidden">
         {children}
       </div>
 
       {/* Subtle Folio Footer */}
-      <footer className="relative z-10 flex items-center justify-between border-t border-[#762D35]/15 pt-2.5 text-[9px] font-semibold tracking-[0.16em] text-[#33231D]/60 uppercase">
+      <footer className="relative z-10 shrink-0 flex items-center justify-between border-t border-[#762D35]/15 pt-2 text-[9px] font-semibold tracking-[0.16em] text-[#33231D]/60 uppercase">
         <span>AUTHENTIC COPPER HANDI</span>
         <span>A2 COW GHEE &bull; SAFFRON</span>
       </footer>
@@ -61,7 +61,7 @@ function PageFrame({
 // 1. FRONT COVER (Outside)
 export function FrontCoverPage() {
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-between overflow-hidden bg-[#762D35] p-8 text-center text-[#F5EBDD] sm:p-12 shadow-2xl select-none">
+    <div className="relative flex h-full w-full flex-col items-center justify-between overflow-hidden rounded-r-lg border-l border-[#33231D]/20 border-b-2 border-[#33231D]/40 bg-[#762D35] p-6 text-center text-[#F5EBDD] sm:p-10 lg:p-12 shadow-2xl select-none">
       {/* Realistic leatherette grain texture */}
       <div
         aria-hidden="true"
@@ -126,20 +126,20 @@ export function InsideFrontCoverPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             FOREWORD &bull; THE HEARTH
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
             THE RITUAL OF
             <br />
             PROPER DUM.
           </h2>
-          <p className="mt-4 font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="mt-2.5 font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-sm">
             At DUMBAAZ, biryani is neither cooked in batches nor rushed in pressure cookers. Each copper pot is lined with aged, long-grain basmati, marinated country cuts, sweet caramelized onions, and cold-churned A2 cow ghee.
           </p>
-          <p className="mt-3 font-serif text-sm leading-relaxed text-[#33231D]/80 sm:text-base">
+          <p className="mt-2 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-sm">
             The handi is crimped by hand with pliable whole-wheat dough. Placed over glowing charcoal with dying embers laid atop its lid, the ingredients steam in their own sacred vapour for thirty-five minutes.
           </p>
         </div>
 
-        <div className="relative mt-5 aspect-[16/10] w-full overflow-hidden rounded-xl border border-[#762D35]/20 shadow-md">
+        <div className="relative my-2 aspect-[16/9] w-full overflow-hidden rounded-xl border border-[#762D35]/20 shadow-md">
           <Image
             src="/images/chef-tasting.webp"
             alt="Chefs inspecting copper handi"
@@ -149,8 +149,8 @@ export function InsideFrontCoverPage() {
           />
         </div>
 
-        <div className="mt-4 flex items-center justify-between border-t border-[#762D35]/15 pt-3">
-          <span className="font-script text-2xl text-[#762D35]">Taju &amp; Team Dumbaaz</span>
+        <div className="mt-2 flex items-center justify-between border-t border-[#762D35]/15 pt-2">
+          <span className="font-script text-xl text-[#762D35] sm:text-2xl">Taju &amp; Team Dumbaaz</span>
           <span className="text-[10px] font-bold tracking-widest text-[#762D35]/80 uppercase">
             MASTER KHANSAMA
           </span>
@@ -179,14 +179,14 @@ export function PhilosophyIndexPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             TABLE OF CONTENTS
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
             THE CHAPTERS.
           </h2>
-          <div className="mt-4 space-y-2.5">
+          <div className="mt-3 space-y-2">
             {chapters.map((ch) => (
               <div
                 key={ch.num}
-                className="flex items-baseline justify-between border-b border-[#33231D]/10 pb-1.5 text-xs font-semibold sm:text-sm"
+                className="flex items-baseline justify-between border-b border-[#33231D]/10 pb-1 text-xs font-semibold sm:text-sm"
               >
                 <div className="flex items-baseline gap-2">
                   <span className="font-display text-[#762D35]">{ch.num}.</span>
@@ -199,11 +199,11 @@ export function PhilosophyIndexPage() {
         </div>
 
         {/* Spice Box Callout */}
-        <div className="mt-5 rounded-xl border border-[#B47A50]/30 bg-[#F5EBDD]/60 p-4 shadow-sm">
+        <div className="mt-3 rounded-lg border border-[#B47A50]/30 bg-[#F5EBDD]/60 p-2.5 sm:p-3 shadow-sm">
           <span className="text-[10px] font-bold tracking-[0.2em] text-[#B47A50] uppercase">
             OUR SACRED SPICE VAULT
           </span>
-          <p className="mt-1 text-xs leading-relaxed text-[#33231D]/80">
+          <p className="mt-1 text-xs leading-relaxed text-[#33231D]/80 line-clamp-2">
             Kashmiri Saffron &bull; Green Cardamom &bull; Wild Mace &bull; Star Anise &bull; Black Stone Flower &bull; Shah Jeera &bull; Ceylon Cinnamon.
           </p>
         </div>
@@ -224,31 +224,31 @@ export function StartersFeaturePage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; FEATURE
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {dish.name}
           </h2>
-          <span className="mt-1 block font-display text-xl text-[#B47A50] sm:text-2xl">
+          <span className="mt-1 block font-display text-lg text-[#B47A50] sm:text-xl">
             {dish.formattedPrice}
           </span>
         </div>
 
-        <div className="relative my-3 aspect-square w-full max-w-[320px] mx-auto overflow-hidden">
+        <div className="relative my-2 aspect-square w-full max-w-[220px] sm:max-w-[250px] mx-auto overflow-hidden">
           {dish.image && (
             <Image
               src={dish.image}
               alt={dish.name}
               fill
-              sizes="320px"
-              className="object-contain drop-shadow-[0_16px_28px_rgba(51,35,29,0.35)]"
+              sizes="250px"
+              className="object-contain drop-shadow-[0_12px_24px_rgba(51,35,29,0.3)]"
             />
           )}
         </div>
 
         <div>
-          <p className="font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] line-clamp-3">
             {dish.description}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
+          <div className="mt-2.5 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             <span className="rounded bg-[#762D35]/10 px-2 py-0.5">{dish.serving}</span>
             <span className="rounded bg-[#B47A50]/15 px-2 py-0.5 text-[#33231D]">
               {dish.pairing}
@@ -271,12 +271,12 @@ export function StartersListPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.title}
           </span>
-          <p className="mt-1 font-serif text-xs italic text-[#33231D]/75">
+          <p className="mt-0.5 font-serif text-xs italic text-[#33231D]/75">
             {data.subtitle}
           </p>
-          <div className="mt-4 space-y-4">
+          <div className="mt-3 space-y-2.5 sm:space-y-3">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-3">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-2 sm:pb-2.5">
                 <div className="flex items-baseline justify-between gap-2">
                   <div className="flex items-center gap-1.5">
                     <span
@@ -285,15 +285,15 @@ export function StartersListPage() {
                         item.isVegetarian ? "bg-emerald-600" : "bg-[#762D35]"
                       }`}
                     />
-                    <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                    <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                       {item.name}
                     </h3>
                   </div>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-[13px]">
+                <p className="mt-0.5 font-serif text-xs leading-relaxed text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -301,7 +301,7 @@ export function StartersListPage() {
           </div>
         </div>
 
-        <div className="mt-4 rounded border border-dashed border-[#762D35]/30 p-2.5 text-center text-[10px] font-semibold text-[#762D35] uppercase">
+        <div className="mt-3 rounded border border-dashed border-[#762D35]/30 p-2 text-center text-[10px] font-semibold text-[#762D35] uppercase">
           Fresh Chutneys &amp; Laccha Onion served complimentary with all grills.
         </div>
       </div>
@@ -321,31 +321,31 @@ export function ChickenBiryaniFeaturePage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; HOUSE SPECIAL
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {dish.name}
           </h2>
-          <span className="mt-1 block font-display text-xl text-[#B47A50] sm:text-2xl">
+          <span className="mt-1 block font-display text-lg text-[#B47A50] sm:text-xl">
             {dish.formattedPrice}
           </span>
         </div>
 
-        <div className="relative my-3 aspect-square w-full max-w-[320px] mx-auto overflow-hidden">
+        <div className="relative my-2 aspect-square w-full max-w-[220px] sm:max-w-[250px] mx-auto overflow-hidden">
           {dish.image && (
             <Image
               src={dish.image}
               alt={dish.name}
               fill
-              sizes="320px"
-              className="object-contain drop-shadow-[0_18px_30px_rgba(51,35,29,0.38)]"
+              sizes="250px"
+              className="object-contain drop-shadow-[0_14px_26px_rgba(51,35,29,0.32)]"
             />
           )}
         </div>
 
         <div>
-          <p className="font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] line-clamp-3">
             {dish.description}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
+          <div className="mt-2.5 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             <span className="rounded bg-[#762D35]/10 px-2 py-0.5">{dish.serving}</span>
             <span className="rounded bg-[#B47A50]/15 px-2 py-0.5 text-[#33231D]">
               {dish.pairing}
@@ -368,21 +368,21 @@ export function ChickenBiryaniListPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             REGIONAL DUM STYLES
           </span>
-          <p className="mt-1 font-serif text-xs italic text-[#33231D]/75">
+          <p className="mt-0.5 font-serif text-xs italic text-[#33231D]/75">
             {data.description}
           </p>
-          <div className="mt-5 space-y-4">
+          <div className="mt-3 space-y-2.5 sm:space-y-3">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-3">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-2 sm:pb-2.5">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                  <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                     {item.name}
                   </h3>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-[13px]">
+                <p className="mt-0.5 font-serif text-xs leading-relaxed text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -390,8 +390,8 @@ export function ChickenBiryaniListPage() {
           </div>
         </div>
 
-        <div className="mt-4 rounded-lg bg-[#762D35]/10 p-3 text-center">
-          <p className="text-[11px] font-bold tracking-wider text-[#762D35] uppercase">
+        <div className="mt-3 rounded-lg bg-[#762D35]/10 p-2.5 text-center">
+          <p className="text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             SERVED IN DOUGH-SEALED COPPER HANDI WITH BURANI RAITA &amp; MIRCHI SALAN
           </p>
         </div>
@@ -412,31 +412,31 @@ export function MuttonBiryaniFeaturePage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; CROWN JEWEL
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {dish.name}
           </h2>
-          <span className="mt-1 block font-display text-xl text-[#B47A50] sm:text-2xl">
+          <span className="mt-1 block font-display text-lg text-[#B47A50] sm:text-xl">
             {dish.formattedPrice}
           </span>
         </div>
 
-        <div className="relative my-3 aspect-square w-full max-w-[320px] mx-auto overflow-hidden">
+        <div className="relative my-2 aspect-square w-full max-w-[220px] sm:max-w-[250px] mx-auto overflow-hidden">
           {dish.image && (
             <Image
               src={dish.image}
               alt={dish.name}
               fill
-              sizes="320px"
-              className="object-contain drop-shadow-[0_18px_30px_rgba(51,35,29,0.38)]"
+              sizes="250px"
+              className="object-contain drop-shadow-[0_14px_26px_rgba(51,35,29,0.32)]"
             />
           )}
         </div>
 
         <div>
-          <p className="font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] line-clamp-3">
             {dish.description}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
+          <div className="mt-2.5 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             <span className="rounded bg-[#762D35]/10 px-2 py-0.5">{dish.serving}</span>
             <span className="rounded bg-[#B47A50]/15 px-2 py-0.5 text-[#33231D]">
               {dish.pairing}
@@ -459,21 +459,21 @@ export function MuttonBiryaniListPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             GOAT &amp; YAKHNI TRADITIONS
           </span>
-          <p className="mt-1 font-serif text-xs italic text-[#33231D]/75">
+          <p className="mt-0.5 font-serif text-xs italic text-[#33231D]/75">
             {data.description}
           </p>
-          <div className="mt-5 space-y-4">
+          <div className="mt-3 space-y-2.5 sm:space-y-3">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-3">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-2 sm:pb-2.5">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                  <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                     {item.name}
                   </h3>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-[13px]">
+                <p className="mt-0.5 font-serif text-xs leading-relaxed text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -481,8 +481,8 @@ export function MuttonBiryaniListPage() {
           </div>
         </div>
 
-        <div className="mt-4 rounded-lg bg-[#F5EBDD] border border-[#762D35]/30 p-3 text-center">
-          <p className="text-[11px] font-bold tracking-wider text-[#762D35] uppercase">
+        <div className="mt-3 rounded-lg bg-[#F5EBDD] border border-[#762D35]/30 p-2.5 text-center">
+          <p className="text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             SLOW-SIMMERED SHANKS &bull; WILD MACE &bull; CRUSHED CARDAMOM
           </p>
         </div>
@@ -503,31 +503,31 @@ export function SpecialHandisPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; CELEBRATION
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {dish.name}
           </h2>
-          <span className="mt-1 block font-display text-xl text-[#B47A50] sm:text-2xl">
+          <span className="mt-1 block font-display text-lg text-[#B47A50] sm:text-xl">
             {dish.formattedPrice}
           </span>
         </div>
 
-        <div className="relative my-3 aspect-square w-full max-w-[300px] mx-auto overflow-hidden">
+        <div className="relative my-2 aspect-square w-full max-w-[220px] sm:max-w-[250px] mx-auto overflow-hidden">
           {dish.image && (
             <Image
               src={dish.image}
               alt={dish.name}
               fill
-              sizes="300px"
-              className="object-contain drop-shadow-[0_16px_28px_rgba(51,35,29,0.35)]"
+              sizes="250px"
+              className="object-contain drop-shadow-[0_14px_26px_rgba(51,35,29,0.32)]"
             />
           )}
         </div>
 
         <div>
-          <p className="font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] line-clamp-3">
             {dish.description}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
+          <div className="mt-2.5 flex flex-wrap gap-2 text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             <span className="rounded bg-[#762D35]/10 px-2 py-0.5">{dish.serving}</span>
             <span className="rounded bg-[#B47A50]/15 px-2 py-0.5 text-[#33231D]">
               {dish.pairing}
@@ -550,21 +550,21 @@ export function KebabsListPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.title}
           </span>
-          <p className="mt-1 font-serif text-xs italic text-[#33231D]/75">
+          <p className="mt-0.5 font-serif text-xs italic text-[#33231D]/75">
             {data.subtitle}
           </p>
-          <div className="mt-4 space-y-3.5">
+          <div className="mt-3 space-y-2.5 sm:space-y-3">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-2.5">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-2 sm:pb-2.5">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                  <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                     {item.name}
                   </h3>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80">
+                <p className="mt-0.5 font-serif text-xs leading-relaxed text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -591,21 +591,21 @@ export function CurriesBreadsPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; SLOW POTS
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {data.title}
           </h2>
-          <div className="mt-4 space-y-4">
+          <div className="mt-2.5 space-y-2 sm:space-y-2.5">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-3">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-1.5 sm:pb-2">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                  <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                     {item.name}
                   </h3>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-[13px]">
+                <p className="mt-0.5 font-serif text-xs leading-snug text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -613,7 +613,7 @@ export function CurriesBreadsPage() {
           </div>
         </div>
 
-        <div className="mt-3 rounded border border-dashed border-[#762D35]/30 p-2.5 text-center text-[10px] font-semibold text-[#762D35] uppercase">
+        <div className="mt-2 rounded border border-dashed border-[#762D35]/30 p-2 text-center text-[10px] font-semibold text-[#762D35] uppercase">
           Naan baked fresh to order &bull; Served steaming hot from the clay wall.
         </div>
       </div>
@@ -632,21 +632,21 @@ export function DessertsDrinksPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             {data.chapterNumber} &bull; SWEET ENDINGS
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             {data.title}
           </h2>
-          <div className="mt-4 space-y-4">
+          <div className="mt-2.5 space-y-2 sm:space-y-2.5">
             {data.items.map((item) => (
-              <div key={item.id} className="border-b border-[#33231D]/10 pb-3">
+              <div key={item.id} className="border-b border-[#33231D]/10 pb-1.5 sm:pb-2">
                 <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-display text-base tracking-wide text-[#33231D] uppercase sm:text-lg">
+                  <h3 className="font-display text-sm tracking-wide text-[#33231D] uppercase sm:text-base">
                     {item.name}
                   </h3>
-                  <span className="font-display text-sm text-[#762D35] sm:text-base">
+                  <span className="font-display text-xs text-[#762D35] sm:text-sm">
                     {item.formattedPrice}
                   </span>
                 </div>
-                <p className="mt-1 font-serif text-xs leading-relaxed text-[#33231D]/80 sm:text-[13px]">
+                <p className="mt-0.5 font-serif text-xs leading-snug text-[#33231D]/80 line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -654,7 +654,7 @@ export function DessertsDrinksPage() {
           </div>
         </div>
 
-        <div className="mt-3 text-center text-[10px] font-semibold text-[#762D35]/80 uppercase">
+        <div className="mt-2 text-center text-[10px] font-semibold text-[#762D35]/80 uppercase">
           TERRACOTTA CHILLED &bull; KASHMIRI KESAR &bull; PISTACHIO SLIVERS
         </div>
       </div>
@@ -671,28 +671,28 @@ export function PrivateDiningPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             DAWAT &amp; GATHERINGS
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             CELEBRATE
             <br />
             TOGETHER.
           </h2>
-          <p className="mt-3 font-serif text-sm leading-relaxed text-[#33231D]/90 sm:text-base">
+          <p className="mt-2 font-serif text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] line-clamp-3">
             For grand birthdays, intimate family dawat ceremonies, and private corporate banquets, our private dining salon seats up to thirty guests around brass service platters.
           </p>
         </div>
 
-        <div className="relative my-4 aspect-[16/10] w-full overflow-hidden rounded-xl border border-[#762D35]/20 shadow-md">
+        <div className="relative my-2 aspect-[16/9] w-full max-w-[340px] mx-auto overflow-hidden rounded-xl border border-[#762D35]/20 shadow-md">
           <Image
             src="/images/community/image-13.webp"
             alt="Family celebrating around grand biryani table"
             fill
-            sizes="400px"
+            sizes="340px"
             className="object-cover"
           />
         </div>
 
-        <div className="rounded-lg bg-[#762D35]/10 p-3 text-center">
-          <p className="text-[11px] font-bold tracking-wider text-[#762D35] uppercase">
+        <div className="rounded-lg bg-[#762D35]/10 p-2.5 text-center">
+          <p className="text-[10px] font-bold tracking-wider text-[#762D35] uppercase">
             CUSTOM CURATED DEG PACKAGES AVAILABLE UPON REQUEST
           </p>
         </div>
@@ -710,34 +710,34 @@ export function InsideBackCoverPage() {
           <span className="text-[10px] font-bold tracking-[0.28em] text-[#762D35] uppercase sm:text-xs">
             RESERVATIONS &amp; VISITS
           </span>
-          <h2 className="mt-2 font-display text-3xl leading-[0.9] text-[#762D35] uppercase sm:text-4xl lg:text-5xl">
+          <h2 className="mt-1.5 font-display text-2xl leading-[0.9] text-[#762D35] uppercase sm:text-3xl lg:text-4xl">
             JOIN THE
             <br />
             TABLE.
           </h2>
 
-          <div className="mt-5 space-y-3 text-xs leading-relaxed text-[#33231D]/90 sm:text-sm font-medium">
+          <div className="mt-3 space-y-2 text-xs leading-relaxed text-[#33231D]/90 sm:text-[13px] font-medium">
             <div>
-              <p className="font-bold text-[#762D35] uppercase">FLAGSHIP ADDRESS</p>
+              <p className="font-bold text-[#762D35] uppercase text-[11px]">FLAGSHIP ADDRESS</p>
               <p>{BRAND.location.addressLine1}</p>
               <p>{BRAND.location.city}</p>
             </div>
 
             <div>
-              <p className="font-bold text-[#762D35] uppercase">SERVICE HOURS</p>
+              <p className="font-bold text-[#762D35] uppercase text-[11px]">SERVICE HOURS</p>
               <p>{BRAND.location.hoursDinner}</p>
               <p>{BRAND.location.hoursWeekend}</p>
             </div>
 
             <div>
-              <p className="font-bold text-[#762D35] uppercase">TABLE CONCIERGE</p>
+              <p className="font-bold text-[#762D35] uppercase text-[11px]">TABLE CONCIERGE</p>
               <p>{BRAND.location.phone}</p>
               <p>{BRAND.location.email}</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-5 rounded border border-[#762D35]/25 p-3 text-center">
+        <div className="mt-3 rounded border border-[#762D35]/25 p-2.5 text-center">
           <p className="text-[10px] font-bold tracking-widest text-[#762D35] uppercase">
             DIRECT ORDERS RECEIVE 25% COMPLIMENTARY PRIVILEGE
           </p>
@@ -750,7 +750,7 @@ export function InsideBackCoverPage() {
 // 16. BACK COVER (Outside)
 export function BackCoverPage() {
   return (
-    <div className="relative flex h-full w-full flex-col items-center justify-between overflow-hidden bg-[#762D35] p-8 text-center text-[#F5EBDD] sm:p-12 shadow-2xl select-none">
+    <div className="relative flex h-full w-full flex-col items-center justify-between overflow-hidden rounded-l-lg border-r border-[#33231D]/20 border-b-2 border-[#33231D]/40 bg-[#762D35] p-6 text-center text-[#F5EBDD] sm:p-10 lg:p-12 shadow-2xl select-none">
       {/* Leatherette grain texture */}
       <div
         aria-hidden="true"
@@ -762,33 +762,33 @@ export function BackCoverPage() {
         <div className="absolute inset-1 border border-[#B47A50]/20" />
       </div>
 
-      <div className="relative z-10 pt-6">
+      <div className="relative z-10 pt-4 sm:pt-6">
         <span className="font-display text-xs tracking-[0.32em] text-[#B47A50] uppercase sm:text-sm">
           END OF THE REPAST
         </span>
       </div>
 
       <div className="relative z-10 my-auto flex flex-col items-center">
-        <div className="relative h-24 w-24 drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] sm:h-32 sm:w-32">
+        <div className="relative h-20 w-20 drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] sm:h-28 sm:w-28">
           <Image
             src="/images/dumbaaz-crest.png"
             alt="DUMBAAZ emblem crest"
             fill
-            sizes="128px"
+            sizes="112px"
             className="object-contain"
           />
         </div>
 
-        <p className="mt-6 font-display text-3xl tracking-wider text-[#F5EBDD] uppercase sm:text-4xl">
+        <p className="mt-4 font-display text-2xl tracking-wider text-[#F5EBDD] uppercase sm:text-3xl">
           DUMBAAZ
         </p>
 
-        <p className="mt-2 font-serif text-sm tracking-widest text-[#B47A50] uppercase italic">
+        <p className="mt-1 font-serif text-xs tracking-widest text-[#B47A50] uppercase italic sm:text-sm">
           Until We Meet Across The Embers
         </p>
       </div>
 
-      <div className="relative z-10 pb-6 text-[10px] tracking-[0.2em] text-[#B47A50]/80 uppercase sm:text-xs">
+      <div className="relative z-10 pb-4 text-[10px] tracking-[0.2em] text-[#B47A50]/80 uppercase sm:text-xs">
         &copy; 2026 DUMBAAZ CHARCOAL DUM HOUSE &bull; ALL RIGHTS RESERVED
       </div>
     </div>

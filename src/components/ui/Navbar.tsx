@@ -13,16 +13,16 @@ export function Navbar() {
         <a
           href="#hero"
           aria-label="DUMBAAZ home"
-          className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-cream/90 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turmeric"
-          style={{ padding: "2px" }}
+          className="pointer-events-auto inline-flex items-center justify-center transition-transform duration-200 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turmeric"
         >
           <Image
-            src="/images/dumbaaz-crest.png"
+            src="/images/dumbaaz-lid-animation.gif"
             alt="DUMBAAZ"
-            width={52}
-            height={52}
-            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+            width={112}
+            height={112}
+            unoptimized
             priority
+            className="h-20 w-20 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
           />
         </a>
 

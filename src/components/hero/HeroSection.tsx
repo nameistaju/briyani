@@ -57,6 +57,18 @@ export function HeroSection() {
         <span className="text-cream/90">{BRAND.neighborhood}</span>
       </div>
 
+      {/* Full-bleed 3D Canvas spanning entire hero section so floating spices are never clipped */}
+      <div
+        aria-label="Interactive 3D copper biryani handi — drag to rotate"
+        className="pointer-events-none absolute inset-0 z-20 h-full w-full"
+      >
+        <HeroScene3D
+          webglSupported={webglSupported}
+          reducedMotion={reducedMotion}
+          isCompactViewport={isCompactViewport}
+        />
+      </div>
+
       {/* Center poster wordmark behind live 3D copper handi */}
       <div className="relative z-10 mx-auto my-auto flex min-h-[380px] w-full max-w-[1440px] flex-1 items-start justify-center px-2 pt-8 sm:min-h-[450px] sm:items-center sm:px-6 sm:pt-2 lg:min-h-[490px]">
         {/* Giant tilted cream display typography sitting behind the 3D handi */}
@@ -77,18 +89,6 @@ export function HeroSection() {
             </span>
           ))}
         </h1>
-
-        {/* Live 3D handi + floating spices sitting in front of center letters */}
-        <div
-          aria-label="Interactive 3D copper biryani handi — drag to rotate"
-          className="absolute inset-x-0 bottom-0 top-6 z-20 mx-auto flex h-[380px] w-full max-w-[1360px] self-center sm:inset-0 sm:h-[480px] lg:h-[560px]"
-        >
-          <HeroScene3D
-            webglSupported={webglSupported}
-            reducedMotion={reducedMotion}
-            isCompactViewport={isCompactViewport}
-          />
-        </div>
 
         {/* Rotating circular stamp badge */}
         <div
