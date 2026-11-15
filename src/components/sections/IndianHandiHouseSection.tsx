@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { BRAND } from "@/data/brand";
@@ -80,49 +80,49 @@ interface DirectionZone {
   rotationDelta: [number, number]; // degrees spin
 }
 
-// 6 distinct radial trajectory zones so simultaneous items disperse evenly towards the face
+// 6 distinct radial trajectory zones - calibrated to stop gently in the perimeter around the card
 const ZONES: DirectionZone[] = [
   // Upper-Left
   {
     name: "top-left",
-    targetXvw: [-48, -34],
-    targetYvh: [-42, -26],
-    rotationDelta: [-75, -35],
+    targetXvw: [-30, -18],
+    targetYvh: [-22, -12],
+    rotationDelta: [-20, -8],
   },
   // Upper-Right
   {
     name: "top-right",
-    targetXvw: [34, 48],
-    targetYvh: [-42, -26],
-    rotationDelta: [35, 75],
+    targetXvw: [18, 30],
+    targetYvh: [-22, -12],
+    rotationDelta: [8, 20],
   },
   // Mid-Left
   {
     name: "mid-left",
-    targetXvw: [-54, -40],
-    targetYvh: [-12, 14],
-    rotationDelta: [-60, -25],
+    targetXvw: [-34, -22],
+    targetYvh: [-8, 8],
+    rotationDelta: [-18, -5],
   },
   // Mid-Right
   {
     name: "mid-right",
-    targetXvw: [40, 54],
-    targetYvh: [-12, 14],
-    rotationDelta: [25, 60],
+    targetXvw: [22, 34],
+    targetYvh: [-8, 8],
+    rotationDelta: [5, 18],
   },
   // Lower-Left
   {
     name: "bottom-left",
-    targetXvw: [-46, -32],
-    targetYvh: [24, 40],
-    rotationDelta: [-80, -40],
+    targetXvw: [-28, -16],
+    targetYvh: [12, 22],
+    rotationDelta: [-22, -8],
   },
   // Lower-Right
   {
     name: "bottom-right",
-    targetXvw: [32, 46],
-    targetYvh: [24, 40],
-    rotationDelta: [40, 80],
+    targetXvw: [16, 28],
+    targetYvh: [12, 22],
+    rotationDelta: [8, 22],
   },
 ];
 
@@ -132,51 +132,15 @@ function randomBetween(min: number, max: number): number {
 
 export function IndianHandiHouseSection() {
   const sectionRef = useRef<HTMLElement>(null);
-  const sunburstRef = useRef<SVGSVGElement>(null);
   const itemsContainerRef = useRef<HTMLDivElement>(null);
   const reducedMotion = usePrefersReducedMotion();
-
-  // Mouse parallax state for interactive floating tilt
-  const [mouseParallax, setMouseParallax] = useState({ x: 0, y: 0 });
 
   // Track active animating items to avoid duplicate launches
   const activeIdsRef = useRef<Set<string>>(new Set());
   const isVisibleRef = useRef(false);
   const spawnTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Subtle mouse parallax tilt across the section
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
-
-      const normX = (e.clientX - rect.left) / rect.width - 0.5;
-      const normY = (e.clientY - rect.top) / rect.height - 0.5;
-      setMouseParallax({ x: normX * 22, y: normY * 22 });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  // Ambient slow sunburst rotation
-  useEffect(() => {
-    if (!sunburstRef.current || reducedMotion) return;
-
-    const tween = gsap.to(sunburstRef.current, {
-      rotation: 360,
-      duration: 80,
-      repeat: -1,
-      ease: "none",
-    });
-
-    return () => {
-      tween.kill();
-    };
-  }, [reducedMotion]);
-
-  // Autonomous food zoom animation: 1, 2, or 3 random items fly towards face & disappear
+  // Autonomous food zoom animation: items float outward, stop gently in perimeter, and fade out
   useEffect(() => {
     const container = itemsContainerRef.current;
     const activeIds = activeIdsRef.current;
@@ -186,13 +150,14 @@ export function IndianHandiHouseSection() {
     const animateItem = (el: HTMLElement, item: ZoomItemConfig, zone: DirectionZone) => {
       const endX = randomBetween(zone.targetXvw[0], zone.targetXvw[1]);
       const endY = randomBetween(zone.targetYvh[0], zone.targetYvh[1]);
-      const startRot = randomBetween(-16, 16);
+      const startRot = randomBetween(-12, 12);
       const rotDelta = randomBetween(zone.rotationDelta[0], zone.rotationDelta[1]);
       const endRot = startRot + rotDelta;
-      const duration = randomBetween(5.5, 7.5);
-      const endScale = randomBetween(3.0, 3.8);
-      const startX = randomBetween(-15, 15);
-      const startY = randomBetween(-15, 15);
+      const duration = randomBetween(4.2, 5.5);
+      // Natural dish size - never oversized or covering screen
+      const endScale = randomBetween(0.85, 1.1);
+      const startX = randomBetween(-10, 10);
+      const startY = randomBetween(-10, 10);
 
       const tl = gsap.timeline({
         onComplete: () => {
@@ -207,24 +172,23 @@ export function IndianHandiHouseSection() {
         y: startY,
         xPercent: -50,
         yPercent: -50,
-        scale: 0.14,
+        scale: 0.15,
         rotation: startRot,
         opacity: 0,
-        zIndex: Math.floor(Math.random() * 6) + 32,
       });
 
-      // 2. Quick fade in as item emerges
+      // 2. Smooth fade in as item emerges
       tl.to(
         el,
         {
           opacity: 1,
-          duration: 0.9,
+          duration: 0.8,
           ease: "power1.out",
         },
         0
       );
 
-      // 3. Zoom towards the user's face (scale up, travel outwards, rotate)
+      // 3. Move outward and decelerate to a stop before fading ("stop it little before")
       tl.to(
         el,
         {
@@ -232,20 +196,19 @@ export function IndianHandiHouseSection() {
           y: `${endY}vh`,
           scale: endScale,
           rotation: endRot,
-          duration: duration,
-          ease: "power2.inOut",
+          duration: duration * 0.72,
+          ease: "power2.out",
         },
         0
       );
 
-      // 4. Disappear as it passes the user's face (fade out in final 32% of zoom)
+      // 4. Gently fade out while resting at its stopped position (no extra scaling up)
       tl.to(
         el,
         {
           opacity: 0,
-          scale: endScale * 1.22,
           duration: duration * 0.32,
-          ease: "power2.in",
+          ease: "power1.inOut",
         },
         duration * 0.68
       );
@@ -346,13 +309,12 @@ export function IndianHandiHouseSection() {
       aria-label="DUMBAAZ Indian Handi House — Interactive Food Experience"
       className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-cream px-5 py-20 text-center text-burgundy sm:px-10 lg:min-h-screen lg:py-28"
     >
-      {/* Dynamic Sunburst Rays Background */}
+      {/* Static Sunburst Rays Background */}
       <svg
-        ref={sunburstRef}
         aria-hidden="true"
         viewBox="-200 -200 400 400"
         preserveAspectRatio="xMidYMid slice"
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-65 will-change-transform"
+        className="pointer-events-none absolute inset-0 h-full w-full opacity-65"
       >
         {SUNBURST_RAYS.map((angle) => (
           <polygon
@@ -364,16 +326,14 @@ export function IndianHandiHouseSection() {
         ))}
       </svg>
 
-      {/* Autonomous Zooming Food Elements Stage (Preserves 3D perspective towards user) */}
+      {/* Autonomous Zooming Food Elements Stage (Floats behind the central card at z-10) */}
       <div
         ref={itemsContainerRef}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center overflow-hidden"
+        className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center overflow-hidden"
         style={{
           perspective: "1200px",
           transformStyle: "preserve-3d",
-          transform: `translate3d(${mouseParallax.x}px, ${mouseParallax.y}px, 0)`,
-          transition: "transform 0.2s ease-out",
         }}
       >
         {ZOOM_ITEMS.map((item, idx) => (
